@@ -1,0 +1,103 @@
+backend:
+  name: github
+  repo: sps-it-admin/sps-it-admin.github.io
+  branch: main
+
+media_folder: "project/assets"
+public_folder: "/project/assets"
+
+collections:
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "contact"
+        label: "Contact Information"
+        file: "_data/settings.yml"
+        fields:
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Address Line 1", name: "address_line1", widget: "string"}
+          - {label: "Address Line 2", name: "address_line2", widget: "string"}
+          - {label: "Copyright Year", name: "copyright_year", widget: "string"}
+
+  - name: "faq_data"
+    label: "FAQ Items"
+    files:
+      - name: "faqs"
+        label: "Frequently Asked Questions"
+        file: "_data/faqs.yml"
+        fields:
+          - name: "items"
+            label: "FAQ Items"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home"
+        file: "index.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "home"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string"}
+          - {label: "Hero Heading Line 1", name: "hero_h1", widget: "string"}
+          - {label: "Hero Heading Line 2 (italic)", name: "hero_h1_em", widget: "string"}
+          - {label: "Hero Description", name: "hero_desc", widget: "text"}
+
+      - name: "about"
+        label: "About"
+        file: "about.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
+          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+
+      - name: "teaching"
+        label: "Teaching & Learning"
+        file: "teaching.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "teaching"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
+          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+
+      - name: "enrol"
+        label: "Enrolments"
+        file: "enrol.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "enrol"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
+          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+
+      - name: "community"
+        label: "Community"
+        file: "community.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "community"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
+          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+
+      - name: "faq"
+        label: "FAQ"
+        file: "faq.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "faq"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
+          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}

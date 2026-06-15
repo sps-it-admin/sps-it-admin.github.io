@@ -1,0 +1,21 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Spacing scale" subtitle="4px base unit; sections breathe at 80px (--space-20)" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--cream); padding: 22px 26px; }
+  .r { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
+  .bar { height: 14px; background: var(--crimson); border-radius: 2px; }
+  .lab { font-family: var(--font-body); font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="r"><div class="bar" style="width:16px"></div><span class="lab">--space-4 · 16px</span></div>
+  <div class="r"><div class="bar" style="width:24px"></div><span class="lab">--space-6 · 24px</span></div>
+  <div class="r"><div class="bar" style="width:48px"></div><span class="lab">--space-12 · 48px</span></div>
+  <div class="r"><div class="bar" style="width:80px"></div><span class="lab">--space-20 · 80px · section rhythm</span></div>
+  <div class="r"><div class="bar" style="width:112px"></div><span class="lab">--space-28 · 112px · hero / CTA</span></div>
+</body>
+</html>

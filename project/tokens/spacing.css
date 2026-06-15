@@ -1,0 +1,46 @@
+/* ============================================================
+   SPACING, RADII, SHADOWS, MOTION
+   The Cloister is institutional and sharp: radii are minimal
+   (0.25rem base), corners mostly square. Elevation is restrained
+   — a soft shadow on hover, never a heavy drop. Accent geometry
+   comes from gold/crimson RULES and offset OUTLINES, not rounding.
+   ============================================================ */
+
+:root {
+  /* ── Radii — deliberately small/sharp ── */
+  --radius:    0.25rem;                    /* base                          */
+  --radius-sm: calc(var(--radius) - 4px);  /* 0px — true square             */
+  --radius-md: calc(var(--radius) - 2px);  /* 2px                           */
+  --radius-lg: var(--radius);              /* 4px                           */
+  --radius-xl: calc(var(--radius) + 4px);  /* 8px — large surfaces          */
+
+  /* ── Spacing scale (rem) ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;       /* standard vertical section rhythm (py-20)       */
+  --space-28: 7rem;       /* hero / CTA breathing room                      */
+
+  /* ── Shadows — restrained ── */
+  --shadow-sm:  0 1px 2px oklch(0.18 0.06 250 / 0.06);
+  --shadow-md:  0 4px 12px oklch(0.18 0.06 250 / 0.08);
+  --shadow-lg:  0 10px 30px oklch(0.18 0.06 250 / 0.12);
+  --shadow-xl:  0 20px 50px oklch(0.18 0.06 250 / 0.16);
+
+  /* ── Layout ── */
+  --container-max: 1280px;
+  --header-h: 80px;
+
+  /* ── Motion — slow, dignified easing ── */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */  /* fade-up / reveals */
+  --dur-fast:   0.3s;    /* @kind other */
+  --dur-base:   0.6s;    /* @kind other */
+  --dur-slow:   10s;     /* @kind other */  /* Ken Burns hero drift */
+}

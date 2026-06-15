@@ -1,0 +1,178 @@
+/* ============================================================
+   BRAND UTILITIES — the signature classes of "The Cloister"
+   Ported verbatim from the production site so consumers get the
+   real button, label, rule, divider and motion vocabulary.
+   ============================================================ */
+
+/* ── Base resets the brand assumes ── */
+.cloister-body {
+  background: var(--cream);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+}
+
+/* ── Font-family helpers ── */
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+.font-label   { font-family: var(--font-label); }
+
+/* ── Color helpers ── */
+.text-navy      { color: var(--navy); }
+.text-navy-dark { color: var(--navy-dark); }
+.text-crimson   { color: var(--crimson); }
+.text-gold      { color: var(--gold); }
+.text-cream     { color: var(--cream); }
+
+.bg-navy        { background-color: var(--navy); }
+.bg-navy-dark   { background-color: var(--navy-dark); }
+.bg-navy-light  { background-color: var(--navy-light); }
+.bg-crimson     { background-color: var(--crimson); }
+.bg-gold        { background-color: var(--gold); }
+.bg-cream       { background-color: var(--cream); }
+.bg-cream-dark  { background-color: var(--cream-dark); }
+
+.border-gold    { border-color: var(--gold); }
+.border-crimson { border-color: var(--crimson); }
+.border-navy    { border-color: var(--navy); }
+
+/* ── Section label (Cinzel small-caps eyebrow) ── */
+.section-label {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--crimson);
+}
+
+/* ── Crimson left-rule for pull-quotes ── */
+.crimson-rule {
+  border-left: 3px solid var(--crimson);
+  padding-left: 1.25rem;
+}
+
+/* ── Gold ornamental divider (centres a label between two rules) ── */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gold);
+}
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+/* ── Primary CTA — crimson fill with offset gold outline ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--crimson);
+  color: var(--cream);
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--crimson);
+  outline: 1px solid var(--gold);
+  outline-offset: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-fast) ease, outline-color var(--dur-fast) ease;
+}
+.btn-primary:hover {
+  background: var(--crimson-deep);
+  outline-color: var(--gold-light);
+}
+
+/* ── Secondary CTA — ghost with gold border (use on dark grounds) ── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--cream);
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-fast) ease;
+}
+.btn-secondary:hover {
+  background: oklch(1 0 0 / 0.1);
+}
+
+/* ── Nav link with gold slide-in underline ── */
+.nav-link {
+  position: relative;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--dur-fast) ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ── Ken Burns hero drift ── */
+@keyframes kenBurns {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.04); }
+}
+.ken-burns {
+  animation: kenBurns var(--dur-slow) ease-in-out infinite alternate;
+}
+
+/* ── Fade-up entrance ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp var(--dur-base) var(--ease-out-soft) forwards; }
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-up-delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* ── Scroll-reveal (JS toggles .visible) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--dur-base) var(--ease-out-soft),
+              transform var(--dur-base) var(--ease-out-soft);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns, .fade-up { animation: none; }
+  .fade-up, .fade-up-delay-1, .fade-up-delay-2, .fade-up-delay-3, .fade-up-delay-4 { opacity: 1; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

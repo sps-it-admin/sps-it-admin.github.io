@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Corner radii — sharp & institutional" subtitle="Minimal rounding; corners stay square for a formal register" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--cream); padding: 22px; }
+  .row { display: flex; gap: 26px; align-items: flex-end; }
+  .item { text-align: center; }
+  .box { width: 84px; height: 64px; background: var(--white); border: 1px solid var(--border-strong); border-top: 3px solid var(--crimson); }
+  .lab { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-top: 8px; }
+  .val { font-family: var(--font-body); font-size: 11px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="lab">sm · 0px</div></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="lab">md · 2px</div></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="lab">lg · 4px</div></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="lab">xl · 8px</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Core primitives" subtitle="Button · SectionLabel · Badge · PillarCard · StatBlock · PullQuote · GoldDivider" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--cream); font-family: var(--font-body); color: var(--text-body); }
+  .wrap { padding: 26px 30px; display: flex; flex-direction: column; gap: 26px; }
+  .group { }
+  .glabel { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .rowflex { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .panel-navy { background: var(--navy); padding: 22px 24px; border-radius: var(--radius-lg); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="group">
+      <p class="glabel">Button — variants &amp; sizes</p>
+      <div class="panel-navy rowflex">
+        <span id="btn-primary"></span>
+        <span id="btn-secondary"></span>
+        <span id="btn-navy"></span>
+        <span id="btn-ghost"></span>
+        <span id="btn-sm"></span>
+        <span id="btn-lg"></span>
+      </div>
+    </div>
+
+    <div class="group">
+      <p class="glabel">SectionLabel &amp; Badge</p>
+      <div class="rowflex" style="gap:28px;">
+        <span id="seclabel"></span>
+        <span id="badges"></span>
+      </div>
+    </div>
+
+    <div class="group">
+      <p class="glabel">PillarCard</p>
+      <div class="grid2" id="pillars"></div>
+    </div>
+
+    <div class="group">
+      <p class="glabel">StatBlock &amp; PullQuote</p>
+      <div class="grid2" style="align-items:start;">
+        <div class="rowflex" id="stats" style="gap:24px;"></div>
+        <span id="quote"></span>
+      </div>
+    </div>
+
+    <div class="group">
+      <p class="glabel">GoldDivider</p>
+      <div class="panel-navy"><span id="divider"></span></div>
+    </div>
+
+  </div>
+
+  <script src="../../_ds_bundle.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel">
+    const { Button, SectionLabel, Badge, PillarCard, StatBlock, PullQuote, GoldDivider } = window.StPhilomenaSchoolDesignSystem_b41775;
+    const R = ReactDOM;
+    const Arrow = () => <span style={{fontSize:'1em'}}>›</span>;
+
+    R.createRoot(document.getElementById('btn-primary')).render(<Button variant="primary" as="a" href="#" icon={<Arrow/>}>Enrol Now</Button>);
+    R.createRoot(document.getElementById('btn-secondary')).render(<Button variant="secondary" as="a" href="#">Learn More</Button>);
+    R.createRoot(document.getElementById('btn-navy')).render(<Button variant="navy" as="a" href="#">Read More</Button>);
+    R.createRoot(document.getElementById('btn-ghost')).render(<Button variant="ghost" as="a" href="#">Full Curriculum</Button>);
+    R.createRoot(document.getElementById('btn-sm')).render(<Button variant="primary" size="sm" as="a" href="#">Small</Button>);
+    R.createRoot(document.getElementById('btn-lg')).render(<Button variant="primary" size="lg" as="a" href="#">Large</Button>);
+
+    R.createRoot(document.getElementById('seclabel')).render(
+      <span><SectionLabel>Our Foundation</SectionLabel></span>
+    );
+    R.createRoot(document.getElementById('badges')).render(
+      <span style={{display:'inline-flex',gap:'8px'}}>
+        <Badge tone="navy">Yr 7 &amp; 8</Badge>
+        <Badge tone="crimson">Yr 8 only</Badge>
+        <Badge tone="gold">New</Badge>
+        <Badge tone="outline">Optional</Badge>
+      </span>
+    );
+
+    R.createRoot(document.getElementById('pillars')).render(
+      <React.Fragment>
+        <PillarCard icon={<span style={{fontSize:'22px'}}>✝</span>} title="Catholic Faith">
+          Every subject is taught within the framework of the Catholic Faith.
+        </PillarCard>
+        <PillarCard icon={<span style={{fontSize:'22px'}}>❧</span>} title="Classical Curriculum">
+          Latin, Logic, Rhetoric, Literature, and History form the core of our Liberal Arts programme.
+        </PillarCard>
+      </React.Fragment>
+    );
+
+    R.createRoot(document.getElementById('stats')).render(
+      <React.Fragment>
+        <StatBlock value="1999" label="Founded" />
+        <StatBlock value="7 & 8" label="Year Levels" />
+        <StatBlock value="QLD" label="Park Ridge" />
+      </React.Fragment>
+    );
+    R.createRoot(document.getElementById('quote')).render(
+      <PullQuote cite="— Fr Joseph Ockerse, Principal">
+        The most important part of education is the formation of character.
+      </PullQuote>
+    );
+
+    R.createRoot(document.getElementById('divider')).render(
+      <GoldDivider>"Sine Deo Nihil"</GoldDivider>
+    );
+  </script>
+</body>
+</html>

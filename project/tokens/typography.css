@@ -1,0 +1,41 @@
+/* ============================================================
+   TYPOGRAPHY — three serif voices + a modular scale
+   Display: Playfair Display · Body: Lora · Label: Cinzel
+   The brand never uses a sans-serif. Body is set generously
+   (17px / 1.75) for sustained, book-like reading.
+   ============================================================ */
+
+:root {
+  /* ── Families ── */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body:    "Lora", Georgia, serif;
+  --font-label:   "Cinzel", "Times New Roman", serif;
+
+  /* ── Type scale (rem) ── */
+  --text-xs:   0.75rem;   /* 12px — fine print, captions            */
+  --text-sm:   0.875rem;  /* 14px — secondary copy                  */
+  --text-base: 1.0625rem; /* 17px — body default (brand baseline)   */
+  --text-lg:   1.1875rem; /* 19px — lead paragraphs                 */
+  --text-xl:   1.5rem;    /* 24px — small headings                  */
+  --text-2xl:  1.875rem;  /* 30px — h3                              */
+  --text-3xl:  2.25rem;   /* 36px — h2                              */
+  --text-4xl:  3rem;      /* 48px — h1 / hero                       */
+  --text-5xl:  3.75rem;   /* 60px — display hero                    */
+
+  /* ── Weights ── */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ── Line heights ── */
+  --leading-tight:   1.15;  /* display headings                     */
+  --leading-snug:    1.35;  /* sub-heads                            */
+  --leading-body:    1.75;  /* body copy — the brand's signature    */
+
+  /* ── Label tracking (Cinzel small-caps) ── */
+  --tracking-label:  0.12em;
+  --tracking-wide:   0.2em;  /* section labels                      */
+  --tracking-mega:   0.08em;
+}

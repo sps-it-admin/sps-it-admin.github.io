@@ -1,0 +1,9 @@
+/* ============================================================
+   FONTS — Playfair Display · Lora · Cinzel
+   The brand's three serif voices, served from Google Fonts.
+   Playfair Display  → display headings (high-contrast didone)
+   Lora              → body copy (warm, readable book serif)
+   Cinzel            → labels, nav, small-caps (Roman capitals)
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700&display=swap");

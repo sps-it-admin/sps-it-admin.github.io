@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Crimson — header & accent" subtitle="Header bar, CTAs, section labels, pull-quote rules" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--cream); }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 20px; }
+  .sw { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-strong); }
+  .chip { height: 84px; }
+  .meta { padding: 8px 10px 10px; background: var(--white); }
+  .name { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+  .val { font-family: var(--font-body); font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--crimson)"></div><div class="meta"><div class="name">Crimson</div><div class="val">--crimson</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--crimson-deep)"></div><div class="meta"><div class="name">Crimson Deep</div><div class="val">--crimson-deep</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--crimson-light)"></div><div class="meta"><div class="name">Crimson Light</div><div class="val">--crimson-light</div></div></div>
+  </div>
+</body>
+</html>

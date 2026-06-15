@@ -1,0 +1,53 @@
+/* ============================================================
+   COLORS — "The Cloister" palette
+   Deep Navy · Crimson · Antique Gold · Cream
+   All values in oklch, lifted verbatim from the production site.
+   ============================================================ */
+
+:root {
+  /* ── Brand base scale ── */
+  --navy:          oklch(0.27 0.065 250);  /* primary institutional blue-navy   */
+  --navy-dark:     oklch(0.18 0.06 250);   /* footer / deepest ground           */
+  --navy-light:    oklch(0.38 0.07 250);   /* hover / raised navy surfaces       */
+
+  --crimson:       oklch(0.38 0.13 22);    /* header bar, accents, CTAs          */
+  --crimson-deep:  oklch(0.28 0.10 22);    /* crimson hover / dropdown ground    */
+  --crimson-light: oklch(0.50 0.12 22);    /* lighter crimson                    */
+
+  --gold:          oklch(0.72 0.12 80);    /* antique gold — rules, dividers     */
+  --gold-bright:   oklch(0.84 0.16 70);    /* logo rule / brightened gold        */
+  --gold-light:    oklch(0.85 0.10 80);    /* gold on dark, soft highlight       */
+
+  --cream:         oklch(0.98 0.015 90);   /* page ground — warm parchment       */
+  --cream-dark:    oklch(0.94 0.02 90);    /* alt section ground / borders       */
+  --white:         oklch(1 0 0);           /* card surface                       */
+
+  /* ── Semantic aliases ── */
+  --background:          var(--cream);
+  --foreground:          oklch(0.18 0.04 250);
+  --surface-card:        var(--white);
+  --surface-alt:         var(--cream-dark);
+  --surface-inverse:     var(--navy);
+  --surface-inverse-deep:var(--navy-dark);
+
+  --text-body:           oklch(0.18 0.04 250);
+  --text-muted:          oklch(0.5 0.04 250);
+  --text-on-dark:        var(--cream);
+  --text-on-dark-muted:  oklch(0.98 0.015 90 / 0.70);
+
+  --primary:             var(--navy);
+  --primary-foreground:  var(--cream);
+  --accent:              var(--crimson);
+  --accent-foreground:   var(--cream);
+
+  --border:              var(--cream-dark);
+  --border-strong:       oklch(0.88 0.02 90);
+  --ring:                var(--crimson);
+
+  /* Chart / data palette (from production) */
+  --chart-1: var(--navy);
+  --chart-2: var(--crimson);
+  --chart-3: var(--gold);
+  --chart-4: oklch(0.5 0.04 250);
+  --chart-5: var(--cream-dark);
+}

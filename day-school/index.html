@@ -1,25 +1,231 @@
 ---
-layout: landing
-title: "Day School — St Philomena School"
+layout: day-school
+nav: home
+title: "St Philomena School — Day School"
+description: "St Philomena School's Day School offers an authentic Catholic classical education for students in Years 7 & 8 at our Park Ridge campus in Queensland."
+hero_eyebrow: "† Catholic · Classical · Day School"
+hero_h1: "An Education Rooted"
+hero_h1_em: "in Truth &amp; Tradition"
+hero_desc: "St Philomena School's Day School programme offers an authentic Catholic classical education for students in Years 7 &amp; 8 — on our Park Ridge campus in Queensland."
 ---
 
-<main class="landing-page" style="min-height:100vh; background:var(--navy); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem 1.5rem; text-align:center;">
-  <a href="/" style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--gold); font-family:var(--font-label); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; margin-bottom:3rem; opacity:0.8;">
-    ← School Home
-  </a>
-  <img src="/project/assets/logo-full.png" alt="St Philomena School" style="width:140px; margin-bottom:2rem; opacity:0.95;">
-  <p style="font-family:var(--font-label); font-size:0.7rem; letter-spacing:0.2em; color:var(--gold); text-transform:uppercase; margin-bottom:0.75rem;">St Philomena School</p>
-  <h1 style="font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.5rem); color:var(--cream); font-weight:700; margin-bottom:1rem;">Day School</h1>
-  <div style="width:60px; height:2px; background:var(--gold); margin:0 auto 2rem;"></div>
-  <p style="font-family:var(--font-body); color:var(--cream); opacity:0.85; max-width:480px; line-height:1.75; font-size:1.05rem; margin-bottom:3rem;">
-    The St Philomena School Day School website is currently being prepared.<br>
-    Please check back soon, or contact the school directly for information.
-  </p>
-  <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-    <a href="tel:0738020088" class="btn btn-primary">
-      Call (07) 3802 0088
-    </a>
-    <a href="/" class="btn btn-secondary">Back to School Home</a>
-  </div>
-  <p style="font-family:var(--font-label); font-size:0.7rem; letter-spacing:0.1em; color:var(--gold); opacity:0.5; text-transform:uppercase; margin-top:4rem;">"Sine Deo Nihil"</p>
+<main>
+
+  <!-- ── Hero ── -->
+  <section class="home-hero">
+    <div class="hero-img-wrap">
+      <img src="/project/assets/chapel-interior.jpg" alt="Chapel interior" class="ken-burns">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-eyebrow fade-up fade-up-delay-1">{{ page.hero_eyebrow }}</p>
+        <h1 class="hero-h1 fade-up fade-up-delay-2">
+          {{ page.hero_h1 }}<br>
+          <em>{{ page.hero_h1_em }}</em>
+        </h1>
+        <div class="hero-rule fade-up fade-up-delay-3">
+          <p class="hero-desc">{{ page.hero_desc }}</p>
+        </div>
+        <div class="hero-btns fade-up fade-up-delay-4">
+          <a href="/day-school/enrol.html" class="btn btn-primary">
+            Enrol Now
+            <i data-lucide="arrow-right" class="icon-14"></i>
+          </a>
+          <a href="/day-school/about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- ── Motto banner ── -->
+  <section class="motto-banner">
+    <div class="container">
+      <div class="motto-divider">"Sine Deo Nihil"</div>
+      <p class="motto-sub">Without God there is Nothing</p>
+    </div>
+  </section>
+
+  <!-- ── Four pillars ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="pillars-intro reveal">
+        <span class="section-eyebrow">Our Foundation</span>
+        <h2 class="section-h2">Education for Education's Sake</h2>
+        <p class="body-text" style="margin-top:1rem;">
+          At St Philomena School, we value education not merely as a means to something else, but for its own sake. A true education forms the whole person — intellect, will, and character — in the company of fellow students and dedicated teachers.
+        </p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><i data-lucide="cross" class="icon-22"></i></div>
+          <h3 class="pillar-title">Catholic Faith</h3>
+          <p class="pillar-body">Every subject is taught within the framework of the Catholic Faith. We form students who know their Faith, practise it, and have a deep desire to serve God in all things.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><i data-lucide="book-open" class="icon-22"></i></div>
+          <h3 class="pillar-title">Classical Curriculum</h3>
+          <p class="pillar-body">Latin, Logic, Rhetoric, Literature, and History form the core of our Liberal Arts programme — developing memory, analysis, and the ability to express truth beautifully.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><i data-lucide="graduation-cap" class="icon-22"></i></div>
+          <h3 class="pillar-title">Character Formation</h3>
+          <p class="pillar-body">The most important part of education is the formation of character. We strive to produce young men and women who are balanced, responsible, and courageous in living their Faith.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><i data-lucide="map-pin" class="icon-22"></i></div>
+          <h3 class="pillar-title">On-Campus Community</h3>
+          <p class="pillar-body">Our Day School brings students together on our eleven-acre Park Ridge campus — a community of learning, worship, and friendship rooted in the Catholic tradition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Philosophy + image grid ── -->
+  <section class="section section-cream-dark" style="overflow:hidden">
+    <div class="container">
+      <div class="philosophy-grid">
+        <div class="img-cluster reveal">
+          <div class="img-cluster-grid">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/hero-classroom-7wyiCEKTwN6vYWCSsmSaRG.webp" alt="Classical classroom">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/school-photo-2_50501a39.jpg" alt="School grounds">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/school-photo-1_b292adba.jpg" alt="Students">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/hero-garden-axKgWznFwSKqriqWxEDbr5.webp" alt="School garden">
+          </div>
+          <div class="img-cluster-accent"></div>
+        </div>
+        <div class="philosophy-text reveal">
+          <span class="section-eyebrow">Our Philosophy</span>
+          <h2 class="section-h2">Forming Catholics<br><em>for Eternity</em></h2>
+          <div class="body-stack" style="margin-top:1.5rem;">
+            <p class="body-text">St Philomena School was established in response to the concerns of Catholic families about the available education choices for their children. Our school exists to provide an authentically Catholic education — one directed by the Catholic philosophy of life.</p>
+            <p class="body-text">Our classical education curriculum plays a very important role in the formation of character. Through the study of Latin, Logic, Rhetoric, Literature, and History, students develop self-discipline, diligence, memory, and the ability to analyse and express themselves.</p>
+          </div>
+          <div class="pull-quote">
+            <blockquote>The most important part of education is the formation of character.</blockquote>
+            <cite>— Fr Joseph Ockerse, Principal</cite>
+          </div>
+          <a href="/day-school/about.html" class="btn btn-navy">
+            Read Our Philosophy
+            <i data-lucide="arrow-right" class="icon-14"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Curriculum ── -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="curriculum-grid">
+        <div class="curriculum-text reveal">
+          <span class="section-eyebrow gold">What We Teach</span>
+          <h2 class="section-h2 cream">A Liberal Arts<br><em><span class="gold">Curriculum</span></em></h2>
+          <p class="body-text on-navy" style="margin:1.5rem 0 2rem;">
+            Our Day School programme covers Years 7 (Grammar Phase) and Year 8 (Logic Phase), offering a rigorous classical curriculum grounded in the Catholic intellectual tradition — taught in person by dedicated teachers on our Park Ridge campus.
+          </p>
+          <a href="/day-school/teaching.html" class="btn btn-secondary">
+            Full Curriculum
+            <i data-lucide="arrow-right" class="icon-14"></i>
+          </a>
+        </div>
+        <div class="subjects-grid reveal">
+          <div class="subject-row">
+            <span class="subject-name">Religion &amp; Catechism</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Latin</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">English Literature</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Logic</span>
+            <span class="badge badge-crimson">Yr 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">History (Ancient &amp; Modern)</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Mathematics</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Science</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Rhetoric</span>
+            <span class="badge badge-crimson">Yr 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Geography</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+          <div class="subject-row">
+            <span class="subject-name">Art &amp; Music</span>
+            <span class="badge badge-navy">Yr 7 &amp; 8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Campus + Stats ── -->
+  <section class="section section-cream" style="overflow:hidden">
+    <div class="container">
+      <div class="dl-grid">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/feature-books-JMwxXe4geHc3fqomKHJoYc.webp" alt="Classical books" class="reveal">
+        <div class="dl-text reveal">
+          <span class="section-eyebrow">Our Campus</span>
+          <h2 class="section-h2">Classical Education,<br><em>On Sacred Ground</em></h2>
+          <p class="body-text" style="margin-top:1.5rem;">
+            Set on eleven rural acres at Park Ridge, our campus is a place of learning, prayer, and community. Students attend daily Mass, receive a rigorous classical education, and grow in the Faith alongside their peers and teachers.
+          </p>
+          <div class="stats-inline">
+            <div class="stat-block">
+              <span class="stat-value">7 &amp; 8</span>
+              <span class="stat-label">Year Levels</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-value">1999</span>
+              <span class="stat-label">Founded</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-value">11 ac</span>
+              <span class="stat-label">Park Ridge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/campus-aerial_9d641911.jpg" alt="Campus aerial">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <span class="section-eyebrow gold">Begin the Journey</span>
+      <h2 class="cta-h2">Ready to Enrol?</h2>
+      <p class="body-text on-navy" style="font-size:1.15rem;line-height:1.6;margin-bottom:2rem;">
+        We welcome families who share our commitment to an authentic Catholic education. Contact us to learn more about our Day School programme and the enrolment process.
+      </p>
+      <div class="cta-btns">
+        <a href="/day-school/enrol.html" class="btn btn-primary">
+          Begin Enrolment
+          <i data-lucide="arrow-right" class="icon-14"></i>
+        </a>
+        <a href="/day-school/faq.html" class="btn btn-secondary">Frequently Asked Questions</a>
+      </div>
+    </div>
+  </section>
+
 </main>

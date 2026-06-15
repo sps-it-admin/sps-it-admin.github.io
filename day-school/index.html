@@ -3,123 +3,23 @@ layout: landing
 title: "Day School — St Philomena School"
 ---
 
-<style>
-  .ds-page {
-    min-height: 100vh;
-    background: var(--navy, #1a2744);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  .ds-crest {
-    width: 140px;
-    height: auto;
-    margin: 0 auto 2rem;
-    opacity: 0.95;
-  }
-  .ds-school-name {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.3rem, 3vw, 2rem);
-    letter-spacing: 0.18em;
-    color: var(--cream, #f5f0e8);
-    margin: 0 0 0.5rem;
-    text-transform: uppercase;
-  }
-  .ds-sub {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    letter-spacing: 0.12em;
-    color: var(--gold, #c9a84c);
-    margin: 0 0 0.5rem;
-    text-transform: uppercase;
-  }
-  .ds-rule {
-    width: 80px;
-    height: 1px;
-    background: var(--gold, #c9a84c);
-    margin: 1.5rem auto;
-    opacity: 0.6;
-  }
-  .ds-motto {
-    font-family: Georgia, serif;
-    font-style: italic;
-    color: var(--gold, #c9a84c);
-    font-size: 1.1rem;
-    margin: 0 0 0.35rem;
-    opacity: 0.85;
-  }
-  .ds-motto-en {
-    font-family: Georgia, serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: oklch(0.98 0.015 90 / 0.4);
-    margin: 0 0 2.5rem;
-  }
-  .ds-coming-soon {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
-    color: var(--cream, #f5f0e8);
-    letter-spacing: 0.05em;
-    margin: 0 0 1.5rem;
-  }
-  .ds-message {
-    max-width: 520px;
-    margin: 0 auto 2.5rem;
-    color: oklch(0.98 0.015 90 / 0.65);
-    font-family: Georgia, serif;
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-  .ds-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: Georgia, serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold, #c9a84c);
-    text-decoration: none;
-    border: 1px solid oklch(0.72 0.12 80 / 0.4);
-    padding: 0.7rem 1.5rem;
-    transition: border-color 0.25s, background 0.25s;
-  }
-  .ds-back:hover {
-    border-color: var(--gold, #c9a84c);
-    background: oklch(1 0 0 / 0.05);
-  }
-  .ds-location {
-    margin-top: 3rem;
-    font-family: Georgia, serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: oklch(0.98 0.015 90 / 0.3);
-  }
-</style>
-
-<main class="ds-page">
-  <img src="/project/assets/logo-full.png" alt="St Philomena School crest" class="ds-crest">
-
-  <p class="ds-school-name">St Philomena School</p>
-  <p class="ds-sub">Day School</p>
-
-  <div class="ds-rule"></div>
-
-  <p class="ds-motto">"Sine Deo Nihil"</p>
-  <p class="ds-motto-en">Without God there is Nothing</p>
-
-  <h1 class="ds-coming-soon">Coming Soon</h1>
-
-  <p class="ds-message">
-    The Day School website is currently being prepared. Our onsite Catholic classical education programme at Park Ridge, QLD serves students from Prep to Year 8. Please contact the school office for further information in the meantime.
+<main class="landing-page" style="min-height:100vh; background:var(--navy); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem 1.5rem; text-align:center;">
+  <a href="/" style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--gold); font-family:var(--font-label); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; margin-bottom:3rem; opacity:0.8;">
+    ← School Home
+  </a>
+  <img src="/project/assets/logo-full.png" alt="St Philomena School" style="width:140px; margin-bottom:2rem; opacity:0.95;">
+  <p style="font-family:var(--font-label); font-size:0.7rem; letter-spacing:0.2em; color:var(--gold); text-transform:uppercase; margin-bottom:0.75rem;">St Philomena School</p>
+  <h1 style="font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.5rem); color:var(--cream); font-weight:700; margin-bottom:1rem;">Day School</h1>
+  <div style="width:60px; height:2px; background:var(--gold); margin:0 auto 2rem;"></div>
+  <p style="font-family:var(--font-body); color:var(--cream); opacity:0.85; max-width:480px; line-height:1.75; font-size:1.05rem; margin-bottom:3rem;">
+    The St Philomena School Day School website is currently being prepared.<br>
+    Please check back soon, or contact the school directly for information.
   </p>
-
-  <a href="/" class="ds-back">← Return to School Home</a>
-
-  <p class="ds-location">61 Koplick Road, Park Ridge QLD &nbsp;·&nbsp; Est. 1999</p>
+  <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+    <a href="tel:0738020088" class="btn btn-primary">
+      Call (07) 3802 0088
+    </a>
+    <a href="/" class="btn btn-secondary">Back to School Home</a>
+  </div>
+  <p style="font-family:var(--font-label); font-size:0.7rem; letter-spacing:0.1em; color:var(--gold); opacity:0.5; text-transform:uppercase; margin-top:4rem;">"Sine Deo Nihil"</p>
 </main>

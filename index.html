@@ -1,172 +1,174 @@
 ---
 layout: landing
 title: "St Philomena School"
-description: "St Philomena School — Catholic classical education at Park Ridge, QLD. Day School (Prep–Year 8) and Distance Learning (Years 7–8)."
+description: "Catholic classical education at Park Ridge, QLD — Day School and Distance Learning."
 ---
 
 <style>
-  .landing-body {
-    background: var(--navy, #1a2744);
+  .landing-wrap {
     min-height: 100vh;
-  }
-  .landing-page {
-    min-height: 100vh;
+    background: var(--navy);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .landing-hero {
+    padding: 4rem 1.5rem;
     text-align: center;
-    margin-bottom: 3rem;
+  }
+  .landing-brand {
+    margin-bottom: 3.5rem;
   }
   .landing-crest {
-    width: 160px;
-    height: auto;
-    margin: 0 auto 1.75rem;
-    display: block;
+    width: 150px;
+    margin-bottom: 1.5rem;
   }
   .landing-school-name {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-    letter-spacing: 0.2em;
-    color: var(--cream, #f5f0e8);
-    margin: 0 0 0.4rem;
+    font-family: var(--font-label);
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    color: var(--gold);
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .landing-tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
   }
   .landing-motto {
-    font-family: Georgia, serif;
+    font-family: var(--font-body);
     font-style: italic;
-    color: var(--gold, #c9a84c);
-    font-size: 1.05rem;
-    margin: 0 0 0.3rem;
-    opacity: 0.9;
+    color: var(--gold);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
   }
   .landing-motto-en {
-    font-family: Georgia, serif;
-    font-size: 0.7rem;
+    font-family: var(--font-label);
+    font-size: 0.65rem;
     letter-spacing: 0.15em;
+    color: var(--cream);
+    opacity: 0.4;
     text-transform: uppercase;
-    color: oklch(0.98 0.015 90 / 0.4);
-    margin: 0 0 0;
   }
-  .landing-rule {
-    width: 80px;
+  .landing-divider {
+    width: 60px;
     height: 1px;
-    background: var(--gold, #c9a84c);
-    margin: 1.5rem auto;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 2.5rem auto;
+  }
+  .landing-prompt {
+    font-family: var(--font-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--cream);
     opacity: 0.5;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
   }
   .landing-choices {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.75rem;
+    gap: 1.5rem;
+    max-width: 720px;
     width: 100%;
-    max-width: 820px;
   }
   .choice-card {
-    background: var(--cream, #f5f0e8);
-    border: 1px solid oklch(0.72 0.12 80 / 0.25);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(var(--gold-rgb, 180,140,60), 0.25);
+    border-radius: 2px;
     padding: 2.5rem 2rem;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-shadow: 0 4px 24px oklch(0 0 0 / 0.3);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    cursor: pointer;
   }
   .choice-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px oklch(0 0 0 / 0.5);
-    border-color: var(--gold, #c9a84c);
+    background: rgba(255,255,255,0.07);
+    border-color: var(--gold);
+    transform: translateY(-3px);
   }
   .choice-card-eyebrow {
-    font-family: Georgia, serif;
+    font-family: var(--font-label);
     font-size: 0.65rem;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
+    color: var(--gold);
     text-transform: uppercase;
-    color: var(--crimson, #8b1a1a);
-    margin: 0;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
   }
   .choice-card-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--cream);
     font-weight: 700;
-    color: var(--navy, #1a2744);
-    margin: 0;
-    line-height: 1.15;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
   .choice-card-desc {
-    font-family: Georgia, serif;
-    font-size: 0.9rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--cream);
+    opacity: 0.7;
     line-height: 1.7;
-    color: oklch(0.27 0.065 250 / 0.7);
-    margin: 0;
     flex: 1;
+    margin-bottom: 1.5rem;
   }
-  .choice-card-btn {
-    display: inline-flex;
+  .choice-card-cta {
+    font-family: var(--font-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: Georgia, serif;
-    font-size: 0.75rem;
+  }
+  .choice-card-cta::after {
+    content: '→';
+  }
+  .landing-footer-note {
+    margin-top: 4rem;
+    font-family: var(--font-label);
+    font-size: 0.65rem;
     letter-spacing: 0.12em;
+    color: var(--cream);
+    opacity: 0.25;
     text-transform: uppercase;
-    font-weight: 600;
-    padding: 0.65rem 1.5rem;
-    border: 1px solid var(--navy, #1a2744);
-    color: var(--navy, #1a2744);
-    background: transparent;
-    transition: background 0.2s, color 0.2s;
-    margin-top: 0.5rem;
-  }
-  .choice-card:hover .choice-card-btn {
-    background: var(--navy, #1a2744);
-    color: var(--cream, #f5f0e8);
-  }
-  .choice-card-icon {
-    font-size: 2rem;
-    line-height: 1;
-    color: var(--crimson, #8b1a1a);
-    opacity: 0.7;
-  }
-  @media (max-width: 600px) {
-    .landing-page { padding: 3rem 1.25rem; }
-    .landing-crest { width: 120px; }
   }
 </style>
 
-<main>
-  <div class="landing-page">
-    <div class="landing-hero">
-      <img src="/project/assets/logo-full.png" alt="St Philomena School crest" class="landing-crest">
-      <h1 class="landing-school-name">St Philomena School</h1>
-      <div class="landing-rule"></div>
-      <p class="landing-motto">"Sine Deo Nihil"</p>
-      <p class="landing-motto-en">Without God there is Nothing</p>
-    </div>
-
-    <div class="landing-choices">
-
-      <a href="/day-school/" class="choice-card">
-        <p class="choice-card-eyebrow">Park Ridge, QLD · Prep – Year 8</p>
-        <h2 class="choice-card-title">Day School</h2>
-        <p class="choice-card-desc">Onsite Catholic classical education at Park Ridge, QLD, for Prep to Year 8. Forming the whole person — intellect, will, and character — within the Catholic faith.</p>
-        <span class="choice-card-btn">Visit Day School →</span>
-      </a>
-
-      <a href="/distance-learning/" class="choice-card">
-        <p class="choice-card-eyebrow">Australia-wide · Years 7 &amp; 8</p>
-        <h2 class="choice-card-title">Distance Learning</h2>
-        <p class="choice-card-desc">Authentic Catholic classical education for Years 7 &amp; 8, delivered to families across Australia. The same rigorous curriculum, wherever you are.</p>
-        <span class="choice-card-btn">Visit Distance Learning →</span>
-      </a>
-
-    </div>
+<div class="landing-wrap">
+  <div class="landing-brand">
+    <img src="/project/assets/logo-full.png" alt="St Philomena School crest" class="landing-crest">
+    <p class="landing-school-name">St Philomena School</p>
+    <h1 class="landing-tagline">Park Ridge, Queensland</h1>
+    <p class="landing-motto">"Sine Deo Nihil"</p>
+    <p class="landing-motto-en">Without God there is Nothing</p>
   </div>
-</main>
+
+  <div class="landing-divider"></div>
+  <p class="landing-prompt">Please select your school</p>
+
+  <div class="landing-choices">
+    <a href="/day-school/" class="choice-card">
+      <span class="choice-card-eyebrow">On Campus · Prep – Year 8</span>
+      <h2 class="choice-card-title">Day School</h2>
+      <p class="choice-card-desc">Onsite Catholic classical education at our Park Ridge campus. A full school experience grounded in Faith, virtue, and the Liberal Arts.</p>
+      <span class="choice-card-cta">Visit Day School</span>
+    </a>
+    <a href="/distance-learning/" class="choice-card">
+      <span class="choice-card-eyebrow">Australia-Wide · Years 7 & 8</span>
+      <h2 class="choice-card-title">Distance Learning</h2>
+      <p class="choice-card-desc">Authentic Catholic classical education delivered to families across Australia — the same rigorous curriculum, wherever you are.</p>
+      <span class="choice-card-cta">Visit Distance Learning</span>
+    </a>
+  </div>
+
+  <p class="landing-footer-note">&copy; 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, Park Ridge QLD 4125</p>
+</div>

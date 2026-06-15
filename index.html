@@ -1,231 +1,172 @@
 ---
-layout: default
-nav: home
-title: "St Philomena School — Distance Learning"
-description: "St Philomena School's Distance Learning programme offers an authentic Catholic classical education for students in Years 7 & 8, wherever they are in Australia."
-hero_eyebrow: "† Catholic · Classical · Distance Learning"
-hero_h1: "An Education Rooted"
-hero_h1_em: "in Truth & Tradition"
-hero_desc: "St Philomena School's Distance Learning programme offers an authentic Catholic classical education for students in Years 7 & 8 — wherever they are in Australia."
+layout: landing
+title: "St Philomena School"
+description: "St Philomena School — Catholic classical education at Park Ridge, QLD. Day School (Prep–Year 8) and Distance Learning (Years 7–8)."
 ---
 
+<style>
+  .landing-body {
+    background: var(--navy, #1a2744);
+    min-height: 100vh;
+  }
+  .landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .landing-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .landing-crest {
+    width: 160px;
+    height: auto;
+    margin: 0 auto 1.75rem;
+    display: block;
+  }
+  .landing-school-name {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+    letter-spacing: 0.2em;
+    color: var(--cream, #f5f0e8);
+    margin: 0 0 0.4rem;
+    text-transform: uppercase;
+  }
+  .landing-motto {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--gold, #c9a84c);
+    font-size: 1.05rem;
+    margin: 0 0 0.3rem;
+    opacity: 0.9;
+  }
+  .landing-motto-en {
+    font-family: Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: oklch(0.98 0.015 90 / 0.4);
+    margin: 0 0 0;
+  }
+  .landing-rule {
+    width: 80px;
+    height: 1px;
+    background: var(--gold, #c9a84c);
+    margin: 1.5rem auto;
+    opacity: 0.5;
+  }
+  .landing-choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    width: 100%;
+    max-width: 820px;
+  }
+  .choice-card {
+    background: var(--cream, #f5f0e8);
+    border: 1px solid oklch(0.72 0.12 80 / 0.25);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 24px oklch(0 0 0 / 0.3);
+  }
+  .choice-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px oklch(0 0 0 / 0.5);
+    border-color: var(--gold, #c9a84c);
+  }
+  .choice-card-eyebrow {
+    font-family: Georgia, serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson, #8b1a1a);
+    margin: 0;
+  }
+  .choice-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--navy, #1a2744);
+    margin: 0;
+    line-height: 1.15;
+  }
+  .choice-card-desc {
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: oklch(0.27 0.065 250 / 0.7);
+    margin: 0;
+    flex: 1;
+  }
+  .choice-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: Georgia, serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border: 1px solid var(--navy, #1a2744);
+    color: var(--navy, #1a2744);
+    background: transparent;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 0.5rem;
+  }
+  .choice-card:hover .choice-card-btn {
+    background: var(--navy, #1a2744);
+    color: var(--cream, #f5f0e8);
+  }
+  .choice-card-icon {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--crimson, #8b1a1a);
+    opacity: 0.7;
+  }
+  @media (max-width: 600px) {
+    .landing-page { padding: 3rem 1.25rem; }
+    .landing-crest { width: 120px; }
+  }
+</style>
+
 <main>
+  <div class="landing-page">
+    <div class="landing-hero">
+      <img src="/project/assets/logo-full.png" alt="St Philomena School crest" class="landing-crest">
+      <h1 class="landing-school-name">St Philomena School</h1>
+      <div class="landing-rule"></div>
+      <p class="landing-motto">"Sine Deo Nihil"</p>
+      <p class="landing-motto-en">Without God there is Nothing</p>
+    </div>
 
-  <!-- ── Hero ── -->
-  <section class="home-hero">
-    <div class="hero-img-wrap">
-      <img src="/project/assets/chapel-interior.jpg" alt="Chapel interior" class="ken-burns">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="hero-eyebrow fade-up fade-up-delay-1">{{ page.hero_eyebrow }}</p>
-        <h1 class="hero-h1 fade-up fade-up-delay-2">
-          {{ page.hero_h1 }}<br>
-          <em>{{ page.hero_h1_em }}</em>
-        </h1>
-        <div class="hero-rule fade-up fade-up-delay-3">
-          <p class="hero-desc">{{ page.hero_desc }}</p>
-        </div>
-        <div class="hero-btns fade-up fade-up-delay-4">
-          <a href="/enrol.html" class="btn btn-primary">
-            Enrol Now
-            <i data-lucide="arrow-right" class="icon-14"></i>
-          </a>
-          <a href="/about.html" class="btn btn-secondary">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-fade"></div>
-  </section>
+    <div class="landing-choices">
 
-  <!-- ── Motto banner ── -->
-  <section class="motto-banner">
-    <div class="container">
-      <div class="motto-divider">"Sine Deo Nihil"</div>
-      <p class="motto-sub">Without God there is Nothing</p>
-    </div>
-  </section>
+      <a href="/day-school/" class="choice-card">
+        <p class="choice-card-eyebrow">Park Ridge, QLD · Prep – Year 8</p>
+        <h2 class="choice-card-title">Day School</h2>
+        <p class="choice-card-desc">Onsite Catholic classical education at Park Ridge, QLD, for Prep to Year 8. Forming the whole person — intellect, will, and character — within the Catholic faith.</p>
+        <span class="choice-card-btn">Visit Day School →</span>
+      </a>
 
-  <!-- ── Four pillars ── -->
-  <section class="section section-cream">
-    <div class="container">
-      <div class="pillars-intro reveal">
-        <span class="section-eyebrow">Our Foundation</span>
-        <h2 class="section-h2">Education for Education's Sake</h2>
-        <p class="body-text" style="margin-top:1rem;">
-          At St Philomena School, we value education not merely as a means to something else, but for its own sake. A true education forms the whole person — intellect, will, and character.
-        </p>
-      </div>
-      <div class="pillars-grid">
-        <div class="pillar-card reveal">
-          <div class="pillar-icon"><i data-lucide="cross" class="icon-22"></i></div>
-          <h3 class="pillar-title">Catholic Faith</h3>
-          <p class="pillar-body">Every subject is taught within the framework of the Catholic Faith. We form students who know their Faith, practise it, and have a deep desire to serve God.</p>
-        </div>
-        <div class="pillar-card reveal">
-          <div class="pillar-icon"><i data-lucide="book-open" class="icon-22"></i></div>
-          <h3 class="pillar-title">Classical Curriculum</h3>
-          <p class="pillar-body">Latin, Logic, Rhetoric, Literature, and History form the core of our Liberal Arts programme — developing memory, analysis, and the ability to express truth beautifully.</p>
-        </div>
-        <div class="pillar-card reveal">
-          <div class="pillar-icon"><i data-lucide="graduation-cap" class="icon-22"></i></div>
-          <h3 class="pillar-title">Character Formation</h3>
-          <p class="pillar-body">The most important part of education is the formation of character. We strive to produce young men and women who are balanced, responsible, and courageous.</p>
-        </div>
-        <div class="pillar-card reveal">
-          <div class="pillar-icon"><i data-lucide="map-pin" class="icon-22"></i></div>
-          <h3 class="pillar-title">Distance Learning</h3>
-          <p class="pillar-body">Our Distance Learning programme brings St Philomena's classical Catholic education directly to families across Australia, regardless of location.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <a href="/distance-learning/" class="choice-card">
+        <p class="choice-card-eyebrow">Australia-wide · Years 7 &amp; 8</p>
+        <h2 class="choice-card-title">Distance Learning</h2>
+        <p class="choice-card-desc">Authentic Catholic classical education for Years 7 &amp; 8, delivered to families across Australia. The same rigorous curriculum, wherever you are.</p>
+        <span class="choice-card-btn">Visit Distance Learning →</span>
+      </a>
 
-  <!-- ── Philosophy + image grid ── -->
-  <section class="section section-cream-dark" style="overflow:hidden">
-    <div class="container">
-      <div class="philosophy-grid">
-        <div class="img-cluster reveal">
-          <div class="img-cluster-grid">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/hero-classroom-7wyiCEKTwN6vYWCSsmSaRG.webp" alt="Classical classroom">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/school-photo-2_50501a39.jpg" alt="Statue garden">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/school-photo-1_b292adba.jpg" alt="Students">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/hero-garden-axKgWznFwSKqriqWxEDbr5.webp" alt="School garden">
-          </div>
-          <div class="img-cluster-accent"></div>
-        </div>
-        <div class="philosophy-text reveal">
-          <span class="section-eyebrow">Our Philosophy</span>
-          <h2 class="section-h2">Forming Catholics<br><em>for Eternity</em></h2>
-          <div class="body-stack" style="margin-top:1.5rem;">
-            <p class="body-text">St Philomena School was established in response to the concerns of Catholic families about the available education choices for their children. Our school exists to provide an authentically Catholic education — one directed by the Catholic philosophy of life.</p>
-            <p class="body-text">Our classical education curriculum plays a very important role in the formation of character. Through the study of Latin, Logic, Rhetoric, Literature, and History, students develop self-discipline, diligence, memory, and the ability to analyse and express themselves.</p>
-          </div>
-          <div class="pull-quote">
-            <blockquote>The most important part of education is the formation of character.</blockquote>
-            <cite>— Fr Joseph Ockerse, Principal</cite>
-          </div>
-          <a href="/about.html" class="btn btn-navy">
-            Read Our Philosophy
-            <i data-lucide="arrow-right" class="icon-14"></i>
-          </a>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- ── Curriculum ── -->
-  <section class="section section-navy">
-    <div class="container">
-      <div class="curriculum-grid">
-        <div class="curriculum-text reveal">
-          <span class="section-eyebrow gold">What We Teach</span>
-          <h2 class="section-h2 cream">A Liberal Arts<br><em><span class="gold">Curriculum</span></em></h2>
-          <p class="body-text on-navy" style="margin:1.5rem 0 2rem;">
-            Our Distance Learning programme covers Years 7 (Grammar Phase) and Year 8 (Logic Phase), offering a rigorous classical curriculum grounded in the Catholic intellectual tradition.
-          </p>
-          <a href="/teaching.html" class="btn btn-secondary">
-            Full Curriculum
-            <i data-lucide="arrow-right" class="icon-14"></i>
-          </a>
-        </div>
-        <div class="subjects-grid reveal">
-          <div class="subject-row">
-            <span class="subject-name">Religion &amp; Catechism</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Latin</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">English Literature</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Logic</span>
-            <span class="badge badge-crimson">Yr 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">History (Ancient &amp; Modern)</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Mathematics</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Science</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Rhetoric</span>
-            <span class="badge badge-crimson">Yr 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Geography</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-          <div class="subject-row">
-            <span class="subject-name">Art &amp; Music</span>
-            <span class="badge badge-navy">Yr 7 &amp; 8</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Distance Learning + Stats ── -->
-  <section class="section section-cream" style="overflow:hidden">
-    <div class="container">
-      <div class="dl-grid">
-        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/feature-books-JMwxXe4geHc3fqomKHJoYc.webp" alt="Classical books" class="reveal">
-        <div class="dl-text reveal">
-          <span class="section-eyebrow">Distance Learning</span>
-          <h2 class="section-h2">Classical Education,<br><em>Wherever You Are</em></h2>
-          <p class="body-text" style="margin-top:1.5rem;">
-            Our Distance Learning programme delivers the same rigorous Catholic classical education as our day school, adapted for families across Australia. Students receive structured lesson materials, regular teacher contact, and access to the full curriculum.
-          </p>
-          <div class="stats-inline">
-            <div class="stat-block">
-              <span class="stat-value">7 &amp; 8</span>
-              <span class="stat-label">Year Levels</span>
-            </div>
-            <div class="stat-block">
-              <span class="stat-value">1999</span>
-              <span class="stat-label">Founded</span>
-            </div>
-            <div class="stat-block">
-              <span class="stat-value">QLD</span>
-              <span class="stat-label">Park Ridge</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA ── -->
-  <section class="cta-section">
-    <div class="cta-bg">
-      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663413087806/55wBVxrGbCQaoGXKotXahV/campus-aerial_9d641911.jpg" alt="Campus">
-    </div>
-    <div class="cta-overlay"></div>
-    <div class="cta-content reveal">
-      <span class="section-eyebrow gold">Begin the Journey</span>
-      <h2 class="cta-h2">Ready to Enrol?</h2>
-      <p class="body-text on-navy" style="font-size:1.15rem;line-height:1.6;margin-bottom:2rem;">
-        We welcome families who share our commitment to an authentic Catholic education. Contact us to learn more about our Distance Learning programme and the enrolment process.
-      </p>
-      <div class="cta-btns">
-        <a href="/enrol.html" class="btn btn-primary">
-          Begin Enrolment
-          <i data-lucide="arrow-right" class="icon-14"></i>
-        </a>
-        <a href="/faq.html" class="btn btn-secondary">Frequently Asked Questions</a>
-      </div>
-    </div>
-  </section>
-
+  </div>
 </main>

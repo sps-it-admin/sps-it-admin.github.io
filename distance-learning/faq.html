@@ -1,0 +1,58 @@
+---
+layout: distance-learning
+nav: faq
+title: "FAQ"
+page_hero_label: "FAQ"
+page_hero_heading: "Frequently Asked Questions"
+---
+
+<main>
+  <section class="page-hero">
+    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.page_hero_label }}</p>
+      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      {% if site.data.faqs.items %}
+        <div class="faq-list">
+          {% for item in site.data.faqs.items %}
+          <div class="faq-item reveal">
+            <h3 class="faq-question">{{ item.question }}</h3>
+            <div class="faq-answer">{{ item.answer | markdownify }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="stub-inner">
+          <p class="stub-quote">"Sine Deo Nihil"</p>
+          <p class="stub-body">
+            Our full FAQ is being prepared. For any questions, please contact the Distance Learning office directly — we are happy to help.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="/distance-learning/enrol.html" class="btn btn-navy">
+              Enrolment Enquiries
+              <i data-lucide="arrow-right" class="icon-14"></i>
+            </a>
+            <a href="/distance-learning/" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">Back to Home</a>
+          </div>
+        </div>
+      {% endif %}
+
+      <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--cream-dark,#e8e0d4);">
+        <p class="body-text" style="margin-bottom:1.5rem;">Have a question not listed here? Contact our Distance Learning office.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="/distance-learning/enrol.html" class="btn btn-navy">
+            Enrolment Enquiries
+            <i data-lucide="arrow-right" class="icon-14"></i>
+          </a>
+          <a href="/distance-learning/" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

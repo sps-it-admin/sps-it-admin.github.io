@@ -1,0 +1,73 @@
+---
+layout: day-school
+nav: about
+title: "Our Staff"
+description: "Meet the dedicated staff of St Philomena School Day School."
+page_hero_label: "Our Community"
+page_hero_heading: "Our Staff"
+---
+
+<main>
+
+  <!-- ── Page hero ── -->
+  <section class="page-hero">
+    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.page_hero_label }}</p>
+      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+    </div>
+  </section>
+
+  <!-- ── Staff intro ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="reveal" style="max-width:42rem;margin:0 auto;text-align:center;">
+        <span class="section-eyebrow">{{ page.staff_eyebrow | default: "Dedicated to Your Children" }}</span>
+        <h2 class="section-h2" style="margin-top:0.75rem;">{{ page.staff_heading | default: "The People Who<br><em>Teach &amp; Lead</em>" }}</h2>
+        {% if page.staff_intro %}
+        <p class="body-text" style="margin-top:1.25rem;">{{ page.staff_intro }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Staff grid ── -->
+  {% assign staff_by_dept = site.data.day_school_staff.members | group_by: "department" %}
+  {% for dept in staff_by_dept %}
+  <section class="section {% cycle 'section-cream', 'section-cream-dark' %}">
+    <div class="container">
+      {% if dept.name != "" %}
+      <div class="reveal" style="margin-bottom:2rem;">
+        <span class="section-eyebrow">{{ dept.name }}</span>
+      </div>
+      {% endif %}
+      <div class="staff-grid">
+        {% for member in dept.items %}
+        {% if member.name != "" %}
+        <div class="staff-card reveal">
+          {% if member.photo %}
+          <div class="staff-photo-wrap">
+            <img src="{{ member.photo }}" alt="{{ member.name }}" class="staff-photo">
+          </div>
+          {% else %}
+          <div class="staff-photo-wrap staff-photo-placeholder">
+            <i data-lucide="user" class="icon-32"></i>
+          </div>
+          {% endif %}
+          <div class="staff-info">
+            <h3 class="staff-name">{{ member.name }}</h3>
+            <p class="staff-role">{{ member.role }}</p>
+            {% if member.bio and member.bio != "" %}
+            <p class="staff-bio">{{ member.bio }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+</main>

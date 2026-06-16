@@ -1,0 +1,190 @@
+members:
+  - name: "Father Joseph Ockerse"
+    role: "Principal"
+    department: "Leadership"
+    bio: ""
+
+  - name: "Mrs Angela Marin"
+    role: "Head of Day School"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "Mr Clinton Hall"
+    role: "Business Manager"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "Mr Nathan Tait"
+    role: "Business Manager"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "Mrs Laura Payne"
+    role: "School Administrator"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "Mrs Marian Pecats"
+    role: "School Administrator"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "TBA"
+    role: "Whole School Curriculum Coordinator"
+    department: "Executive & Administration"
+    bio: ""
+
+  - name: "Miss Ora Duffley"
+    role: "Preparatory"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Miss Hannah Sloane"
+    role: "Year 1"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Miss Frances Erbacher"
+    role: "Year 2"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Lawrence Phillips"
+    role: "Year 3"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Miss Catherine Ahern"
+    role: "Year 4"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Mrs Sheri-Ann O'Shea"
+    role: "Year 5"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Trevor Briggs"
+    role: "Year 6"
+    department: "Primary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Edmund O'Shea"
+    role: "Junior, Middle & Senior Latin"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Rohininandan Das"
+    role: "Middle Years Mathematics & Senior Mathematics Methods"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Ignatius Chipperfield"
+    role: "Senior Business & Legal Studies"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mrs Kylie Sandilands"
+    role: "Junior Physical Science, Middle Years Biology & Senior Biology"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "TBA"
+    role: "Junior and Middle Years Humanities & Middle Years English"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mrs Megan Hardess"
+    role: "Junior Years Mathematics & Senior General Mathematics"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Miss Grace Goldthorpe"
+    role: "Junior and Middle Years English"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Miss Christine Mulcahy"
+    role: "Senior Ancient History & Senior English"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mrs Karen Wilson"
+    role: "Middle Years Chemistry & Senior Chemistry"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mr Alex Hobbs"
+    role: "Junior & Middle Latin"
+    department: "Secondary Teaching Staff"
+    bio: ""
+
+  - name: "Mrs Kylie Hawkins"
+    role: "Inclusive Education Teacher"
+    department: "Specialist Teaching Staff"
+    bio: ""
+
+  - name: "Mr Alex Harding"
+    role: "Prep to Year 10 Music Teacher"
+    department: "Specialist Teaching Staff"
+    bio: ""
+
+  - name: "Mr Matthew Hardess"
+    role: "Primary HPE & Secondary HPE"
+    department: "Specialist Teaching Staff"
+    bio: ""
+
+  - name: "Father Mwangi"
+    role: "Religious Education, First Communion, Catechism"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Father du Chazaud"
+    role: "Religious Education, First Communion, Catechism"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mrs Claire Wall"
+    role: "Teacher Aide"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Miss Anne Ockerse"
+    role: "Teacher Aide"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mrs Sarah Braaksma"
+    role: "Teacher Aide"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mrs Ellen Gaynor"
+    role: "Librarian"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mrs Justina Turrisi"
+    role: "Uniform Shop Convenor"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mr Paul de Groot"
+    role: "Science Lab Technician"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mr Nick Mulcahy"
+    role: "Maintenance"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mr Stephen Robinson"
+    role: "Grounds"
+    department: "Support Staff"
+    bio: ""
+
+  - name: "Mr Lee Summerville"
+    role: "IT Technical Support"
+    department: "Support Staff"
+    bio: ""

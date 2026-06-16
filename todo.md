@@ -23,14 +23,18 @@
 
 - [ ] Home (`/distance-learning/index.html`)
 - [ ] About (`/distance-learning/about.html`)
-  - [ ] Our Philosophy
-  - [ ] School Vision
-  - [ ] History
-  - [ ] Principal's Welcome
+  - [ ] About (Welcome)
+  - [ ] Philosophy of Education
+  - [ ] Employment
+  - [ ] Fee Schedule
 - [ ] Teaching & Learning (`/distance-learning/teaching.html`)
-  - [ ] Grammar Phase (Yr 7)
-  - [ ] Logic Phase (Yr 8)
-  - [ ] Curriculum Overview
+  - [ ] Logic Phase
 - [ ] Enrolments (`/distance-learning/enrol.html`)
+  - [ ] Expressions of Interest
+  - [ ] Enrolment Process
 - [ ] Community (`/distance-learning/community.html`)
-- [ ] FAQ (`/distance-learning/faq.html`)
+  - [ ] News
+  - [ ] Parent Handbook
+  - [ ] Student Handbook
+  - [ ] IT Requirements
+- [ ] Frequently Asked Questions (`/distance-learning/faq.html`)

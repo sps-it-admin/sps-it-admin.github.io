@@ -2,7 +2,7 @@
 
 ## Day School (`/day-school/`)
 
-- [ ] Home (`/day-school/index.html`)
+- [x] Home (`/day-school/index.html`)
 - [ ] About (`/day-school/about.html`)
   - [ ] Our Philosophy
   - [ ] School Vision

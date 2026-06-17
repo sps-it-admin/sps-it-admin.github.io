@@ -12,7 +12,7 @@
 - [ ] School Life
   - [ ] School Calendar
   - [x] Music
-  - [ ] Drama
+  - [x] Drama
   - [ ] Sport
   - [ ] Classical Books
 - [ ] Admissions

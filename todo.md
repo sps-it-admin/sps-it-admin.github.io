@@ -3,11 +3,11 @@
 ## Day School (`/day-school/`)
 
 - [x] Home (`/day-school/index.html`)
-- [ ] About (`/day-school/about.html`)
-  - [ ] Our Philosophy
-  - [ ] School Vision
-  - [ ] History
-  - [ ] Principal's Welcome
+- [x] About (`/day-school/about.html`)
+  - [x] Our Philosophy
+  - [x] School Vision
+  - [x] History
+  - [x] Principal's Welcome
   - [ ] Our Staff (`/day-school/our-staff.html`)
 - [ ] Teaching & Learning (`/day-school/teaching.html`)
   - [ ] Grammar Phase (Yr 7)

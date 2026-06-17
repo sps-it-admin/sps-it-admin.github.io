@@ -13,7 +13,7 @@
   - [ ] School Calendar
   - [x] Music
   - [x] Drama
-  - [ ] Sport
+  - [x] Sport
   - [ ] Classical Books
 - [ ] Admissions
   - [ ] Admission Process

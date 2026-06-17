@@ -7,7 +7,7 @@
   - [ ] About
   - [ ] Our Campus
   - [ ] Our Staff
-  - [ ] Classical Education
+  - [x] Classical Education
   - [ ] Annual Report
 - [ ] School Life
   - [ ] School Calendar

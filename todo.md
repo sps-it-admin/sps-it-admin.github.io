@@ -11,7 +11,7 @@
   - [ ] Annual Report
 - [ ] School Life
   - [ ] School Calendar
-  - [ ] Music
+  - [x] Music
   - [ ] Drama
   - [ ] Sport
   - [ ] Classical Books

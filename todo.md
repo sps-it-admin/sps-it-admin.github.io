@@ -4,6 +4,46 @@
 
 - [x] Home (`/day-school/index.html`)
 - [ ] Navigation Bar
+  - [ ] About Us
+    - [ ] About
+    - [ ] Our Campus
+    - [ ] Our Staff
+    - [ ] Classical Education
+    - [ ] Annual Report
+  - [ ] School Life
+    - [ ] School Calendar
+    - [ ] Music
+    - [ ] Drama
+    - [ ] Sport
+    - [ ] Classical Books
+  - [ ] Admissions
+    - [ ] Admission Process
+    - [ ] Prospectus & Handbook
+    - [ ] Fee Schedule
+    - [ ] Bus Transport
+  - [ ] Our Community
+    - [ ] Uniform Shop
+    - [ ] Parents & Friends
+    - [ ] Parent Portal
+  - [ ] Portal
+    - [ ] School Portal
+    - [ ] Forms
+      - [ ] Accident Claim Form
+      - [ ] AHI Claim Form Sport/Volunteers
+      - [ ] Insured Authorization Form
+      - [ ] Declaration Information Authority Form
+    - [ ] Policies
+      - [ ] Student Safety and Wellbeing Policy
+      - [ ] Whistle Blower Policy
+      - [ ] Complaints Handling Policy
+      - [ ] Privacy Policy
+      - [ ] Workplace Health and Safety
+    - [ ] Parish Bulletin
+    - [ ] SSPX Podcast: Digital Dangers Intro
+  - [ ] Distance Education
+    - [ ] Announcement
+    - [ ] Expressions of Interest
+  - [ ] Pledge Your Support
 - [x] About (`/day-school/about.html`)
   - [x] Our Philosophy
   - [x] School Vision

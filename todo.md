@@ -2,7 +2,7 @@
 
 ## Day School (`/day-school/`)
 
-- [ ] Home
+- [x] Home
 - [ ] About Us
   - [ ] About
   - [ ] Our Campus

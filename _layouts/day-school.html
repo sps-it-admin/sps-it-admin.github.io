@@ -3,6 +3,7 @@
 {%- assign fee_schedule_doc = site.data.day_school_fee_schedule.document -%}
 {%- assign bus_transport_doc = site.data.day_school_bus_transport.document -%}
 {%- assign classical_books_doc = site.data.day_school_classical_books.document -%}
+{%- assign school_calendar_doc = site.data.day_school_school_calendar.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +75,11 @@
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
           <div class="nav-dropdown">
+            {% if school_calendar_doc and school_calendar_doc != "" %}
+            <a href="{{ school_calendar_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">School Calendar</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">School Calendar</a>
+            {% endif %}
             <a href="/day-school/music.html" class="nav-dropdown-item">Music</a>
             <a href="/day-school/drama.html" class="nav-dropdown-item">Drama</a>
             <a href="/day-school/sport.html" class="nav-dropdown-item">Sport</a>
@@ -177,7 +182,11 @@
       {% else %}
       <a href="#" class="mobile-nav-item">Annual Report</a>
       {% endif %}
+      {% if school_calendar_doc and school_calendar_doc != "" %}
+      <a href="{{ school_calendar_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">School Calendar</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">School Calendar</a>
+      {% endif %}
       <a href="/day-school/music.html" class="mobile-nav-item">Music</a>
       <a href="/day-school/drama.html" class="mobile-nav-item">Drama</a>
       <a href="/day-school/sport.html" class="mobile-nav-item">Sport</a>

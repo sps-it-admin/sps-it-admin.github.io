@@ -9,8 +9,8 @@
   - [x] Our Staff
   - [x] Classical Education
   - [x] Annual Report
-- [ ] School Life
-  - [ ] School Calendar
+- [x] School Life
+  - [x] School Calendar
   - [x] Music
   - [x] Drama
   - [x] Sport

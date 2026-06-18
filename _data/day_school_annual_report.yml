@@ -1,0 +1,5 @@
+# Day School — Annual Report
+# The Annual Report document is uploaded and managed through the CMS (admin/).
+# When a document is set here, the "Annual Report" menu item links to it and
+# opens it in a new browser tab. Leave blank to keep the menu item inactive.
+document: ""

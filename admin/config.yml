@@ -37,6 +37,15 @@ collections:
               - {label: "Photo", name: "photo", widget: "image", required: false}
               - {label: "Bio", name: "bio", widget: "text", required: false}
 
+  - name: "day_school_annual_report"
+    label: "Day School — Annual Report"
+    files:
+      - name: "annual_report"
+        label: "Annual Report Document"
+        file: "_data/day_school_annual_report.yml"
+        fields:
+          - {label: "Annual Report Document", name: "document", widget: "file", required: false, hint: "Upload the Annual Report (e.g. a PDF). The Annual Report menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

@@ -1,3 +1,4 @@
+{%- assign annual_report_doc = site.data.day_school_annual_report.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +57,11 @@
             <a href="#" class="nav-dropdown-item">Our Campus</a>
             <a href="/day-school/our-staff.html" class="nav-dropdown-item">Our Staff</a>
             <a href="/day-school/classical-education.html" class="nav-dropdown-item">Classical Education</a>
+            {% if annual_report_doc and annual_report_doc != "" %}
+            <a href="{{ annual_report_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Annual Report</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Annual Report</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -147,7 +152,11 @@
       <a href="#" class="mobile-nav-item">Our Campus</a>
       <a href="/day-school/our-staff.html" class="mobile-nav-item">Our Staff</a>
       <a href="/day-school/classical-education.html" class="mobile-nav-item">Classical Education</a>
+      {% if annual_report_doc and annual_report_doc != "" %}
+      <a href="{{ annual_report_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Annual Report</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Annual Report</a>
+      {% endif %}
       <a href="#" class="mobile-nav-item">School Calendar</a>
       <a href="/day-school/music.html" class="mobile-nav-item">Music</a>
       <a href="/day-school/drama.html" class="mobile-nav-item">Drama</a>

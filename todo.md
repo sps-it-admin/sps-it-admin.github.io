@@ -8,7 +8,7 @@
   - [ ] Our Campus
   - [ ] Our Staff
   - [x] Classical Education
-  - [ ] Annual Report
+  - [x] Annual Report
 - [ ] School Life
   - [ ] School Calendar
   - [x] Music

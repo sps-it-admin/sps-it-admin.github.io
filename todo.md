@@ -4,9 +4,9 @@
 
 - [x] Home
 - [ ] About Us
-  - [ ] About
+  - [x] About
   - [ ] Our Campus
-  - [ ] Our Staff
+  - [x] Our Staff
   - [x] Classical Education
   - [x] Annual Report
 - [ ] School Life

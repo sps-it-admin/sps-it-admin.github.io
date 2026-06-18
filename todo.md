@@ -17,9 +17,9 @@
   - [x] Classical Books
 - [ ] Admissions
   - [x] Admission Process
-  - [ ] Prospectus & Handbook
-  - [ ] Fee Schedule
-  - [ ] Bus Transport
+  - [x] Prospectus & Handbook
+  - [x] Fee Schedule
+  - [x] Bus Transport
 - [ ] Our Community
   - [ ] Uniform Shop
   - [ ] Parents & Friends

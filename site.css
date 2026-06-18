@@ -88,6 +88,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 .logo-lockup img { height: clamp(44px, 4vw + 20px, 62px); width: auto; }
 .logo-text { display: flex; flex-direction: column; }

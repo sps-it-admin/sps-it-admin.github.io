@@ -46,6 +46,17 @@ collections:
         fields:
           - {label: "Annual Report Document", name: "document", widget: "file", required: false, hint: "Upload the Annual Report (e.g. a PDF). The Annual Report menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_admissions"
+    label: "Day School — Admissions Documents"
+    files:
+      - name: "admissions"
+        label: "Admissions Documents"
+        file: "_data/day_school_admissions.yml"
+        fields:
+          - {label: "Prospectus & Handbook", name: "prospectus_handbook", widget: "file", required: false, hint: "Upload the Prospectus & Handbook (e.g. a PDF). The Prospectus & Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+          - {label: "Fee Schedule", name: "fee_schedule", widget: "file", required: false, hint: "Upload the Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+          - {label: "Bus Transport", name: "bus_transport", widget: "file", required: false, hint: "Upload the Bus Transport document (e.g. a PDF). The Bus Transport menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

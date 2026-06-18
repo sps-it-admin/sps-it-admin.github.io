@@ -1,4 +1,7 @@
 {%- assign annual_report_doc = site.data.day_school_annual_report.document -%}
+{%- assign prospectus_doc = site.data.day_school_admissions.prospectus_handbook -%}
+{%- assign fee_schedule_doc = site.data.day_school_admissions.fee_schedule -%}
+{%- assign bus_transport_doc = site.data.day_school_admissions.bus_transport -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,9 +87,21 @@
           </a>
           <div class="nav-dropdown">
             <a href="/day-school/admission-process.html" class="nav-dropdown-item">Admission Process</a>
+            {% if prospectus_doc and prospectus_doc != "" %}
+            <a href="{{ prospectus_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Prospectus &amp; Handbook</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Prospectus &amp; Handbook</a>
+            {% endif %}
+            {% if fee_schedule_doc and fee_schedule_doc != "" %}
+            <a href="{{ fee_schedule_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Fee Schedule</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Fee Schedule</a>
+            {% endif %}
+            {% if bus_transport_doc and bus_transport_doc != "" %}
+            <a href="{{ bus_transport_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Bus Transport</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Bus Transport</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -163,9 +178,21 @@
       <a href="/day-school/sport.html" class="mobile-nav-item">Sport</a>
       <a href="#" class="mobile-nav-item">Classical Books</a>
       <a href="/day-school/admission-process.html" class="mobile-nav-item">Admission Process</a>
+      {% if prospectus_doc and prospectus_doc != "" %}
+      <a href="{{ prospectus_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Prospectus &amp; Handbook</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Prospectus &amp; Handbook</a>
+      {% endif %}
+      {% if fee_schedule_doc and fee_schedule_doc != "" %}
+      <a href="{{ fee_schedule_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Fee Schedule</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Fee Schedule</a>
+      {% endif %}
+      {% if bus_transport_doc and bus_transport_doc != "" %}
+      <a href="{{ bus_transport_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Bus Transport</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Bus Transport</a>
+      {% endif %}
       <a href="#" class="mobile-nav-item">Uniform Shop</a>
       <a href="#" class="mobile-nav-item">Parents &amp; Friends</a>
       <a href="#" class="mobile-nav-item">Parent Portal</a>

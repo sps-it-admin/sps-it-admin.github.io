@@ -16,7 +16,7 @@
   - [x] Sport
   - [ ] Classical Books
 - [ ] Admissions
-  - [ ] Admission Process
+  - [x] Admission Process
   - [ ] Prospectus & Handbook
   - [ ] Fee Schedule
   - [ ] Bus Transport

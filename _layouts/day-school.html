@@ -2,6 +2,7 @@
 {%- assign prospectus_doc = site.data.day_school_prospectus.document -%}
 {%- assign fee_schedule_doc = site.data.day_school_fee_schedule.document -%}
 {%- assign bus_transport_doc = site.data.day_school_bus_transport.document -%}
+{%- assign classical_books_doc = site.data.day_school_classical_books.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,11 @@
             <a href="/day-school/music.html" class="nav-dropdown-item">Music</a>
             <a href="/day-school/drama.html" class="nav-dropdown-item">Drama</a>
             <a href="/day-school/sport.html" class="nav-dropdown-item">Sport</a>
+            {% if classical_books_doc and classical_books_doc != "" %}
+            <a href="{{ classical_books_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Classical Books</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Classical Books</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -176,7 +181,11 @@
       <a href="/day-school/music.html" class="mobile-nav-item">Music</a>
       <a href="/day-school/drama.html" class="mobile-nav-item">Drama</a>
       <a href="/day-school/sport.html" class="mobile-nav-item">Sport</a>
+      {% if classical_books_doc and classical_books_doc != "" %}
+      <a href="{{ classical_books_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Classical Books</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Classical Books</a>
+      {% endif %}
       <a href="/day-school/admission-process.html" class="mobile-nav-item">Admission Process</a>
       {% if prospectus_doc and prospectus_doc != "" %}
       <a href="{{ prospectus_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Prospectus &amp; Handbook</a>

@@ -14,7 +14,7 @@
   - [x] Music
   - [x] Drama
   - [x] Sport
-  - [ ] Classical Books
+  - [x] Classical Books
 - [ ] Admissions
   - [x] Admission Process
   - [ ] Prospectus & Handbook

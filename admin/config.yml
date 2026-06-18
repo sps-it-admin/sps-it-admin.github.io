@@ -73,6 +73,15 @@ collections:
         fields:
           - {label: "Bus Transport Document", name: "document", widget: "file", required: false, hint: "Upload the Bus Transport document (e.g. a PDF). The Bus Transport menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_classical_books"
+    label: "Day School — Classical Books"
+    files:
+      - name: "classical_books"
+        label: "Classical Books Document"
+        file: "_data/day_school_classical_books.yml"
+        fields:
+          - {label: "Classical Books Document", name: "document", widget: "file", required: false, hint: "Upload the Classical Books document (e.g. a PDF). The Classical Books menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

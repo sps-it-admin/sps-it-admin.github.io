@@ -22,7 +22,7 @@
   - [x] Bus Transport
 - [ ] Our Community
   - [x] Uniform Shop
-  - [ ] Parents & Friends
+  - [x] Parents & Friends
   - [ ] Parent Portal
 - [ ] Portal
   - [ ] School Portal

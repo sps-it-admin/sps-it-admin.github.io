@@ -23,7 +23,7 @@
 - [ ] Our Community
   - [x] Uniform Shop
   - [x] Parents & Friends
-  - [ ] Parent Portal
+  - [x] Parent Portal
 - [ ] Portal
   - [ ] School Portal
   - [ ] Forms

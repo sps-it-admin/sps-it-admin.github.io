@@ -89,7 +89,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   gap: 0.85rem;
   text-decoration: none;
 }
-.logo-lockup img { height: 62px; width: auto; }
+.logo-lockup img { height: clamp(44px, 4vw + 20px, 62px); width: auto; }
 .logo-text { display: flex; flex-direction: column; }
 .logo-name {
   font-family: Georgia, serif;
@@ -113,7 +113,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: clamp(0.85rem, 1.4vw, 1.75rem);
+  flex-wrap: nowrap;
 }
 .nav-item { position: relative; }
 .nav-item-btn {
@@ -125,8 +126,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 0;
   padding-bottom: 2px;
   font-family: var(--font-label);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-size: clamp(0.65rem, 0.5vw + 0.45rem, 0.75rem);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cream);
   text-decoration: none;
@@ -1095,6 +1096,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* ======================================================
    RESPONSIVE
    ====================================================== */
+@media (max-width: 1280px) {
+  .logo-name { font-size: 0.9rem; }
+  .logo-sub { font-size: 0.78rem; }
+}
+
 @media (max-width: 1023px) {
   .desktop-nav { display: none; }
   .mob-toggle { display: inline-flex; }

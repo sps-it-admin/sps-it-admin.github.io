@@ -82,6 +82,21 @@ collections:
         fields:
           - {label: "Classical Books Document", name: "document", widget: "file", required: false, hint: "Upload the Classical Books document (e.g. a PDF). The Classical Books menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_campus"
+    label: "Day School — Our Campus"
+    files:
+      - name: "campus"
+        label: "Our Campus Images"
+        file: "_data/day_school_campus.yml"
+        fields:
+          - {label: "Featured Image", name: "featured_image", widget: "image", required: false, hint: "Large image shown at the top of the Our Campus gallery. Leave empty to hide it."}
+          - {label: "Campus Photo 1", name: "campus_photo_1", widget: "image", required: false, hint: "Shown in the campus photo grid. Leave empty to hide it."}
+          - {label: "Campus Photo 2", name: "campus_photo_2", widget: "image", required: false, hint: "Shown in the campus photo grid. Leave empty to hide it."}
+          - {label: "Campus Photo 3", name: "campus_photo_3", widget: "image", required: false, hint: "Shown in the campus photo grid. Leave empty to hide it."}
+          - {label: "Campus Photo 4", name: "campus_photo_4", widget: "image", required: false, hint: "Shown in the campus photo grid. Leave empty to hide it."}
+          - {label: "Master Plan 1", name: "masterplan_1", widget: "image", required: false, hint: "Master plan image shown in the campus grid. Leave empty to hide it."}
+          - {label: "Master Plan 2", name: "masterplan_2", widget: "image", required: false, hint: "Master plan image shown in the campus grid. Leave empty to hide it."}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

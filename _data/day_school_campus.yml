@@ -1,0 +1,10 @@
+# ── Day School — Our Campus gallery ──
+# Each image below is editable in the CMS under "Day School — Our Campus".
+# Paths point to files in /project/assets. Leave a field empty to hide that image.
+featured_image: /project/assets/SPS-Campus-1.jpg
+campus_photo_1: /project/assets/SPS-Campus-2.jpg
+campus_photo_2: /project/assets/SPS-Campus-4.jpg
+campus_photo_3: /project/assets/SPS-Campus-3.jpg
+campus_photo_4: /project/assets/SPS-Campus-5.jpg
+masterplan_1: /project/assets/masterplan-2.jpg
+masterplan_2: /project/assets/masterplan-1.jpg

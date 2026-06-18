@@ -1,0 +1,79 @@
+---
+layout: day-school
+nav: about
+title: "Our Campus"
+description: "Explore the St Philomena School campus at Park Ridge — our grounds, facilities and master plan for the future."
+page_hero_label: "About the School"
+page_hero_heading: "Our Campus"
+---
+
+{%- assign campus = site.data.day_school_campus -%}
+
+<main>
+
+  <!-- ── Page hero ── -->
+  <section class="page-hero">
+    <img src="/project/assets/SPS-Campus-1.jpg" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.page_hero_label }}</p>
+      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+    </div>
+  </section>
+
+  <!-- ── Campus gallery ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="reveal" style="max-width:42rem;margin:0 auto 3rem;text-align:center;">
+        <span class="section-eyebrow">Park Ridge, Queensland</span>
+        <h2 class="section-h2" style="margin-top:0.75rem;">St Philomena<br><em>School Campus</em></h2>
+      </div>
+
+      {% if campus.featured_image and campus.featured_image != "" %}
+      <figure class="campus-featured reveal">
+        <img src="{{ campus.featured_image }}" alt="The St Philomena School campus at Park Ridge">
+      </figure>
+      {% endif %}
+
+      <div class="campus-grid">
+        {% if campus.campus_photo_1 and campus.campus_photo_1 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.campus_photo_1 }}" alt="St Philomena School campus" loading="lazy"></figure>
+        {% endif %}
+        {% if campus.campus_photo_2 and campus.campus_photo_2 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.campus_photo_2 }}" alt="St Philomena School campus" loading="lazy"></figure>
+        {% endif %}
+        {% if campus.campus_photo_3 and campus.campus_photo_3 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.campus_photo_3 }}" alt="St Philomena School campus" loading="lazy"></figure>
+        {% endif %}
+        {% if campus.campus_photo_4 and campus.campus_photo_4 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.campus_photo_4 }}" alt="St Philomena School campus" loading="lazy"></figure>
+        {% endif %}
+        {% if campus.masterplan_1 and campus.masterplan_1 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.masterplan_1 }}" alt="St Philomena School campus master plan" loading="lazy"></figure>
+        {% endif %}
+        {% if campus.masterplan_2 and campus.masterplan_2 != "" %}
+        <figure class="campus-tile reveal"><img src="{{ campus.masterplan_2 }}" alt="St Philomena School campus master plan" loading="lazy"></figure>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact information ── -->
+  <section class="stats-band">
+    <div class="stats-band-inner">
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Address</span>
+        <span class="stats-band-label">{{ site.data.settings.day_school.address_line1 }}, {{ site.data.settings.day_school.address_line2 }}</span>
+      </div>
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Call Us</span>
+        <span class="stats-band-label">{{ site.data.settings.day_school.phone }}</span>
+      </div>
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Email Us</span>
+        <span class="stats-band-label">{{ site.data.settings.day_school.email }}</span>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -3,9 +3,9 @@
 ## Day School (`/day-school/`)
 
 - [x] Home
-- [ ] About Us
+- [x] About Us
   - [x] About
-  - [ ] Our Campus
+  - [x] Our Campus
   - [x] Our Staff
   - [x] Classical Education
   - [x] Annual Report
@@ -15,12 +15,12 @@
   - [x] Drama
   - [x] Sport
   - [x] Classical Books
-- [ ] Admissions
+- [x] Admissions
   - [x] Admission Process
   - [x] Prospectus & Handbook
   - [x] Fee Schedule
   - [x] Bus Transport
-- [ ] Our Community
+- [x] Our Community
   - [x] Uniform Shop
   - [x] Parents & Friends
   - [x] Parent Portal

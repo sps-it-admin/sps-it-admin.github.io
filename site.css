@@ -1706,3 +1706,46 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-weight: 700;
   color: var(--crimson);
 }
+
+/* ── Our Campus gallery ── */
+.campus-featured {
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+.campus-featured img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 50vw, 560px);
+  object-fit: cover;
+}
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.campus-tile {
+  margin: 0;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+.campus-tile img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform var(--dur-fast) var(--ease-out-soft);
+}
+.campus-tile:hover img { transform: scale(1.04); }
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-tile img { transition: none; }
+  .campus-tile:hover img { transform: none; }
+}
+@media (max-width: 600px) {
+  .campus-grid { grid-template-columns: 1fr; }
+}

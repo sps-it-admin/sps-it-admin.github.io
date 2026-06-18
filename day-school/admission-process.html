@@ -1,0 +1,111 @@
+---
+layout: day-school
+nav: enrol
+title: "Admission Process"
+description: "Learn how to apply for admission to St Philomena School and submit your Expression of Interest."
+page_hero_label: "Admissions"
+page_hero_heading: "Admission Process"
+---
+
+<main>
+
+  <!-- ── Page hero ── -->
+  <section class="page-hero">
+    <img src="/project/assets/chapel-interior.jpg" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.page_hero_label }}</p>
+      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+    </div>
+  </section>
+
+  <!-- ── Process ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="welcome-inner reveal">
+        <span class="section-eyebrow">Expression of Interest</span>
+        <h2 class="section-h2">Submit Your Expression of Interest<br><em>Using the Process Below</em></h2>
+        <div class="body-stack" style="margin-top:1.5rem;">
+          <p class="body-text">Thank you for considering enrolling at St Philomena School!</p>
+          <p class="body-text">At St Philomena School we offer a unique form of learning with a focus on the <strong>Classical Education of the Liberal Arts</strong>. We take special care in imparting the rich &amp; profound beauty of the <strong>traditional Catholic Faith</strong> to all our students.</p>
+          <p class="body-text">St Philomena School offers enrolment into all grades, which is <strong>subject to availability</strong> of positions with <strong>limited</strong> class capacity. <strong><u>St Philomena School does not host an Open Day and School tours are only offered upon acceptance into the School.</u></strong></p>
+          <p class="body-text">Please follow the steps to enrol at St Philomena School:</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Steps ── -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="vision-header reveal">
+        <span class="section-eyebrow gold">How to Apply</span>
+        <h2 class="section-h2 cream" style="margin-top:0.75rem;">Steps to Enrol</h2>
+        <div class="vision-divider"><em>A simple, personal process</em></div>
+      </div>
+      <div class="vision-grid">
+        <div class="vision-card reveal">
+          <div class="vision-num">01</div>
+          <h3 class="vision-title">Research the School</h3>
+          <p class="vision-body">Browse and research our school community first to see if it fits in with your requirements.</p>
+        </div>
+        <div class="vision-card reveal">
+          <div class="vision-num">02</div>
+          <h3 class="vision-title">Submit Your Expression of Interest</h3>
+          <p class="vision-body">Click on the Expression of Interest Form button below and complete the form.</p>
+        </div>
+        <div class="vision-card reveal">
+          <div class="vision-num">03</div>
+          <h3 class="vision-title">Application Reviewed</h3>
+          <p class="vision-body">We will process interests to ensure we have the capacity to accommodate your family/child, as we have limited class capacity.</p>
+        </div>
+        <div class="vision-card reveal">
+          <div class="vision-num">04</div>
+          <h3 class="vision-title">Interview</h3>
+          <p class="vision-body">If space is available, you will be requested to attend an interview with the School Principal. If we have no space to accommodate your family, you will be notified in writing.</p>
+        </div>
+        <div class="vision-card reveal">
+          <div class="vision-num">05</div>
+          <h3 class="vision-title">Outcome</h3>
+          <p class="vision-body">After the interview, you will be notified of the outcome of your application.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" class="btn btn-primary" target="_blank" rel="noopener">
+          Expression of Interest Form
+          <i data-lucide="arrow-right" class="icon-14"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section class="section section-cream-dark">
+    <div class="container">
+      <div class="welcome-inner reveal" style="text-align:center;">
+        <span class="section-eyebrow">Questions?</span>
+        <h2 class="section-h2">We're Here<br><em>to Help</em></h2>
+        <p class="body-text" style="margin-top:1.5rem;">For further information please do not hesitate to contact us on {{ site.data.settings.phone }} or email <a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact information ── -->
+  <section class="stats-band">
+    <div class="stats-band-inner">
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Address</span>
+        <span class="stats-band-label">{{ site.data.settings.address_line1 }}, {{ site.data.settings.address_line2 }}</span>
+      </div>
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Call Us</span>
+        <span class="stats-band-label">{{ site.data.settings.phone }}</span>
+      </div>
+      <div class="stats-band-item reveal">
+        <span class="stats-band-value">Email Us</span>
+        <span class="stats-band-label">{{ site.data.settings.email }}</span>
+      </div>
+    </div>
+  </section>
+
+</main>

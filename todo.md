@@ -53,7 +53,7 @@
 - [ ] About
   - [ ] About
   - [ ] Philosophy of Education
-  - [ ] Employment
+  - [x] Employment
   - [ ] Fee Schedule
 - [ ] Teaching & Learning
   - [ ] Logic Phase

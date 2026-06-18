@@ -21,7 +21,7 @@
   - [x] Fee Schedule
   - [x] Bus Transport
 - [ ] Our Community
-  - [ ] Uniform Shop
+  - [x] Uniform Shop
   - [ ] Parents & Friends
   - [ ] Parent Portal
 - [ ] Portal

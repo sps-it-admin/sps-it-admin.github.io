@@ -54,7 +54,7 @@
   - [ ] About
   - [ ] Philosophy of Education
   - [x] Employment
-  - [ ] Fee Schedule
+  - [x] Fee Schedule
 - [ ] Teaching & Learning
   - [ ] Logic Phase
 - [ ] Enrolments

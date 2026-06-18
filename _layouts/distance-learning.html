@@ -1,3 +1,4 @@
+{%- assign fee_schedule_doc = site.data.distance_learning_fee_schedule.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +56,11 @@
             <a href="/distance-learning/about.html" class="nav-dropdown-item">About</a>
             <a href="#" class="nav-dropdown-item">Philosophy of Education</a>
             <a href="/distance-learning/employment.html" class="nav-dropdown-item">Employment</a>
+            {% if fee_schedule_doc and fee_schedule_doc != "" %}
+            <a href="{{ fee_schedule_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Fee Schedule</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Fee Schedule</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -107,7 +112,11 @@
       <a href="/distance-learning/about.html" class="mobile-nav-item">About</a>
       <a href="#" class="mobile-nav-item">Philosophy of Education</a>
       <a href="/distance-learning/employment.html" class="mobile-nav-item">Employment</a>
+      {% if fee_schedule_doc and fee_schedule_doc != "" %}
+      <a href="{{ fee_schedule_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Fee Schedule</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Fee Schedule</a>
+      {% endif %}
       <a href="/distance-learning/teaching.html" class="mobile-nav-item">Teaching &amp; Learning</a>
       <a href="#" class="mobile-nav-item">Logic Phase</a>
       <a href="/distance-learning/enrol.html" class="mobile-nav-item">Enrolments</a>

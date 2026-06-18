@@ -1,5 +1,19 @@
 phone: "(07) 3802 0088"
-email: "dladmin@stphilomena.qld.edu.au"
+email: "admin@stphilomena.qld.edu.au"
 address_line1: "61 Koplick Road"
 address_line2: "Park Ridge QLD 4125"
 copyright_year: "2026"
+
+day_school:
+  phone: "(07) 3802 0088"
+  email: "admin@stphilomena.qld.edu.au"
+  address_line1: "61 Koplick Road"
+  address_line2: "Park Ridge QLD 4125"
+  copyright_year: "2026"
+
+distance_learning:
+  phone: "(07) 3802 0088"
+  email: "dladmin@stphilomena.qld.edu.au"
+  address_line1: "61 Koplick Road"
+  address_line2: "Park Ridge QLD 4125"
+  copyright_year: "2026"

@@ -128,7 +128,8 @@ See each component's `.prompt.md` for usage and variants.
 
 ### Key facts (for accurate copy)
 - **Founded:** 1999 · **Year levels:** 7 & 8 · **Location:** 61 Koplick Road, Park Ridge QLD 4125
-- **Phone:** (07) 3802 0088 · **Email:** dladmin@stphilomena.qld.edu.au
+- **Phone:** (07) 3802 0088 · **Email (Distance Learning):** dladmin@stphilomena.qld.edu.au · **Email (Day School):** admin@stphilomena.qld.edu.au
+- Contact details are kept separately per programme in `_data/settings.yml`, under the `day_school` and `distance_learning` keys — do not merge them, the two programmes use different inboxes.
 - **Principal:** Fr Joseph Ockerse (2024–present) · **Motto:** Sine Deo Nihil
 
 ---

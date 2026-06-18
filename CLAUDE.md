@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Site Overview
 
-This is a **Jekyll static site** for St Philomena School (Distance Learning programme), hosted on GitHub Pages. There is no build step to run locally — GitHub Pages builds and publishes automatically on push. The site has two programme sections: a root site and `/distance-learning/`, each with its own set of pages.
+This is a **Jekyll static site** for St Philomena School, hosted on GitHub Pages. There is no build step to run locally — GitHub Pages builds and publishes automatically on push. The site has two programme sections, `/day-school/` and `/distance-learning/`, plus a root site, each with its own set of pages.
 
 ## Jekyll Structure
 
 - `_config.yml` — site title, description, URL
-- `_layouts/` — three layouts: `default.html` (root site), `distance-learning.html` (DL section), `landing.html` (minimal, no nav)
-- `_data/settings.yml` — shared contact info (phone, email, address) injected via Liquid into layouts
+- `_layouts/` — four layouts: `default.html` (root site), `day-school.html` (day school section), `distance-learning.html` (DL section), `landing.html` (minimal, no nav)
+- `_data/settings.yml` — contact info (phone, email, address) injected via Liquid into layouts. Top-level keys are shared defaults (used by `default.html`); the `day_school` and `distance_learning` keys hold programme-specific overrides (used by `day-school.html` and `distance-learning.html` respectively) — the two programmes have different contact emails and must not be merged
 - `_data/faqs.yml` — FAQ content rendered on the FAQ pages
 - `admin/config.yml` — Netlify CMS config for non-technical content editing
 
@@ -82,7 +82,7 @@ The UI kit at `project/ui_kits/website/` contains full-screen JSX recreations of
 
 ## Content Editing
 
-Contact details, copyright year → `_data/settings.yml`  
+Contact details, copyright year → `_data/settings.yml` (set per-programme under the `day_school` and `distance_learning` keys; top-level keys are the shared default used by the root site)  
 FAQ items → `_data/faqs.yml`  
 Page body copy → frontmatter and inline HTML in each `.html` page file  
 CMS-managed fields → `admin/config.yml` (Netlify CMS)

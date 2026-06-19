@@ -25,7 +25,7 @@
   - [x] Parents & Friends
   - [x] Parent Portal
 - [ ] Portal
-  - [ ] School Portal
+  - [x] School Portal
   - [ ] Forms
     - [ ] Accident Claim Form
     - [ ] AHI Claim Form Sport/Volunteers

@@ -91,6 +91,42 @@ collections:
         fields:
           - {label: "Classical Books Document", name: "document", widget: "file", required: false, hint: "Upload the Classical Books document (e.g. a PDF). The Classical Books menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_accident_claim_form"
+    label: "Day School — Accident Claim Form"
+    files:
+      - name: "accident_claim_form"
+        label: "Accident Claim Form Document"
+        file: "_data/day_school_accident_claim_form.yml"
+        fields:
+          - {label: "Accident Claim Form Document", name: "document", widget: "file", required: false, hint: "Upload the Accident Claim Form (e.g. a PDF). The Accident Claim Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_ahi_claim_form"
+    label: "Day School — AHI Claim Form Sport/Volunteers"
+    files:
+      - name: "ahi_claim_form"
+        label: "AHI Claim Form Sport/Volunteers Document"
+        file: "_data/day_school_ahi_claim_form.yml"
+        fields:
+          - {label: "AHI Claim Form Sport/Volunteers Document", name: "document", widget: "file", required: false, hint: "Upload the AHI Claim Form Sport/Volunteers (e.g. a PDF). The AHI Claim Form Sport/Volunteers menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_insured_authorization_form"
+    label: "Day School — Insured Authorization Form"
+    files:
+      - name: "insured_authorization_form"
+        label: "Insured Authorization Form Document"
+        file: "_data/day_school_insured_authorization_form.yml"
+        fields:
+          - {label: "Insured Authorization Form Document", name: "document", widget: "file", required: false, hint: "Upload the Insured Authorization Form (e.g. a PDF). The Insured Authorization Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_declaration_authority_form"
+    label: "Day School — Declaration Information Authority Form"
+    files:
+      - name: "declaration_authority_form"
+        label: "Declaration Information Authority Form Document"
+        file: "_data/day_school_declaration_authority_form.yml"
+        fields:
+          - {label: "Declaration Information Authority Form Document", name: "document", widget: "file", required: false, hint: "Upload the Declaration Information Authority Form (e.g. a PDF). The Declaration Information Authority Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "day_school_campus"
     label: "Day School — Our Campus"
     files:

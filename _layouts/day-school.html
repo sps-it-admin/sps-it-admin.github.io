@@ -4,6 +4,10 @@
 {%- assign bus_transport_doc = site.data.day_school_bus_transport.document -%}
 {%- assign classical_books_doc = site.data.day_school_classical_books.document -%}
 {%- assign school_calendar_doc = site.data.day_school_school_calendar.document -%}
+{%- assign accident_claim_form_doc = site.data.day_school_accident_claim_form.document -%}
+{%- assign ahi_claim_form_doc = site.data.day_school_ahi_claim_form.document -%}
+{%- assign insured_authorization_form_doc = site.data.day_school_insured_authorization_form.document -%}
+{%- assign declaration_authority_form_doc = site.data.day_school_declaration_authority_form.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,10 +142,26 @@
                 <i data-lucide="chevron-right" class="nav-chevron icon-12"></i>
               </button>
               <div class="nav-subdropdown">
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Accident Claim Form</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Insured Authorization Form</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Declaration Information Authority Form</a>
+                {% if accident_claim_form_doc and accident_claim_form_doc != "" %}
+                <a href="{{ accident_claim_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Accident Claim Form</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Accident Claim Form</a>
+                {% endif %}
+                {% if ahi_claim_form_doc and ahi_claim_form_doc != "" %}
+                <a href="{{ ahi_claim_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">AHI Claim Form Sport/Volunteers</a>
+                {% endif %}
+                {% if insured_authorization_form_doc and insured_authorization_form_doc != "" %}
+                <a href="{{ insured_authorization_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Insured Authorization Form</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Insured Authorization Form</a>
+                {% endif %}
+                {% if declaration_authority_form_doc and declaration_authority_form_doc != "" %}
+                <a href="{{ declaration_authority_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Declaration Information Authority Form</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Declaration Information Authority Form</a>
+                {% endif %}
               </div>
             </div>
             <div class="nav-dropdown-sub">
@@ -232,10 +252,26 @@
       <a href="https://stphilomena.qld.tass.cloud/parentlounge/login.cfm" class="mobile-nav-item" target="_blank" rel="noopener">Parent Portal</a>
       <a href="https://stphilomenaschool.sharepoint.com/sites/Portal" class="mobile-nav-item" target="_blank" rel="noopener">School Portal</a>
       <span class="mobile-nav-group-label">Forms</span>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Accident Claim Form</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Insured Authorization Form</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Declaration Information Authority Form</a>
+      {% if accident_claim_form_doc and accident_claim_form_doc != "" %}
+      <a href="{{ accident_claim_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Accident Claim Form</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Accident Claim Form</a>
+      {% endif %}
+      {% if ahi_claim_form_doc and ahi_claim_form_doc != "" %}
+      <a href="{{ ahi_claim_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">AHI Claim Form Sport/Volunteers</a>
+      {% endif %}
+      {% if insured_authorization_form_doc and insured_authorization_form_doc != "" %}
+      <a href="{{ insured_authorization_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Insured Authorization Form</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Insured Authorization Form</a>
+      {% endif %}
+      {% if declaration_authority_form_doc and declaration_authority_form_doc != "" %}
+      <a href="{{ declaration_authority_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Declaration Information Authority Form</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Declaration Information Authority Form</a>
+      {% endif %}
       <span class="mobile-nav-group-label">Policies</span>
       <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
       <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Whistle Blower Policy</a>

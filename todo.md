@@ -26,11 +26,11 @@
   - [x] Parent Portal
 - [ ] Portal
   - [x] School Portal
-  - [ ] Forms
-    - [ ] Accident Claim Form
-    - [ ] AHI Claim Form Sport/Volunteers
-    - [ ] Insured Authorization Form
-    - [ ] Declaration Information Authority Form
+  - [x] Forms
+    - [x] Accident Claim Form
+    - [x] AHI Claim Form Sport/Volunteers
+    - [x] Insured Authorization Form
+    - [x] Declaration Information Authority Form
   - [ ] Policies
     - [ ] Student Safety and Wellbeing Policy
     - [ ] Whistle Blower Policy

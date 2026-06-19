@@ -172,6 +172,15 @@ collections:
         fields:
           - {label: "Workplace Health and Safety Document", name: "document", widget: "file", required: false, hint: "Upload the Workplace Health and Safety document (e.g. a PDF). The Workplace Health and Safety menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_distance_education_announcement"
+    label: "Day School — Distance Education Announcement"
+    files:
+      - name: "distance_education_announcement"
+        label: "Distance Education Announcement Document"
+        file: "_data/day_school_distance_education_announcement.yml"
+        fields:
+          - {label: "Distance Education Announcement Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Education Announcement (e.g. a PDF). The Announcement menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "day_school_campus"
     label: "Day School — Our Campus"
     files:

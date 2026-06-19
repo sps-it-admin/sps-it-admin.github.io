@@ -39,8 +39,8 @@
     - [x] Workplace Health and Safety
   - [x] Parish Bulletin
   - [x] SSPX Podcast: Digital Dangers Episodes
-- [ ] Distance Education
-  - [ ] Announcement
+- [x] Distance Education
+  - [x] Announcement
   - [x] Expressions of Interest
 - [ ] Pledge Your Support
 - [ ] Landing

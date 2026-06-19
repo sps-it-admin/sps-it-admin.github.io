@@ -13,6 +13,7 @@
 {%- assign complaints_handling_policy_doc = site.data.day_school_complaints_handling_policy.document -%}
 {%- assign privacy_policy_doc = site.data.day_school_privacy_policy.document -%}
 {%- assign workplace_health_safety_doc = site.data.day_school_workplace_health_safety.document -%}
+{%- assign announcement_doc = site.data.day_school_distance_education_announcement.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -212,7 +213,11 @@
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
           <div class="nav-dropdown">
-            <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Announcement</a>
+            {% if announcement_doc and announcement_doc != "" %}
+            <a href="{{ announcement_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Announcement</a>
+            {% else %}
+            <a href="#" class="nav-dropdown-item">Announcement</a>
+            {% endif %}
             <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" class="nav-dropdown-item" target="_blank" rel="noopener">Expressions of Interest</a>
           </div>
         </div>
@@ -325,7 +330,11 @@
       {% endif %}
       <a href="https://sspx.au/en/parish-bulletins-queensland-42293" class="mobile-nav-item" target="_blank" rel="noopener">Parish Bulletin</a>
       <a href="https://sspxpodcast.com/digital-dangers/" class="mobile-nav-item" target="_blank" rel="noopener">SSPX Podcast: Digital Dangers Episodes</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item" target="_blank" rel="noopener">Announcement</a>
+      {% if announcement_doc and announcement_doc != "" %}
+      <a href="{{ announcement_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Announcement</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item">Announcement</a>
+      {% endif %}
       <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" class="mobile-nav-item" target="_blank" rel="noopener">Expressions of Interest</a>
       <a href="#" class="mobile-nav-item">Pledge Your Support</a>
     </div>

@@ -50,8 +50,8 @@
 ## Distance Learning (`/distance-learning/`)
 
 - [x] Home
-- [ ] About
-  - [ ] About
+- [x] About
+  - [x] About
   - [x] Philosophy of Education
   - [x] Employment
   - [x] Fee Schedule

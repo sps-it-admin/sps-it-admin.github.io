@@ -49,7 +49,7 @@
 
 ## Distance Learning (`/distance-learning/`)
 
-- [ ] Home
+- [x] Home
 - [ ] About
   - [ ] About
   - [ ] Philosophy of Education

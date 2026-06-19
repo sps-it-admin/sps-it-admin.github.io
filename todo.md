@@ -58,7 +58,7 @@
 - [ ] Teaching & Learning
   - [ ] Logic Phase
 - [ ] Enrolments
-  - [ ] Expressions of Interest
+  - [x] Expressions of Interest
   - [ ] Enrolment Process
 - [ ] Community
   - [ ] News

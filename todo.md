@@ -61,7 +61,7 @@
   - [x] Expressions of Interest
   - [x] Enrolment Process
 - [ ] Community
-  - [ ] News
+  - [x] News
   - [ ] Parent Handbook
   - [ ] Student Handbook
   - [ ] IT Requirements

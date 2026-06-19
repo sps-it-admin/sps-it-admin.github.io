@@ -49,20 +49,20 @@
 
 ## Distance Learning (`/distance-learning/`)
 
-- [ ] Home
-- [ ] About
-  - [ ] About
-  - [ ] Philosophy of Education
+- [x] Home
+- [x] About
+  - [x] About
+  - [x] Philosophy of Education
   - [x] Employment
   - [x] Fee Schedule
 - [ ] Teaching & Learning
   - [ ] Logic Phase
-- [ ] Enrolments
-  - [ ] Expressions of Interest
-  - [ ] Enrolment Process
-- [ ] Community
-  - [ ] News
-  - [ ] Parent Handbook
-  - [ ] Student Handbook
-  - [ ] IT Requirements
-- [ ] Frequently Asked Questions
+- [x] Enrolments
+  - [x] Expressions of Interest
+  - [x] Enrolment Process
+- [x] Community
+  - [x] News
+  - [x] Parent Handbook
+  - [x] Student Handbook
+  - [x] IT Requirements
+- [x] Frequently Asked Questions

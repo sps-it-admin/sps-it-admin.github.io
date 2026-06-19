@@ -217,6 +217,69 @@ collections:
         fields:
           - {label: "Fee Schedule Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "distance_learning_philosophy_of_education"
+    label: "Distance Learning — Philosophy of Education"
+    files:
+      - name: "philosophy_of_education"
+        label: "Philosophy of Education Document"
+        file: "_data/distance_learning_philosophy_of_education.yml"
+        fields:
+          - {label: "Philosophy of Education Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_parent_handbook"
+    label: "Distance Learning — Parent Handbook"
+    files:
+      - name: "parent_handbook"
+        label: "Parent Handbook Document"
+        file: "_data/distance_learning_parent_handbook.yml"
+        fields:
+          - {label: "Parent Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_student_handbook"
+    label: "Distance Learning — Student Handbook"
+    files:
+      - name: "student_handbook"
+        label: "Student Handbook Document"
+        file: "_data/distance_learning_student_handbook.yml"
+        fields:
+          - {label: "Student Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_it_requirements"
+    label: "Distance Learning — IT Requirements"
+    files:
+      - name: "it_requirements"
+        label: "IT Requirements Document"
+        file: "_data/distance_learning_it_requirements.yml"
+        fields:
+          - {label: "IT Requirements Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_faq"
+    label: "Distance Learning — Frequently Asked Questions"
+    files:
+      - name: "faq"
+        label: "Frequently Asked Questions Document"
+        file: "_data/distance_learning_faq.yml"
+        fields:
+          - {label: "Frequently Asked Questions Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
+
+  - name: "dl_news"
+    label: "Distance Learning — News"
+    label_singular: "News Post"
+    description: "Each entry is published as its own post on the Distance Learning News page. Use 'New News Post' to add one."
+    folder: "_dl_news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "news-post"}
+      - {label: "Navigation", name: "nav", widget: "hidden", default: "community"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional. Shown on the News listing and at the top of the post."}
+      - {label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown on the News listing page. If left empty, the start of the post is used."}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

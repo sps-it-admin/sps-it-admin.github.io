@@ -1,4 +1,9 @@
 {%- assign fee_schedule_doc = site.data.distance_learning_fee_schedule.document -%}
+{%- assign philosophy_doc = site.data.distance_learning_philosophy_of_education.document -%}
+{%- assign parent_handbook_doc = site.data.distance_learning_parent_handbook.document -%}
+{%- assign student_handbook_doc = site.data.distance_learning_student_handbook.document -%}
+{%- assign it_requirements_doc = site.data.distance_learning_it_requirements.document -%}
+{%- assign faq_doc = site.data.distance_learning_faq.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +59,11 @@
           </a>
           <div class="nav-dropdown">
             <a href="/distance-learning/about.html" class="nav-dropdown-item">About</a>
+            {% if philosophy_doc and philosophy_doc != "" %}
+            <a href="{{ philosophy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Philosophy of Education</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Philosophy of Education</a>
+            {% endif %}
             <a href="/distance-learning/employment.html" class="nav-dropdown-item">Employment</a>
             {% if fee_schedule_doc and fee_schedule_doc != "" %}
             <a href="{{ fee_schedule_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Fee Schedule</a>
@@ -78,8 +87,8 @@
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
           <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-item">Expressions of Interest</a>
-            <a href="#" class="nav-dropdown-item">Enrolment Process</a>
+            <a href="https://app.enquirytracker.net/webforms/general/558b9aa3-c63e-4db5-9159-8a5646730457" class="nav-dropdown-item" target="_blank" rel="noopener">Expressions of Interest</a>
+            <a href="/distance-learning/enrolment-process.html" class="nav-dropdown-item">Enrolment Process</a>
           </div>
         </div>
         <div class="nav-item">
@@ -88,14 +97,30 @@
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
           <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-item">News</a>
+            <a href="/distance-learning/news.html" class="nav-dropdown-item">News</a>
+            {% if parent_handbook_doc and parent_handbook_doc != "" %}
+            <a href="{{ parent_handbook_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Parent Handbook</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Parent Handbook</a>
+            {% endif %}
+            {% if student_handbook_doc and student_handbook_doc != "" %}
+            <a href="{{ student_handbook_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Student Handbook</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Student Handbook</a>
+            {% endif %}
+            {% if it_requirements_doc and it_requirements_doc != "" %}
+            <a href="{{ it_requirements_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">IT Requirements</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">IT Requirements</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
+          {% if faq_doc and faq_doc != "" %}
+          <a href="{{ faq_doc }}" class="nav-item-btn" target="_blank" rel="noopener">Frequently Asked Questions</a>
+          {% else %}
           <a href="/distance-learning/faq.html" class="nav-item-btn{% if page.nav == 'faq' %} active{% endif %}">Frequently Asked Questions</a>
+          {% endif %}
         </div>
       </nav>
 
@@ -110,7 +135,11 @@
     <div class="mobile-nav-inner">
       <a href="/distance-learning/" class="mobile-nav-item">Home</a>
       <a href="/distance-learning/about.html" class="mobile-nav-item">About</a>
+      {% if philosophy_doc and philosophy_doc != "" %}
+      <a href="{{ philosophy_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Philosophy of Education</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Philosophy of Education</a>
+      {% endif %}
       <a href="/distance-learning/employment.html" class="mobile-nav-item">Employment</a>
       {% if fee_schedule_doc and fee_schedule_doc != "" %}
       <a href="{{ fee_schedule_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Fee Schedule</a>
@@ -120,14 +149,30 @@
       <a href="/distance-learning/teaching.html" class="mobile-nav-item">Teaching &amp; Learning</a>
       <a href="#" class="mobile-nav-item">Logic Phase</a>
       <a href="/distance-learning/enrol.html" class="mobile-nav-item">Enrolments</a>
-      <a href="#" class="mobile-nav-item">Expressions of Interest</a>
-      <a href="#" class="mobile-nav-item">Enrolment Process</a>
+      <a href="https://app.enquirytracker.net/webforms/general/558b9aa3-c63e-4db5-9159-8a5646730457" class="mobile-nav-item" target="_blank" rel="noopener">Expressions of Interest</a>
+      <a href="/distance-learning/enrolment-process.html" class="mobile-nav-item">Enrolment Process</a>
       <a href="/distance-learning/community.html" class="mobile-nav-item">Community</a>
-      <a href="#" class="mobile-nav-item">News</a>
+      <a href="/distance-learning/news.html" class="mobile-nav-item">News</a>
+      {% if parent_handbook_doc and parent_handbook_doc != "" %}
+      <a href="{{ parent_handbook_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Parent Handbook</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Parent Handbook</a>
+      {% endif %}
+      {% if student_handbook_doc and student_handbook_doc != "" %}
+      <a href="{{ student_handbook_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Student Handbook</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Student Handbook</a>
+      {% endif %}
+      {% if it_requirements_doc and it_requirements_doc != "" %}
+      <a href="{{ it_requirements_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">IT Requirements</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">IT Requirements</a>
+      {% endif %}
+      {% if faq_doc and faq_doc != "" %}
+      <a href="{{ faq_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Frequently Asked Questions</a>
+      {% else %}
       <a href="/distance-learning/faq.html" class="mobile-nav-item">Frequently Asked Questions</a>
+      {% endif %}
     </div>
   </nav>
 </div>
@@ -152,7 +197,11 @@
           <li><a href="/distance-learning/teaching.html" class="footer-link">Teaching &amp; Learning</a></li>
           <li><a href="/distance-learning/enrol.html" class="footer-link">Enrolments</a></li>
           <li><a href="/distance-learning/community.html" class="footer-link">Community</a></li>
+          {% if faq_doc and faq_doc != "" %}
+          <li><a href="{{ faq_doc }}" class="footer-link" target="_blank" rel="noopener">FAQ</a></li>
+          {% else %}
           <li><a href="/distance-learning/faq.html" class="footer-link">FAQ</a></li>
+          {% endif %}
         </ul>
       </div>
       <div>

@@ -226,6 +226,24 @@ collections:
         fields:
           - {label: "Philosophy of Education Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "dl_news"
+    label: "Distance Learning — News"
+    label_singular: "News Post"
+    description: "Each entry is published as its own post on the Distance Learning News page. Use 'New News Post' to add one."
+    folder: "_dl_news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "news-post"}
+      - {label: "Navigation", name: "nav", widget: "hidden", default: "community"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional. Shown on the News listing and at the top of the post."}
+      - {label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown on the News listing page. If left empty, the start of the post is used."}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

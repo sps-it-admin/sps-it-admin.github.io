@@ -1,0 +1,26 @@
+---
+layout: distance-learning
+---
+<main>
+  <article class="news-article">
+    <header class="news-article-header reveal">
+      <a href="/distance-learning/news.html" class="news-back">&larr; All News</a>
+      {% if page.date %}<p class="news-article-meta">{{ page.date | date: "%-d %B %Y" }}</p>{% endif %}
+      <h1 class="news-article-title">{{ page.title }}</h1>
+    </header>
+
+    {% if page.image %}
+    <div class="news-article-img reveal">
+      <img src="{{ page.image }}" alt="{{ page.title | escape }}">
+    </div>
+    {% endif %}
+
+    <div class="news-prose reveal">
+      {{ content }}
+    </div>
+
+    <div class="news-article-footer">
+      <a href="/distance-learning/news.html" class="btn btn-navy">Back to News</a>
+    </div>
+  </article>
+</main>

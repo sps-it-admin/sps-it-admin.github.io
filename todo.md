@@ -41,7 +41,7 @@
   - [x] SSPX Podcast: Digital Dangers Episodes
 - [ ] Distance Education
   - [ ] Announcement
-  - [ ] Expressions of Interest
+  - [x] Expressions of Interest
 - [ ] Pledge Your Support
 - [ ] Landing
 

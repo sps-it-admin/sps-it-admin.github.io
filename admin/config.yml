@@ -253,6 +253,15 @@ collections:
         fields:
           - {label: "IT Requirements Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "distance_learning_faq"
+    label: "Distance Learning — Frequently Asked Questions"
+    files:
+      - name: "faq"
+        label: "Frequently Asked Questions Document"
+        file: "_data/distance_learning_faq.yml"
+        fields:
+          - {label: "Frequently Asked Questions Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
+
   - name: "dl_news"
     label: "Distance Learning — News"
     label_singular: "News Post"

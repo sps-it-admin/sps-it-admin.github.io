@@ -3,6 +3,7 @@
 {%- assign parent_handbook_doc = site.data.distance_learning_parent_handbook.document -%}
 {%- assign student_handbook_doc = site.data.distance_learning_student_handbook.document -%}
 {%- assign it_requirements_doc = site.data.distance_learning_it_requirements.document -%}
+{%- assign faq_doc = site.data.distance_learning_faq.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,7 +116,11 @@
           </div>
         </div>
         <div class="nav-item">
+          {% if faq_doc and faq_doc != "" %}
+          <a href="{{ faq_doc }}" class="nav-item-btn" target="_blank" rel="noopener">Frequently Asked Questions</a>
+          {% else %}
           <a href="/distance-learning/faq.html" class="nav-item-btn{% if page.nav == 'faq' %} active{% endif %}">Frequently Asked Questions</a>
+          {% endif %}
         </div>
       </nav>
 
@@ -163,7 +168,11 @@
       {% else %}
       <a href="#" class="mobile-nav-item">IT Requirements</a>
       {% endif %}
+      {% if faq_doc and faq_doc != "" %}
+      <a href="{{ faq_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Frequently Asked Questions</a>
+      {% else %}
       <a href="/distance-learning/faq.html" class="mobile-nav-item">Frequently Asked Questions</a>
+      {% endif %}
     </div>
   </nav>
 </div>
@@ -188,7 +197,11 @@
           <li><a href="/distance-learning/teaching.html" class="footer-link">Teaching &amp; Learning</a></li>
           <li><a href="/distance-learning/enrol.html" class="footer-link">Enrolments</a></li>
           <li><a href="/distance-learning/community.html" class="footer-link">Community</a></li>
+          {% if faq_doc and faq_doc != "" %}
+          <li><a href="{{ faq_doc }}" class="footer-link" target="_blank" rel="noopener">FAQ</a></li>
+          {% else %}
           <li><a href="/distance-learning/faq.html" class="footer-link">FAQ</a></li>
+          {% endif %}
         </ul>
       </div>
       <div>

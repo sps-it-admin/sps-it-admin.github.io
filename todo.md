@@ -65,4 +65,4 @@
   - [x] Parent Handbook
   - [x] Student Handbook
   - [x] IT Requirements
-- [ ] Frequently Asked Questions
+- [x] Frequently Asked Questions

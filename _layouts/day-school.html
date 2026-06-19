@@ -8,6 +8,11 @@
 {%- assign ahi_claim_form_doc = site.data.day_school_ahi_claim_form.document -%}
 {%- assign insured_authorization_form_doc = site.data.day_school_insured_authorization_form.document -%}
 {%- assign declaration_authority_form_doc = site.data.day_school_declaration_authority_form.document -%}
+{%- assign student_safety_wellbeing_policy_doc = site.data.day_school_student_safety_wellbeing_policy.document -%}
+{%- assign whistle_blower_policy_doc = site.data.day_school_whistle_blower_policy.document -%}
+{%- assign complaints_handling_policy_doc = site.data.day_school_complaints_handling_policy.document -%}
+{%- assign privacy_policy_doc = site.data.day_school_privacy_policy.document -%}
+{%- assign workplace_health_safety_doc = site.data.day_school_workplace_health_safety.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -170,11 +175,31 @@
                 <i data-lucide="chevron-right" class="nav-chevron icon-12"></i>
               </button>
               <div class="nav-subdropdown">
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Whistle Blower Policy</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Complaints Handling Policy</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Privacy Policy</a>
-                <a href="/project/assets/Test.pdf" class="nav-dropdown-item" target="_blank" rel="noopener">Workplace Health and Safety</a>
+                {% if student_safety_wellbeing_policy_doc and student_safety_wellbeing_policy_doc != "" %}
+                <a href="{{ student_safety_wellbeing_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Student Safety and Wellbeing Policy</a>
+                {% endif %}
+                {% if whistle_blower_policy_doc and whistle_blower_policy_doc != "" %}
+                <a href="{{ whistle_blower_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Whistle Blower Policy</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Whistle Blower Policy</a>
+                {% endif %}
+                {% if complaints_handling_policy_doc and complaints_handling_policy_doc != "" %}
+                <a href="{{ complaints_handling_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Complaints Handling Policy</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Complaints Handling Policy</a>
+                {% endif %}
+                {% if privacy_policy_doc and privacy_policy_doc != "" %}
+                <a href="{{ privacy_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Privacy Policy</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Privacy Policy</a>
+                {% endif %}
+                {% if workplace_health_safety_doc and workplace_health_safety_doc != "" %}
+                <a href="{{ workplace_health_safety_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Workplace Health and Safety</a>
+                {% else %}
+                <a href="#" class="nav-dropdown-item">Workplace Health and Safety</a>
+                {% endif %}
               </div>
             </div>
             <a href="https://sspx.au/en/parish-bulletins-queensland-42293" class="nav-dropdown-item" target="_blank" rel="noopener">Parish Bulletin</a>
@@ -273,11 +298,31 @@
       <a href="#" class="mobile-nav-item mobile-nav-subitem">Declaration Information Authority Form</a>
       {% endif %}
       <span class="mobile-nav-group-label">Policies</span>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Whistle Blower Policy</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Complaints Handling Policy</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="/project/assets/Test.pdf" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Workplace Health and Safety</a>
+      {% if student_safety_wellbeing_policy_doc and student_safety_wellbeing_policy_doc != "" %}
+      <a href="{{ student_safety_wellbeing_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Student Safety and Wellbeing Policy</a>
+      {% endif %}
+      {% if whistle_blower_policy_doc and whistle_blower_policy_doc != "" %}
+      <a href="{{ whistle_blower_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Whistle Blower Policy</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Whistle Blower Policy</a>
+      {% endif %}
+      {% if complaints_handling_policy_doc and complaints_handling_policy_doc != "" %}
+      <a href="{{ complaints_handling_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Complaints Handling Policy</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Complaints Handling Policy</a>
+      {% endif %}
+      {% if privacy_policy_doc and privacy_policy_doc != "" %}
+      <a href="{{ privacy_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Privacy Policy</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Privacy Policy</a>
+      {% endif %}
+      {% if workplace_health_safety_doc and workplace_health_safety_doc != "" %}
+      <a href="{{ workplace_health_safety_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Workplace Health and Safety</a>
+      {% else %}
+      <a href="#" class="mobile-nav-item mobile-nav-subitem">Workplace Health and Safety</a>
+      {% endif %}
       <a href="https://sspx.au/en/parish-bulletins-queensland-42293" class="mobile-nav-item" target="_blank" rel="noopener">Parish Bulletin</a>
       <a href="https://sspxpodcast.com/digital-dangers/" class="mobile-nav-item" target="_blank" rel="noopener">SSPX Podcast: Digital Dangers Episodes</a>
       <a href="/project/assets/Test.pdf" class="mobile-nav-item" target="_blank" rel="noopener">Announcement</a>

@@ -24,19 +24,19 @@
   - [x] Uniform Shop
   - [x] Parents & Friends
   - [x] Parent Portal
-- [ ] Portal
+- [x] Portal
   - [x] School Portal
   - [x] Forms
     - [x] Accident Claim Form
     - [x] AHI Claim Form Sport/Volunteers
     - [x] Insured Authorization Form
     - [x] Declaration Information Authority Form
-  - [ ] Policies
-    - [ ] Student Safety and Wellbeing Policy
-    - [ ] Whistle Blower Policy
-    - [ ] Complaints Handling Policy
-    - [ ] Privacy Policy
-    - [ ] Workplace Health and Safety
+  - [x] Policies
+    - [x] Student Safety and Wellbeing Policy
+    - [x] Whistle Blower Policy
+    - [x] Complaints Handling Policy
+    - [x] Privacy Policy
+    - [x] Workplace Health and Safety
   - [x] Parish Bulletin
   - [x] SSPX Podcast: Digital Dangers Episodes
 - [ ] Distance Education

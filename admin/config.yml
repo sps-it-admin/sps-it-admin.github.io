@@ -127,6 +127,51 @@ collections:
         fields:
           - {label: "Declaration Information Authority Form Document", name: "document", widget: "file", required: false, hint: "Upload the Declaration Information Authority Form (e.g. a PDF). The Declaration Information Authority Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "day_school_student_safety_wellbeing_policy"
+    label: "Day School — Student Safety and Wellbeing Policy"
+    files:
+      - name: "student_safety_wellbeing_policy"
+        label: "Student Safety and Wellbeing Policy Document"
+        file: "_data/day_school_student_safety_wellbeing_policy.yml"
+        fields:
+          - {label: "Student Safety and Wellbeing Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Student Safety and Wellbeing Policy (e.g. a PDF). The Student Safety and Wellbeing Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_whistle_blower_policy"
+    label: "Day School — Whistle Blower Policy"
+    files:
+      - name: "whistle_blower_policy"
+        label: "Whistle Blower Policy Document"
+        file: "_data/day_school_whistle_blower_policy.yml"
+        fields:
+          - {label: "Whistle Blower Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Whistle Blower Policy (e.g. a PDF). The Whistle Blower Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_complaints_handling_policy"
+    label: "Day School — Complaints Handling Policy"
+    files:
+      - name: "complaints_handling_policy"
+        label: "Complaints Handling Policy Document"
+        file: "_data/day_school_complaints_handling_policy.yml"
+        fields:
+          - {label: "Complaints Handling Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Complaints Handling Policy (e.g. a PDF). The Complaints Handling Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_privacy_policy"
+    label: "Day School — Privacy Policy"
+    files:
+      - name: "privacy_policy"
+        label: "Privacy Policy Document"
+        file: "_data/day_school_privacy_policy.yml"
+        fields:
+          - {label: "Privacy Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Privacy Policy (e.g. a PDF). The Privacy Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "day_school_workplace_health_safety"
+    label: "Day School — Workplace Health and Safety"
+    files:
+      - name: "workplace_health_safety"
+        label: "Workplace Health and Safety Document"
+        file: "_data/day_school_workplace_health_safety.yml"
+        fields:
+          - {label: "Workplace Health and Safety Document", name: "document", widget: "file", required: false, hint: "Upload the Workplace Health and Safety document (e.g. a PDF). The Workplace Health and Safety menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "day_school_campus"
     label: "Day School — Our Campus"
     files:

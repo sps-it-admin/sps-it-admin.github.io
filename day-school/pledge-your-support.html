@@ -1,0 +1,52 @@
+---
+layout: day-school
+nav: pledge
+title: "Pledge Your Support"
+description: "Support the Catholic education of our youth at St Philomena School, Park Ridge."
+page_hero_label: "Giving"
+page_hero_heading: "Pledge Your Support"
+---
+
+{%- assign pledge = site.data.day_school_pledge_your_support -%}
+
+<main>
+
+  <!-- ── Page hero ── -->
+  <section class="page-hero">
+    <img src="/project/assets/chapel-interior.jpg" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.page_hero_label }}</p>
+      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+    </div>
+  </section>
+
+  <!-- ── Support appeal ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="reveal" style="max-width:42rem;margin:0 auto 3rem;text-align:center;">
+        <span class="section-eyebrow">Support Our Mission</span>
+        <h2 class="section-h2" style="margin-top:0.75rem;">Support the Catholic<br><em>Education of our Youth</em></h2>
+      </div>
+
+      {% if pledge.photo and pledge.photo != "" %}
+      <figure class="reveal" style="margin:0 auto;max-width:64rem;border:1px solid var(--border-strong);box-shadow:var(--shadow-lg);">
+        <img src="{{ pledge.photo }}" alt="St Philomena School campus master plan" style="display:block;width:100%;height:auto;">
+      </figure>
+      {% endif %}
+
+      <div class="cta-btns reveal" style="margin-top:2.5rem;">
+        {% if pledge.brochure_document and pledge.brochure_document != "" %}
+        <a href="{{ pledge.brochure_document }}" class="btn btn-primary" target="_blank" rel="noopener">Download Full Brochure</a>
+        {% endif %}
+        {% if pledge.direct_debit_request_document and pledge.direct_debit_request_document != "" %}
+        <a href="{{ pledge.direct_debit_request_document }}" class="btn btn-primary" target="_blank" rel="noopener">ANZ Direct Debit Authorisation Request Form</a>
+        {% endif %}
+        {% if pledge.direct_debit_agreement_document and pledge.direct_debit_agreement_document != "" %}
+        <a href="{{ pledge.direct_debit_agreement_document }}" class="btn btn-primary" target="_blank" rel="noopener">ANZ Direct Debit Agreement</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+</main>

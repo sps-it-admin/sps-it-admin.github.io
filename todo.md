@@ -42,7 +42,7 @@
 - [x] Distance Education
   - [x] Announcement
   - [x] Expressions of Interest
-- [ ] Pledge Your Support
+- [x] Pledge Your Support
 - [x] Landing
 
 ---

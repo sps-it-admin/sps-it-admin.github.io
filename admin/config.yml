@@ -196,6 +196,18 @@ collections:
           - {label: "Master Plan 1", name: "masterplan_1", widget: "image", required: false, hint: "Master plan image shown in the campus grid. Leave empty to hide it."}
           - {label: "Master Plan 2", name: "masterplan_2", widget: "image", required: false, hint: "Master plan image shown in the campus grid. Leave empty to hide it."}
 
+  - name: "day_school_pledge_your_support"
+    label: "Day School — Pledge Your Support"
+    files:
+      - name: "pledge_your_support"
+        label: "Pledge Your Support Page"
+        file: "_data/day_school_pledge_your_support.yml"
+        fields:
+          - {label: "Photo", name: "photo", widget: "image", required: false, hint: "Photo shown on the Pledge Your Support page. Leave empty to hide it."}
+          - {label: "Download Full Brochure — document", name: "brochure_document", widget: "file", required: false, hint: "Upload the fundraiser brochure (e.g. a PDF). The 'Download Full Brochure' button links to this file and opens it in a new tab. Leave empty to hide the button."}
+          - {label: "ANZ Direct Debit Authorisation Request Form — document", name: "direct_debit_request_document", widget: "file", required: false, hint: "Upload the ANZ Direct Debit Authorisation Request Form (e.g. a PDF). The matching button links to this file and opens it in a new tab. Leave empty to hide the button."}
+          - {label: "ANZ Direct Debit Agreement — document", name: "direct_debit_agreement_document", widget: "file", required: false, hint: "Upload the ANZ Direct Debit Service Agreement (e.g. a PDF). The matching button links to this file and opens it in a new tab. Leave empty to hide the button."}
+
   - name: "distance_learning_fee_schedule"
     label: "Distance Learning — Fee Schedule"
     files:

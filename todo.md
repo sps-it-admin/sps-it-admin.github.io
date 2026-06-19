@@ -52,7 +52,7 @@
 - [x] Home
 - [ ] About
   - [ ] About
-  - [ ] Philosophy of Education
+  - [x] Philosophy of Education
   - [x] Employment
   - [x] Fee Schedule
 - [ ] Teaching & Learning

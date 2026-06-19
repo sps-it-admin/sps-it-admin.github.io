@@ -57,9 +57,9 @@
   - [x] Fee Schedule
 - [ ] Teaching & Learning
   - [ ] Logic Phase
-- [ ] Enrolments
+- [x] Enrolments
   - [x] Expressions of Interest
-  - [ ] Enrolment Process
+  - [x] Enrolment Process
 - [ ] Community
   - [ ] News
   - [ ] Parent Handbook

@@ -1,4 +1,5 @@
 {%- assign fee_schedule_doc = site.data.distance_learning_fee_schedule.document -%}
+{%- assign philosophy_doc = site.data.distance_learning_philosophy_of_education.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +55,11 @@
           </a>
           <div class="nav-dropdown">
             <a href="/distance-learning/about.html" class="nav-dropdown-item">About</a>
+            {% if philosophy_doc and philosophy_doc != "" %}
+            <a href="{{ philosophy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Philosophy of Education</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Philosophy of Education</a>
+            {% endif %}
             <a href="/distance-learning/employment.html" class="nav-dropdown-item">Employment</a>
             {% if fee_schedule_doc and fee_schedule_doc != "" %}
             <a href="{{ fee_schedule_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Fee Schedule</a>
@@ -110,7 +115,11 @@
     <div class="mobile-nav-inner">
       <a href="/distance-learning/" class="mobile-nav-item">Home</a>
       <a href="/distance-learning/about.html" class="mobile-nav-item">About</a>
+      {% if philosophy_doc and philosophy_doc != "" %}
+      <a href="{{ philosophy_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Philosophy of Education</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Philosophy of Education</a>
+      {% endif %}
       <a href="/distance-learning/employment.html" class="mobile-nav-item">Employment</a>
       {% if fee_schedule_doc and fee_schedule_doc != "" %}
       <a href="{{ fee_schedule_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Fee Schedule</a>

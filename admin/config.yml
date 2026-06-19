@@ -217,6 +217,15 @@ collections:
         fields:
           - {label: "Fee Schedule Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "distance_learning_philosophy_of_education"
+    label: "Distance Learning — Philosophy of Education"
+    files:
+      - name: "philosophy_of_education"
+        label: "Philosophy of Education Document"
+        file: "_data/distance_learning_philosophy_of_education.yml"
+        fields:
+          - {label: "Philosophy of Education Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "faq_data"
     label: "FAQ Items"
     files:

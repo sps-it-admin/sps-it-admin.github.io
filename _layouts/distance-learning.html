@@ -1,5 +1,8 @@
 {%- assign fee_schedule_doc = site.data.distance_learning_fee_schedule.document -%}
 {%- assign philosophy_doc = site.data.distance_learning_philosophy_of_education.document -%}
+{%- assign parent_handbook_doc = site.data.distance_learning_parent_handbook.document -%}
+{%- assign student_handbook_doc = site.data.distance_learning_student_handbook.document -%}
+{%- assign it_requirements_doc = site.data.distance_learning_it_requirements.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,9 +97,21 @@
           </a>
           <div class="nav-dropdown">
             <a href="/distance-learning/news.html" class="nav-dropdown-item">News</a>
+            {% if parent_handbook_doc and parent_handbook_doc != "" %}
+            <a href="{{ parent_handbook_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Parent Handbook</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Parent Handbook</a>
+            {% endif %}
+            {% if student_handbook_doc and student_handbook_doc != "" %}
+            <a href="{{ student_handbook_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Student Handbook</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">Student Handbook</a>
+            {% endif %}
+            {% if it_requirements_doc and it_requirements_doc != "" %}
+            <a href="{{ it_requirements_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">IT Requirements</a>
+            {% else %}
             <a href="#" class="nav-dropdown-item">IT Requirements</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -133,9 +148,21 @@
       <a href="/distance-learning/enrolment-process.html" class="mobile-nav-item">Enrolment Process</a>
       <a href="/distance-learning/community.html" class="mobile-nav-item">Community</a>
       <a href="/distance-learning/news.html" class="mobile-nav-item">News</a>
+      {% if parent_handbook_doc and parent_handbook_doc != "" %}
+      <a href="{{ parent_handbook_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Parent Handbook</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Parent Handbook</a>
+      {% endif %}
+      {% if student_handbook_doc and student_handbook_doc != "" %}
+      <a href="{{ student_handbook_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Student Handbook</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">Student Handbook</a>
+      {% endif %}
+      {% if it_requirements_doc and it_requirements_doc != "" %}
+      <a href="{{ it_requirements_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">IT Requirements</a>
+      {% else %}
       <a href="#" class="mobile-nav-item">IT Requirements</a>
+      {% endif %}
       <a href="/distance-learning/faq.html" class="mobile-nav-item">Frequently Asked Questions</a>
     </div>
   </nav>

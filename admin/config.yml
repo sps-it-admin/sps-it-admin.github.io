@@ -226,6 +226,33 @@ collections:
         fields:
           - {label: "Philosophy of Education Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
+  - name: "distance_learning_parent_handbook"
+    label: "Distance Learning — Parent Handbook"
+    files:
+      - name: "parent_handbook"
+        label: "Parent Handbook Document"
+        file: "_data/distance_learning_parent_handbook.yml"
+        fields:
+          - {label: "Parent Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_student_handbook"
+    label: "Distance Learning — Student Handbook"
+    files:
+      - name: "student_handbook"
+        label: "Student Handbook Document"
+        file: "_data/distance_learning_student_handbook.yml"
+        fields:
+          - {label: "Student Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
+  - name: "distance_learning_it_requirements"
+    label: "Distance Learning — IT Requirements"
+    files:
+      - name: "it_requirements"
+        label: "IT Requirements Document"
+        file: "_data/distance_learning_it_requirements.yml"
+        fields:
+          - {label: "IT Requirements Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+
   - name: "dl_news"
     label: "Distance Learning — News"
     label_singular: "News Post"

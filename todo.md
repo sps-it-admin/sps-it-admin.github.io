@@ -38,7 +38,7 @@
     - [ ] Privacy Policy
     - [ ] Workplace Health and Safety
   - [x] Parish Bulletin
-  - [ ] SSPX Podcast: Digital Dangers Intro
+  - [x] SSPX Podcast: Digital Dangers Intro
 - [ ] Distance Education
   - [ ] Announcement
   - [ ] Expressions of Interest

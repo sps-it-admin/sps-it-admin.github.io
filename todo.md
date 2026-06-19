@@ -37,7 +37,7 @@
     - [ ] Complaints Handling Policy
     - [ ] Privacy Policy
     - [ ] Workplace Health and Safety
-  - [ ] Parish Bulletin
+  - [x] Parish Bulletin
   - [ ] SSPX Podcast: Digital Dangers Intro
 - [ ] Distance Education
   - [ ] Announcement

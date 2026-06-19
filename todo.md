@@ -60,9 +60,9 @@
 - [x] Enrolments
   - [x] Expressions of Interest
   - [x] Enrolment Process
-- [ ] Community
+- [x] Community
   - [x] News
-  - [ ] Parent Handbook
-  - [ ] Student Handbook
-  - [ ] IT Requirements
+  - [x] Parent Handbook
+  - [x] Student Handbook
+  - [x] IT Requirements
 - [ ] Frequently Asked Questions

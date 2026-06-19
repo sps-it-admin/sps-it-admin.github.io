@@ -43,7 +43,7 @@
   - [x] Announcement
   - [x] Expressions of Interest
 - [ ] Pledge Your Support
-- [ ] Landing
+- [x] Landing
 
 ---
 

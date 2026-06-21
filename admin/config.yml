@@ -33,9 +33,8 @@ collections:
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Role / Subject", name: "role", widget: "string"}
-              - {label: "Department", name: "department", widget: "select", options: ["Leadership", "Executive & Administration", "Primary Teaching Staff", "Secondary Teaching Staff", "Specialist Teaching Staff", "Support Staff"]}
-              - {label: "Photo", name: "photo", widget: "image", required: false}
-              - {label: "Bio", name: "bio", widget: "text", required: false}
+              - {label: "Department", name: "department", widget: "select", options: [{label: "Principal", value: "principal"}, {label: "Administration", value: "administration"}, {label: "Primary Teaching Staff", value: "primary"}, {label: "Secondary Teaching Staff", value: "secondary"}, {label: "Specialist Teaching Staff", value: "specialist"}, {label: "Support Staff", value: "support"}]}
+              - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 1}
 
   - name: "day_school_annual_report"
     label: "Day School — Annual Report"
@@ -351,20 +350,6 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
           - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
-
-      - name: "day_school_our_staff"
-        label: "Day School — Our Staff"
-        file: "day-school/our-staff.html"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
-          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
-          - {label: "Section Eyebrow", name: "staff_eyebrow", widget: "string", required: false}
-          - {label: "Section Heading", name: "staff_heading", widget: "string", required: false}
-          - {label: "Section Intro", name: "staff_intro", widget: "text", required: false}
 
       - name: "faq"
         label: "FAQ"

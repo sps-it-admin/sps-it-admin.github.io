@@ -254,6 +254,10 @@ section[id] { scroll-margin-top: 96px; }
    ============================================================ */
 .font-label { letter-spacing: 0.05em; }
 
+/* Inline icon inside buttons/links */
+.icon-inline { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; margin-right: 0.4rem; }
+.ds-doc-icon svg, .ds-doc-icon i { width: 32px; height: 32px; }
+
 /* Ken Burns hero drift */
 @keyframes ds-ken-burns { from { transform: scale(1); } to { transform: scale(1.04); } }
 .ken-burns { animation: ds-ken-burns 10s ease-in-out infinite alternate; }

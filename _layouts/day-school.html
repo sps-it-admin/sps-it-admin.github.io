@@ -1,395 +1,176 @@
-{%- assign annual_report_doc = site.data.day_school_annual_report.document -%}
-{%- assign prospectus_doc = site.data.day_school_prospectus.document -%}
-{%- assign fee_schedule_doc = site.data.day_school_fee_schedule.document -%}
-{%- assign bus_transport_doc = site.data.day_school_bus_transport.document -%}
-{%- assign classical_books_doc = site.data.day_school_classical_books.document -%}
-{%- assign school_calendar_doc = site.data.day_school_school_calendar.document -%}
-{%- assign accident_claim_form_doc = site.data.day_school_accident_claim_form.document -%}
-{%- assign ahi_claim_form_doc = site.data.day_school_ahi_claim_form.document -%}
-{%- assign insured_authorization_form_doc = site.data.day_school_insured_authorization_form.document -%}
-{%- assign declaration_authority_form_doc = site.data.day_school_declaration_authority_form.document -%}
-{%- assign student_safety_wellbeing_policy_doc = site.data.day_school_student_safety_wellbeing_policy.document -%}
-{%- assign whistle_blower_policy_doc = site.data.day_school_whistle_blower_policy.document -%}
-{%- assign complaints_handling_policy_doc = site.data.day_school_complaints_handling_policy.document -%}
-{%- assign privacy_policy_doc = site.data.day_school_privacy_policy.document -%}
-{%- assign workplace_health_safety_doc = site.data.day_school_workplace_health_safety.document -%}
-{%- assign announcement_doc = site.data.day_school_distance_education_announcement.document -%}
+{%- assign ds = site.data.settings.day_school -%}
+{%- assign annual_report = site.data.day_school_annual_report.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} — St Philomena School Day School{% else %}St Philomena School — Day School{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} — St Philomena School{% else %}St Philomena School — A Traditional Catholic School{% endif %}</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <link rel="icon" href="/project/assets/favicon.ico">
-  <link rel="stylesheet" href="/project/styles.css">
-  <link rel="stylesheet" href="/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/day-school.css">
 </head>
 <body>
 
-<div class="site-header">
-  <div class="util-bar">
-    <div class="util-bar-left">
-      <span class="util-bar-item">
-        <i data-lucide="phone" class="icon-11"></i>
-        {{ site.data.settings.day_school.phone }}
-      </span>
-      <span class="util-bar-item">
-        <i data-lucide="mail" class="icon-11"></i>
-        {{ site.data.settings.day_school.email }}
-      </span>
-    </div>
-    <div class="util-bar-right">
-      <a href="/" class="util-bar-link">← School Home</a>
-      <span class="util-bar-sep">|</span>
-      <a href="/distance-learning/" class="util-bar-link">Distance Learning</a>
-      <span class="util-bar-sep">|</span>
-      <a href="https://stphilomenaschool.sharepoint.com/sites/Portal" class="util-bar-link" target="_blank" rel="noopener">School Portal</a>
+<!-- ── Utility bar ── -->
+<div class="ds-utilbar">
+  <div class="ds-utilbar-group">
+    <a href="tel:0738020088"><i data-lucide="phone"></i>{{ ds.phone }}</a>
+    <a href="mailto:{{ ds.email }}"><i data-lucide="mail"></i>{{ ds.email }}</a>
+  </div>
+  <div class="ds-utilbar-group">
+    <a href="https://stphilomena.qld.tass.cloud/parentlounge/index.cfm" target="_blank" rel="noopener">Parent Portal ↗</a>
+    <span class="sep">|</span>
+    <a href="https://stphilomenaschool.sharepoint.com/sites/Portal" target="_blank" rel="noopener">School Portal ↗</a>
+    <span class="sep">|</span>
+    <span style="opacity:0.9">Day School</span>
+    <span class="sep">|</span>
+    <a href="/distance-learning/">Distance Learning →</a>
+  </div>
+</div>
+
+<!-- ── Header ── -->
+<header class="main-header">
+  <div class="container">
+    <div class="ds-header-inner">
+      <a href="/day-school/" class="ds-logo">
+        <img src="/project/assets/logo-full.png" alt="St Philomena School">
+        <span class="ds-logo-text">
+          <span class="ds-logo-name">St Philomena School</span>
+          <span class="ds-logo-motto">Sine Deo Nihil</span>
+        </span>
+      </a>
+
+      <nav class="ds-nav" aria-label="Main">
+        <div class="ds-nav-item">
+          <a href="/day-school/" class="ds-nav-link{% if page.nav == 'home' %} active{% endif %}">Home</a>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/about.html" class="ds-nav-link{% if page.nav == 'about' %} active{% endif %}">About <i data-lucide="chevron-down"></i></a>
+          <div class="ds-dropdown">
+            <a href="/day-school/about.html#philosophy">Our Philosophy</a>
+            <a href="/day-school/about.html#vision">School Vision</a>
+            <a href="/day-school/about.html#history">History</a>
+            <a href="/day-school/about.html#principal">Principal's Welcome</a>
+            <a href="/day-school/campus.html">Our Campus</a>
+            <a href="/day-school/staff.html">Our Staff</a>
+          </div>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/classical-education.html" class="ds-nav-link{% if page.nav == 'classical-education' %} active{% endif %}">Classical Education <i data-lucide="chevron-down"></i></a>
+          <div class="ds-dropdown">
+            <a href="/day-school/classical-education.html#history">History</a>
+            <a href="/day-school/classical-education.html#latin">Latin</a>
+            <a href="/day-school/classical-education.html#literature">Literature</a>
+            <a href="/day-school/classical-education.html#logic">Logic</a>
+          </div>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/music.html" class="ds-nav-link{% if page.nav == 'school-life' %} active{% endif %}">School Life <i data-lucide="chevron-down"></i></a>
+          <div class="ds-dropdown">
+            <a href="/day-school/music.html">Music</a>
+            <a href="/day-school/drama.html">Drama</a>
+            <a href="/day-school/sport.html">Sport</a>
+          </div>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/admissions.html" class="ds-nav-link{% if page.nav == 'admissions' %} active{% endif %}">Admissions</a>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/community.html" class="ds-nav-link{% if page.nav == 'community' %} active{% endif %}">Community <i data-lucide="chevron-down"></i></a>
+          <div class="ds-dropdown">
+            <a href="/day-school/community.html#uniform">Uniform Shop</a>
+            <a href="/day-school/community.html#parents-friends">Parents &amp; Friends</a>
+            <a href="/day-school/community.html#policies">Policies</a>
+            <a href="/day-school/community.html#forms">Forms</a>
+            <a href="/day-school/community.html#portals">Portals</a>
+          </div>
+        </div>
+        <div class="ds-nav-item">
+          <a href="/day-school/pledge.html" class="ds-nav-link{% if page.nav == 'pledge' %} active{% endif %}">Pledge</a>
+        </div>
+        <a href="/day-school/admissions.html" class="ds-enrol">Enrol Now</a>
+      </nav>
+
+      <button class="mob-toggle" type="button" aria-label="Toggle navigation">
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
   </div>
 
-  <header class="main-header">
-    <div class="header-inner">
-      <a href="/day-school/" class="logo-lockup">
-        <img src="/project/assets/logo-full.png" alt="St Philomena School crest">
-        <div class="logo-text">
-          <span class="logo-name">ST PHILOMENA SCHOOL</span>
-          <span class="logo-sub">Day School</span>
-        </div>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <div class="nav-item">
-          <a href="/day-school/" class="nav-item-btn{% if page.nav == 'home' %} active{% endif %}">Home</a>
-        </div>
-        <div class="nav-item">
-          <a href="/day-school/about.html" class="nav-item-btn{% if page.nav == 'about' %} active{% endif %}">
-            About Us
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="/day-school/about.html" class="nav-dropdown-item">About</a>
-            <a href="/day-school/our-campus.html" class="nav-dropdown-item">Our Campus</a>
-            <a href="/day-school/our-staff.html" class="nav-dropdown-item">Our Staff</a>
-            <a href="/day-school/classical-education.html" class="nav-dropdown-item">Classical Education</a>
-            {% if annual_report_doc and annual_report_doc != "" %}
-            <a href="{{ annual_report_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Annual Report</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Annual Report</a>
-            {% endif %}
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="#" class="nav-item-btn{% if page.nav == 'school-life' %} active{% endif %}">
-            School Life
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            {% if school_calendar_doc and school_calendar_doc != "" %}
-            <a href="{{ school_calendar_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">School Calendar</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">School Calendar</a>
-            {% endif %}
-            <a href="/day-school/music.html" class="nav-dropdown-item">Music</a>
-            <a href="/day-school/drama.html" class="nav-dropdown-item">Drama</a>
-            <a href="/day-school/sport.html" class="nav-dropdown-item">Sport</a>
-            {% if classical_books_doc and classical_books_doc != "" %}
-            <a href="{{ classical_books_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Classical Books</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Classical Books</a>
-            {% endif %}
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="/day-school/enrol.html" class="nav-item-btn{% if page.nav == 'enrol' %} active{% endif %}">
-            Admissions
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="/day-school/admission-process.html" class="nav-dropdown-item">Admission Process</a>
-            {% if prospectus_doc and prospectus_doc != "" %}
-            <a href="{{ prospectus_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Prospectus &amp; Handbook</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Prospectus &amp; Handbook</a>
-            {% endif %}
-            {% if fee_schedule_doc and fee_schedule_doc != "" %}
-            <a href="{{ fee_schedule_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Fee Schedule</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Fee Schedule</a>
-            {% endif %}
-            {% if bus_transport_doc and bus_transport_doc != "" %}
-            <a href="{{ bus_transport_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Bus Transport</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Bus Transport</a>
-            {% endif %}
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="/day-school/community.html" class="nav-item-btn{% if page.nav == 'community' %} active{% endif %}">
-            Our Community
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="/day-school/uniform-shop.html" class="nav-dropdown-item">Uniform Shop</a>
-            <a href="/day-school/parents-friends.html" class="nav-dropdown-item">Parents &amp; Friends</a>
-            <a href="https://stphilomena.qld.tass.cloud/parentlounge/login.cfm" class="nav-dropdown-item" target="_blank" rel="noopener">Parent Portal</a>
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="#" class="nav-item-btn">
-            Portal
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="https://stphilomenaschool.sharepoint.com/sites/Portal" class="nav-dropdown-item" target="_blank" rel="noopener">School Portal</a>
-            <div class="nav-dropdown-sub">
-              <button type="button" class="nav-dropdown-item nav-dropdown-sub-toggle" aria-haspopup="true">
-                Forms
-                <i data-lucide="chevron-right" class="nav-chevron icon-12"></i>
-              </button>
-              <div class="nav-subdropdown">
-                {% if accident_claim_form_doc and accident_claim_form_doc != "" %}
-                <a href="{{ accident_claim_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Accident Claim Form</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Accident Claim Form</a>
-                {% endif %}
-                {% if ahi_claim_form_doc and ahi_claim_form_doc != "" %}
-                <a href="{{ ahi_claim_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">AHI Claim Form Sport/Volunteers</a>
-                {% endif %}
-                {% if insured_authorization_form_doc and insured_authorization_form_doc != "" %}
-                <a href="{{ insured_authorization_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Insured Authorization Form</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Insured Authorization Form</a>
-                {% endif %}
-                {% if declaration_authority_form_doc and declaration_authority_form_doc != "" %}
-                <a href="{{ declaration_authority_form_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Declaration Information Authority Form</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Declaration Information Authority Form</a>
-                {% endif %}
-              </div>
-            </div>
-            <div class="nav-dropdown-sub">
-              <button type="button" class="nav-dropdown-item nav-dropdown-sub-toggle" aria-haspopup="true">
-                Policies
-                <i data-lucide="chevron-right" class="nav-chevron icon-12"></i>
-              </button>
-              <div class="nav-subdropdown">
-                {% if student_safety_wellbeing_policy_doc and student_safety_wellbeing_policy_doc != "" %}
-                <a href="{{ student_safety_wellbeing_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Student Safety and Wellbeing Policy</a>
-                {% endif %}
-                {% if whistle_blower_policy_doc and whistle_blower_policy_doc != "" %}
-                <a href="{{ whistle_blower_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Whistle Blower Policy</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Whistle Blower Policy</a>
-                {% endif %}
-                {% if complaints_handling_policy_doc and complaints_handling_policy_doc != "" %}
-                <a href="{{ complaints_handling_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Complaints Handling Policy</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Complaints Handling Policy</a>
-                {% endif %}
-                {% if privacy_policy_doc and privacy_policy_doc != "" %}
-                <a href="{{ privacy_policy_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Privacy Policy</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Privacy Policy</a>
-                {% endif %}
-                {% if workplace_health_safety_doc and workplace_health_safety_doc != "" %}
-                <a href="{{ workplace_health_safety_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Workplace Health and Safety</a>
-                {% else %}
-                <a href="#" class="nav-dropdown-item">Workplace Health and Safety</a>
-                {% endif %}
-              </div>
-            </div>
-            <a href="https://sspx.au/en/parish-bulletins-queensland-42293" class="nav-dropdown-item" target="_blank" rel="noopener">Parish Bulletin</a>
-            <a href="https://sspxpodcast.com/digital-dangers/" class="nav-dropdown-item" target="_blank" rel="noopener">SSPX Podcast: Digital Dangers Episodes</a>
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="#" class="nav-item-btn">
-            Distance Education
-            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
-          </a>
-          <div class="nav-dropdown">
-            {% if announcement_doc and announcement_doc != "" %}
-            <a href="{{ announcement_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Announcement</a>
-            {% else %}
-            <a href="#" class="nav-dropdown-item">Announcement</a>
-            {% endif %}
-            <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" class="nav-dropdown-item" target="_blank" rel="noopener">Expressions of Interest</a>
-          </div>
-        </div>
-        <div class="nav-item">
-          <a href="/day-school/pledge-your-support.html" class="nav-item-btn{% if page.nav == 'pledge' %} active{% endif %}">Pledge Your Support</a>
-        </div>
-        <div class="nav-item">
-          <a href="https://stphilomena.qld.edu.au/" class="nav-item-btn">Landing</a>
-        </div>
-      </nav>
-
-      <button class="mob-toggle" aria-label="Toggle navigation">
-        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <div class="mobile-nav-inner">
+  <!-- ── Mobile nav ── -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <div class="container mobile-nav-inner">
       <a href="/day-school/" class="mobile-nav-item">Home</a>
       <a href="/day-school/about.html" class="mobile-nav-item">About</a>
-      <a href="/day-school/our-campus.html" class="mobile-nav-item">Our Campus</a>
-      <a href="/day-school/our-staff.html" class="mobile-nav-item">Our Staff</a>
+      <a href="/day-school/campus.html" class="mobile-nav-item mobile-nav-sub">Our Campus</a>
+      <a href="/day-school/staff.html" class="mobile-nav-item mobile-nav-sub">Our Staff</a>
       <a href="/day-school/classical-education.html" class="mobile-nav-item">Classical Education</a>
-      {% if annual_report_doc and annual_report_doc != "" %}
-      <a href="{{ annual_report_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Annual Report</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Annual Report</a>
-      {% endif %}
-      {% if school_calendar_doc and school_calendar_doc != "" %}
-      <a href="{{ school_calendar_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">School Calendar</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">School Calendar</a>
-      {% endif %}
-      <a href="/day-school/music.html" class="mobile-nav-item">Music</a>
-      <a href="/day-school/drama.html" class="mobile-nav-item">Drama</a>
-      <a href="/day-school/sport.html" class="mobile-nav-item">Sport</a>
-      {% if classical_books_doc and classical_books_doc != "" %}
-      <a href="{{ classical_books_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Classical Books</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Classical Books</a>
-      {% endif %}
-      <a href="/day-school/admission-process.html" class="mobile-nav-item">Admission Process</a>
-      {% if prospectus_doc and prospectus_doc != "" %}
-      <a href="{{ prospectus_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Prospectus &amp; Handbook</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Prospectus &amp; Handbook</a>
-      {% endif %}
-      {% if fee_schedule_doc and fee_schedule_doc != "" %}
-      <a href="{{ fee_schedule_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Fee Schedule</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Fee Schedule</a>
-      {% endif %}
-      {% if bus_transport_doc and bus_transport_doc != "" %}
-      <a href="{{ bus_transport_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Bus Transport</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Bus Transport</a>
-      {% endif %}
-      <a href="/day-school/uniform-shop.html" class="mobile-nav-item">Uniform Shop</a>
-      <a href="/day-school/parents-friends.html" class="mobile-nav-item">Parents &amp; Friends</a>
-      <a href="https://stphilomena.qld.tass.cloud/parentlounge/login.cfm" class="mobile-nav-item" target="_blank" rel="noopener">Parent Portal</a>
-      <a href="https://stphilomenaschool.sharepoint.com/sites/Portal" class="mobile-nav-item" target="_blank" rel="noopener">School Portal</a>
-      <span class="mobile-nav-group-label">Forms</span>
-      {% if accident_claim_form_doc and accident_claim_form_doc != "" %}
-      <a href="{{ accident_claim_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Accident Claim Form</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Accident Claim Form</a>
-      {% endif %}
-      {% if ahi_claim_form_doc and ahi_claim_form_doc != "" %}
-      <a href="{{ ahi_claim_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">AHI Claim Form Sport/Volunteers</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">AHI Claim Form Sport/Volunteers</a>
-      {% endif %}
-      {% if insured_authorization_form_doc and insured_authorization_form_doc != "" %}
-      <a href="{{ insured_authorization_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Insured Authorization Form</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Insured Authorization Form</a>
-      {% endif %}
-      {% if declaration_authority_form_doc and declaration_authority_form_doc != "" %}
-      <a href="{{ declaration_authority_form_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Declaration Information Authority Form</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Declaration Information Authority Form</a>
-      {% endif %}
-      <span class="mobile-nav-group-label">Policies</span>
-      {% if student_safety_wellbeing_policy_doc and student_safety_wellbeing_policy_doc != "" %}
-      <a href="{{ student_safety_wellbeing_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Student Safety and Wellbeing Policy</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Student Safety and Wellbeing Policy</a>
-      {% endif %}
-      {% if whistle_blower_policy_doc and whistle_blower_policy_doc != "" %}
-      <a href="{{ whistle_blower_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Whistle Blower Policy</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Whistle Blower Policy</a>
-      {% endif %}
-      {% if complaints_handling_policy_doc and complaints_handling_policy_doc != "" %}
-      <a href="{{ complaints_handling_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Complaints Handling Policy</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Complaints Handling Policy</a>
-      {% endif %}
-      {% if privacy_policy_doc and privacy_policy_doc != "" %}
-      <a href="{{ privacy_policy_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Privacy Policy</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Privacy Policy</a>
-      {% endif %}
-      {% if workplace_health_safety_doc and workplace_health_safety_doc != "" %}
-      <a href="{{ workplace_health_safety_doc }}" class="mobile-nav-item mobile-nav-subitem" target="_blank" rel="noopener">Workplace Health and Safety</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item mobile-nav-subitem">Workplace Health and Safety</a>
-      {% endif %}
-      <a href="https://sspx.au/en/parish-bulletins-queensland-42293" class="mobile-nav-item" target="_blank" rel="noopener">Parish Bulletin</a>
-      <a href="https://sspxpodcast.com/digital-dangers/" class="mobile-nav-item" target="_blank" rel="noopener">SSPX Podcast: Digital Dangers Episodes</a>
-      {% if announcement_doc and announcement_doc != "" %}
-      <a href="{{ announcement_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Announcement</a>
-      {% else %}
-      <a href="#" class="mobile-nav-item">Announcement</a>
-      {% endif %}
-      <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" class="mobile-nav-item" target="_blank" rel="noopener">Expressions of Interest</a>
-      <a href="/day-school/pledge-your-support.html" class="mobile-nav-item">Pledge Your Support</a>
-      <a href="https://stphilomena.qld.edu.au/" class="mobile-nav-item">Landing</a>
+      <a href="/day-school/music.html" class="mobile-nav-item">School Life</a>
+      <a href="/day-school/music.html" class="mobile-nav-item mobile-nav-sub">Music</a>
+      <a href="/day-school/drama.html" class="mobile-nav-item mobile-nav-sub">Drama</a>
+      <a href="/day-school/sport.html" class="mobile-nav-item mobile-nav-sub">Sport</a>
+      <a href="/day-school/admissions.html" class="mobile-nav-item">Admissions</a>
+      <a href="/day-school/community.html" class="mobile-nav-item">Community</a>
+      <a href="/day-school/pledge.html" class="mobile-nav-item">Pledge</a>
+      <a href="/day-school/admissions.html" class="mobile-nav-item mobile-nav-enrol">Enrol Now</a>
     </div>
   </nav>
-</div>
+</header>
 
+<main>
 {{ content }}
+</main>
 
-<footer class="site-footer">
-  <div class="footer-rule"></div>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <img src="/project/assets/logo-full.png" alt="St Philomena School" class="footer-logo">
-        <p class="footer-tagline">Providing an authentic Catholic classical education for students in Prep to Year 12 at our Park Ridge campus.</p>
-        <p class="footer-motto">"Sine Deo Nihil"</p>
-        <p class="footer-motto-en">Without God there is Nothing</p>
-      </div>
-      <div>
-        <h4 class="footer-col-heading">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="/day-school/" class="footer-link">Home</a></li>
-          <li><a href="/day-school/about.html" class="footer-link">About</a></li>
-          <li><a href="/day-school/teaching.html" class="footer-link">Teaching &amp; Learning</a></li>
-          <li><a href="/day-school/enrol.html" class="footer-link">Enrolments</a></li>
-          <li><a href="/day-school/community.html" class="footer-link">Community</a></li>
-          <li><a href="/day-school/faq.html" class="footer-link">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-heading">Contact Us</h4>
-        <div class="footer-contact">
+<!-- ── Footer ── -->
+<footer class="site-footer ds-footer">
+  <div class="container">
+    <div class="ds-footer-grid">
+      <div class="ds-footer-main">
+        <div class="ds-footer-logo">
+          <img src="/project/assets/logo-full.png" alt="St Philomena School">
           <div>
-            <p class="footer-contact-label">Address</p>
-            <p>{{ site.data.settings.day_school.address_line1 }}<br>{{ site.data.settings.day_school.address_line2 }}</p>
-          </div>
-          <div>
-            <p class="footer-contact-label">Phone</p>
-            <p>{{ site.data.settings.day_school.phone }}</p>
-          </div>
-          <div>
-            <p class="footer-contact-label">Email</p>
-            <p>{{ site.data.settings.day_school.email }}</p>
+            <h3>St Philomena School</h3>
+            <p class="ds-footer-motto">Sine Deo Nihil — Without God there is Nothing</p>
           </div>
         </div>
+        <p class="ds-footer-desc">A traditional Catholic school in Park Ridge, Queensland, offering a classical education for students Prep–Year 12. Established 1999.</p>
+        <div class="ds-footer-contact">
+          <a href="tel:0738020088"><i data-lucide="phone"></i> {{ ds.phone }}</a>
+          <a href="mailto:{{ ds.email }}"><i data-lucide="mail"></i> {{ ds.email }}</a>
+          <span style="opacity:0.8">{{ ds.address_line1 }}, {{ ds.address_line2 }}</span>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="ds-footer-links">
+          <li><a href="/day-school/about.html">About</a></li>
+          <li><a href="/day-school/classical-education.html">Classical Education</a></li>
+          <li><a href="/day-school/staff.html">Our Staff</a></li>
+          <li><a href="/day-school/admissions.html">Admissions</a></li>
+          <li><a href="/day-school/community.html">Community</a></li>
+          <li><a href="/day-school/pledge.html">Pledge Your Support</a></li>
+          {% if annual_report and annual_report != "" %}<li><a href="{{ annual_report }}" target="_blank" rel="noopener">Annual Report ↗</a></li>{% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h4>Portals</h4>
+        <ul class="ds-footer-links">
+          <li><a href="https://stphilomena.qld.tass.cloud/parentlounge/index.cfm" target="_blank" rel="noopener">Parent Portal ↗</a></li>
+          <li><a href="https://stphilomenaschool.sharepoint.com/sites/Portal" target="_blank" rel="noopener">School Portal ↗</a></li>
+          <li><a href="https://sspx.com.au/en/parish-bulletins" target="_blank" rel="noopener">Parish Bulletin ↗</a></li>
+          <li><a href="/distance-learning/">Distance Learning →</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; {{ site.data.settings.day_school.copyright_year }} St Philomena School – Day School. All rights reserved.</p>
-      <div class="footer-legal">
-        <span>Privacy Policy</span>
-        <span>|</span>
-        <span>Child Protection</span>
-      </div>
+    <div class="ds-footer-bottom">
+      &copy; {{ ds.copyright_year }} St Philomena School. All rights reserved.
     </div>
   </div>
 </footer>

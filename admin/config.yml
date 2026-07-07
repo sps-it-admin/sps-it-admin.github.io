@@ -587,3 +587,848 @@ collections:
               - {label: "Primary Button Link", name: "primary_link", widget: "string"}
               - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
               - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+
+  - name: "day_school_pages"
+    label: "Day School — Pages"
+    files:
+      - name: "ds_home"
+        label: "Home"
+        file: "day-school/index.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "home"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Image Alt Text", name: "image_alt", widget: "string"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - {label: "Subtext", name: "subtext", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+          - label: "Motto Band"
+            name: "motto"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Latin", name: "latin", widget: "string"}
+              - {label: "English", name: "english", widget: "string"}
+          - label: "Video Showcase"
+            name: "video"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "YouTube Embed URL", name: "embed_url", widget: "string", hint: "Use the /embed/ form of the YouTube URL."}
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Value", name: "value", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          - label: "Pillars"
+            name: "pillars"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "ds_about"
+        label: "About"
+        file: "day-school/about.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Motto (Latin)", name: "motto", widget: "string"}
+              - {label: "Motto (English)", name: "motto_en", widget: "string"}
+              - {label: "Background Image", name: "image", widget: "image"}
+          - label: "Motto / Mission Cards"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Motto Label", name: "motto_label", widget: "string"}
+              - {label: "Motto (Latin)", name: "motto_latin", widget: "string"}
+              - {label: "Motto (English)", name: "motto_english", widget: "string"}
+              - {label: "Mission Label", name: "mission_label", widget: "string"}
+              - {label: "Mission Text", name: "mission_text", widget: "text"}
+          - label: "Philosophy"
+            name: "philosophy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML such as <em> and <strong> is allowed."}
+          - label: "Vision"
+            name: "vision"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML such as <em> and <strong> is allowed."}
+              - {label: "Closing (emphasised)", name: "closing", widget: "text"}
+          - label: "History"
+            name: "history"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML such as <em> and <strong> is allowed."}
+              - {label: "Principals Heading", name: "principals_heading", widget: "string"}
+              - label: "Principals"
+                name: "principals"
+                widget: "list"
+                fields:
+                  - {label: "Years", name: "years", widget: "string"}
+                  - {label: "Name", name: "name", widget: "string"}
+          - label: "Principal's Welcome"
+            name: "principal"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Photo Alt Text", name: "image_alt", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Pull Quote", name: "quote", widget: "text"}
+              - {label: "Signature Name", name: "signature_name", widget: "string"}
+              - {label: "Signature Title", name: "signature_title", widget: "string"}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "ds_admissions"
+        label: "Admissions"
+        file: "day-school/admissions.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "admissions"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - {label: "Callout", name: "callout", widget: "text"}
+          - label: "Enrolment Process"
+            name: "process"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                hint: "Numbered automatically in order."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button URL", name: "button_url", widget: "string"}
+              - {label: "Note", name: "note", widget: "text", hint: "HTML links allowed."}
+          - label: "Key Documents"
+            name: "documents"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Contact CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Phone (display)", name: "phone_display", widget: "string"}
+              - {label: "Phone Link", name: "phone_link", widget: "string"}
+              - {label: "Email Button Label", name: "email_label", widget: "string"}
+              - {label: "Email Link", name: "email_link", widget: "string"}
+
+      - name: "ds_campus"
+        label: "Our Campus"
+        file: "day-school/campus.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Campus Features"
+            name: "features"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Numeral", name: "numeral", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Address", name: "address", widget: "text", hint: "HTML such as <br> and <strong> is allowed."}
+              - {label: "Contact", name: "contact", widget: "text", hint: "HTML links allowed."}
+              - {label: "Note", name: "note", widget: "text"}
+              - {label: "Map Embed URL", name: "map_embed_url", widget: "string"}
+              - {label: "Map Title", name: "map_title", widget: "string"}
+
+      - name: "ds_classical_education"
+        label: "Classical Education"
+        file: "day-school/classical-education.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "classical-education"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+          - label: "Subject Cards"
+            name: "subject_cards"
+            widget: "list"
+            fields:
+              - {label: "Numeral", name: "numeral", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Anchor", name: "anchor", widget: "string", hint: "e.g. #history"}
+          - label: "History"
+            name: "history"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Latin"
+            name: "latin"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Poem Lines"
+                name: "poem"
+                widget: "list"
+                field: {label: "Line", name: "line", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - {label: "Closing (emphasised)", name: "closing", widget: "text"}
+          - label: "Literature"
+            name: "literature"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - {label: "Callout Heading", name: "callout_heading", widget: "string"}
+              - label: "Callout Items"
+                name: "callout_items"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "string"}
+              - {label: "Questions Intro", name: "questions_intro", widget: "string"}
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                field: {label: "Question", name: "question", widget: "string"}
+          - label: "Logic"
+            name: "logic"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text", hint: "HTML allowed."}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "ds_community"
+        label: "Community"
+        file: "day-school/community.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "community"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Uniform"
+            name: "uniform"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - label: "Shop Links"
+                name: "shop_links"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+                  - {label: "Variant", name: "variant", widget: "select", options: ["solid", "outline"]}
+              - {label: "Policy Heading", name: "policy_heading", widget: "string"}
+              - {label: "Policy Card Heading", name: "policy_card_heading", widget: "string"}
+              - label: "Policy Items"
+                name: "policy_items"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+              - label: "Uniform Tables"
+                name: "tables"
+                widget: "list"
+                fields:
+                  - {label: "Heading", name: "heading", widget: "string"}
+                  - {label: "Boys", name: "boys", widget: "text"}
+                  - {label: "Girls", name: "girls", widget: "text"}
+              - {label: "Afterhours Heading", name: "afterhours_heading", widget: "string"}
+              - {label: "Afterhours Intro", name: "afterhours_intro", widget: "text"}
+              - label: "Afterhours Items"
+                name: "afterhours_items"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+          - label: "Parents & Friends"
+            name: "parents_friends"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - {label: "Closing (emphasised)", name: "closing", widget: "text", hint: "HTML allowed."}
+              - label: "Current Executive"
+                name: "execs"
+                widget: "list"
+                fields:
+                  - {label: "Role", name: "role", widget: "string"}
+                  - {label: "Name", name: "name", widget: "string"}
+              - {label: "History Heading", name: "history_heading", widget: "string"}
+              - {label: "History Source", name: "history_source", widget: "string"}
+              - label: "Executive History"
+                name: "history"
+                widget: "list"
+                fields:
+                  - {label: "Year", name: "year", widget: "string"}
+                  - {label: "President", name: "president", widget: "string"}
+                  - {label: "Secretary", name: "secretary", widget: "string"}
+                  - {label: "Treasurer", name: "treasurer", widget: "string"}
+          - label: "Policies"
+            name: "policies"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Forms"
+            name: "forms"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Portals"
+            name: "portals"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - {label: "URL", name: "url", widget: "string"}
+
+      - name: "ds_drama"
+        label: "Drama"
+        file: "day-school/drama.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "school-life"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Feature Quote"
+            name: "quote"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Attribution", name: "attribution", widget: "string"}
+          - label: "Why Drama"
+            name: "why"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Past Productions"
+            name: "productions"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Year", name: "year", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+
+      - name: "ds_music"
+        label: "Music"
+        file: "day-school/music.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "school-life"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Lead Paragraphs"
+                name: "lead"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - label: "Quadrivium"
+                name: "quadrivium"
+                widget: "list"
+                hint: "Numbered automatically; the third item is highlighted."
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "string"}
+              - label: "After Paragraphs"
+                name: "after"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Aristotle Quote"
+            name: "aristotle"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Note", name: "note", widget: "text", hint: "HTML allowed."}
+          - label: "Sacred Music"
+            name: "sacred"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Sources of Inspiration"
+            name: "sources"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Numeral", name: "numeral", widget: "string"}
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "string"}
+              - {label: "Outro", name: "outro", widget: "text", hint: "HTML allowed."}
+          - label: "Augustine Close"
+            name: "augustine"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Closing", name: "closing", widget: "text"}
+
+      - name: "ds_pledge"
+        label: "Pledge Your Support"
+        file: "day-school/pledge.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "pledge"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Why Pledge"
+            name: "why"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+              - {label: "Closing (emphasised)", name: "closing", widget: "text"}
+          - label: "How to Give"
+            name: "give"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Contact CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Phone (display)", name: "phone_display", widget: "string"}
+              - {label: "Phone Link", name: "phone_link", widget: "string"}
+              - {label: "Email Button Label", name: "email_label", widget: "string"}
+              - {label: "Email Link", name: "email_link", widget: "string"}
+
+      - name: "ds_sport"
+        label: "Sport"
+        file: "day-school/sport.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "school-life"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+              - label: "Sport Tags"
+                name: "tags"
+                widget: "list"
+                field: {label: "Tag", name: "tag", widget: "string"}
+          - label: "Club Sport"
+            name: "club"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+          - label: "Interschool Sport"
+            name: "interschool"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+          - label: "Representative Sport"
+            name: "representative"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+          - label: "School Carnivals & Houses"
+            name: "carnivals"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML allowed."}
+              - {label: "Houses Heading", name: "houses_heading", widget: "string"}
+              - label: "Houses"
+                name: "houses"
+                widget: "list"
+                hint: "First house is styled blue, second green."
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Colour Label", name: "colour_label", widget: "string"}
+          - label: "Sports Awards"
+            name: "awards"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Numeral", name: "numeral", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+
+      - name: "ds_staff"
+        label: "Our Staff (page)"
+        file: "day-school/staff.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            hint: "The staff list itself is managed under 'Day School — Our Staff'."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle Prefix", name: "subtitle_prefix", widget: "string", hint: "Text before the automatic staff count."}
+              - {label: "Subtitle Suffix", name: "subtitle_suffix", widget: "string", hint: "Text after the automatic staff count."}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "ds_404"
+        label: "404 (Page Not Found)"
+        file: "day-school/404.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+          - {label: "Code", name: "code", widget: "string"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Body", name: "body", widget: "text"}
+          - {label: "Button Label", name: "button_label", widget: "string"}
+          - {label: "Button Link", name: "button_link", widget: "string"}

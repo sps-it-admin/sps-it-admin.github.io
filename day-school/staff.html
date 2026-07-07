@@ -3,6 +3,21 @@ layout: day-school
 nav: about
 title: "Our Staff"
 description: "Our dedicated faculty and support staff — Catholic teachers committed to the classical liberal arts tradition."
+
+# ── Hero ── (the staff list itself is managed under "Day School — Our Staff")
+hero:
+  eyebrow: "Faculty & Staff"
+  heading: "Our Staff"
+  subtitle_prefix: "A faculty of"
+  subtitle_suffix: "dedicated Catholic teachers and support staff"
+
+# ── Call to action ──
+cta:
+  eyebrow: "Join Our Faculty"
+  heading: "Teaching at St Philomena"
+  body: "We welcome enquiries from suitably qualified teachers who share our commitment to traditional Catholic education and the Classical Liberal Arts tradition."
+  button_label: "Contact Recruitment"
+  button_link: "mailto:recruitment@stphilomena.qld.edu.au"
 ---
 {%- assign staff = site.data.day_school_staff.members -%}
 {%- assign dept_ids = "principal,administration,primary,secondary,specialist,support" | split: "," -%}
@@ -12,9 +27,9 @@ description: "Our dedicated faculty and support staff — Catholic teachers comm
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
   <div class="relative container mx-auto text-center max-w-4xl">
-    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">Faculty &amp; Staff</p>
-    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Our Staff</h1>
-    <p class="text-xl opacity-90 italic max-w-2xl mx-auto">A faculty of {{ total }} dedicated Catholic teachers and support staff</p>
+    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.hero.eyebrow }}</p>
+    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">{{ page.hero.heading }}</h1>
+    <p class="text-xl opacity-90 italic max-w-2xl mx-auto">{{ page.hero.subtitle_prefix }} {{ total }} {{ page.hero.subtitle_suffix }}</p>
   </div>
 </section>
 
@@ -43,9 +58,9 @@ description: "Our dedicated faculty and support staff — Catholic teachers comm
 <!-- CTA -->
 <section class="py-20 px-4" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
   <div class="container mx-auto text-center max-w-3xl">
-    <p class="font-label uppercase mb-3 opacity-80" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">Join Our Faculty</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Teaching at St Philomena</h2>
-    <p class="text-lg opacity-90 mb-8 leading-relaxed">We welcome enquiries from suitably qualified teachers who share our commitment to traditional Catholic education and the Classical Liberal Arts tradition.</p>
-    <a href="mailto:recruitment@stphilomena.qld.edu.au" class="inline-block px-8 py-3 font-display font-semibold rounded transition-opacity hover:opacity-90" style="background-color: oklch(0.85 0.1 80); color: var(--primary)">Contact Recruitment</a>
+    <p class="font-label uppercase mb-3 opacity-80" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.cta.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">{{ page.cta.heading }}</h2>
+    <p class="text-lg opacity-90 mb-8 leading-relaxed">{{ page.cta.body }}</p>
+    <a href="{{ page.cta.button_link }}" class="inline-block px-8 py-3 font-display font-semibold rounded transition-opacity hover:opacity-90" style="background-color: oklch(0.85 0.1 80); color: var(--primary)">{{ page.cta.button_label }}</a>
   </div>
 </section>

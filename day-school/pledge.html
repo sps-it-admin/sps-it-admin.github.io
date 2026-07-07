@@ -3,27 +3,62 @@ layout: day-school
 nav: pledge
 title: "Pledge Your Support"
 description: "Support the Catholic education of our youth. Learn how your pledge builds the future of St Philomena School, brick by brick."
+
+# ── Hero ──
+hero:
+  image: "/project/assets/chapel-interior.jpg"
+  eyebrow: "Pledge Your Support"
+  heading: "Support the Catholic Education of our Youth"
+  subtitle: "Sine Deo Nihil — Without God there is Nothing"
+
+# ── Why pledge ──
+why:
+  eyebrow: "Why Pledge"
+  heading: "Building the Future, Brick by Brick"
+  body:
+    - text: "St Philomena School was founded in 1999 by faithful parents who believed their children deserved a truly Catholic, classical education. Every classroom, the chapel, the multi-purpose court, the library — all were built through the generosity of those who believed in the mission."
+    - text: "The Parents &amp; Friends Association alone has contributed <strong>more than $1,000,000</strong> through fundraising and grants. Yet our work is not finished. New buildings, new resources, and the ongoing operation of the school depend on the continued support of friends and benefactors."
+  closing: "When you pledge your support, you participate directly in the formation of the next generation of Catholic men and women."
+
+# ── How to give ──
+give:
+  eyebrow: "How to Give"
+  heading: "Forms & Resources"
+  items:
+    - {title: "Pledge Brochure", desc: "Full information on the Pledge programme, what your support enables, and how to give.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/"}
+    - {title: "ANZ Direct Debit Authorisation Request", desc: "Authorisation form to set up direct-debit pledges via ANZ Bank.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/"}
+    - {title: "ANZ Direct Debit Agreement", desc: "Service agreement for direct-debit donors — terms and conditions.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/"}
+
+# ── Contact call to action ──
+cta:
+  heading: "Speak With Us"
+  body: "For information on bequests, larger gifts, or to discuss how your support can be directed to a specific need, please contact the school office."
+  phone_display: "(07) 3802 0088"
+  phone_link: "tel:0738020088"
+  email_label: "Email Us"
+  email_link: "mailto:admin@stphilomena.qld.edu.au?subject=Pledge%20Enquiry"
 ---
 
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
-  <div class="absolute inset-0 opacity-25" style="background-image: url('/project/assets/chapel-interior.jpg'); background-size: cover; background-position: center"></div>
+  <div class="absolute inset-0 opacity-25" style="background-image: url('{{ page.hero.image }}'); background-size: cover; background-position: center"></div>
   <div class="relative container mx-auto text-center max-w-4xl">
-    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">Pledge Your Support</p>
-    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Support the Catholic Education of our Youth</h1>
-    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">Sine Deo Nihil — Without God there is Nothing</p>
+    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.hero.eyebrow }}</p>
+    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">{{ page.hero.heading }}</h1>
+    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">{{ page.hero.subtitle }}</p>
   </div>
 </section>
 
 <!-- WHY GIVE -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Why Pledge</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">Building the Future, Brick by Brick</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.why.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.why.heading }}</h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--foreground)">
-      <p>St Philomena School was founded in 1999 by faithful parents who believed their children deserved a truly Catholic, classical education. Every classroom, the chapel, the multi-purpose court, the library — all were built through the generosity of those who believed in the mission.</p>
-      <p>The Parents &amp; Friends Association alone has contributed <strong>more than $1,000,000</strong> through fundraising and grants. Yet our work is not finished. New buildings, new resources, and the ongoing operation of the school depend on the continued support of friends and benefactors.</p>
-      <p class="text-xl italic" style="color: var(--primary)">When you pledge your support, you participate directly in the formation of the next generation of Catholic men and women.</p>
+      {% for para in page.why.body %}
+      <p>{{ para.text }}</p>
+      {% endfor %}
+      <p class="text-xl italic" style="color: var(--primary)">{{ page.why.closing }}</p>
     </div>
   </div>
 </section>
@@ -31,27 +66,17 @@ description: "Support the Catholic education of our youth. Learn how your pledge
 <!-- HOW TO GIVE -->
 <section class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-5xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">How to Give</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">Forms &amp; Resources</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.give.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">{{ page.give.heading }}</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
+      {% for item in page.give.items %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
         <div class="ds-doc-icon mb-3" style="color: var(--accent)"><i data-lucide="file-text"></i></div>
-        <h3 class="text-lg font-display font-semibold mb-2 group-hover:underline" style="color: var(--primary)">Pledge Brochure</h3>
-        <p class="text-sm opacity-80" style="color: var(--foreground)">Full information on the Pledge programme, what your support enables, and how to give.</p>
+        <h3 class="text-lg font-display font-semibold mb-2 group-hover:underline" style="color: var(--primary)">{{ item.title }}</h3>
+        <p class="text-sm opacity-80" style="color: var(--foreground)">{{ item.desc }}</p>
         <p class="text-xs mt-3 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download →</p>
       </a>
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="ds-doc-icon mb-3" style="color: var(--accent)"><i data-lucide="file-text"></i></div>
-        <h3 class="text-lg font-display font-semibold mb-2 group-hover:underline" style="color: var(--primary)">ANZ Direct Debit Authorisation Request</h3>
-        <p class="text-sm opacity-80" style="color: var(--foreground)">Authorisation form to set up direct-debit pledges via ANZ Bank.</p>
-        <p class="text-xs mt-3 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download →</p>
-      </a>
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/pledge-your-support/" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="ds-doc-icon mb-3" style="color: var(--accent)"><i data-lucide="file-text"></i></div>
-        <h3 class="text-lg font-display font-semibold mb-2 group-hover:underline" style="color: var(--primary)">ANZ Direct Debit Agreement</h3>
-        <p class="text-sm opacity-80" style="color: var(--foreground)">Service agreement for direct-debit donors — terms and conditions.</p>
-        <p class="text-xs mt-3 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download →</p>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -59,11 +84,11 @@ description: "Support the Catholic education of our youth. Learn how your pledge
 <!-- CONTACT CTA -->
 <section class="py-20 px-4" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
   <div class="container mx-auto text-center max-w-3xl">
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Speak With Us</h2>
-    <p class="text-lg mb-8 opacity-90">For information on bequests, larger gifts, or to discuss how your support can be directed to a specific need, please contact the school office.</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">{{ page.cta.heading }}</h2>
+    <p class="text-lg mb-8 opacity-90">{{ page.cta.body }}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:0738020088" class="inline-block px-8 py-4 font-label uppercase" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="phone" class="icon-inline"></i>(07) 3802 0088</a>
-      <a href="mailto:admin@stphilomena.qld.edu.au?subject=Pledge%20Enquiry" class="inline-block px-8 py-4 font-label uppercase border-2" style="border-color: oklch(0.85 0.1 80); color: oklch(0.85 0.1 80); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="mail" class="icon-inline"></i>Email Us</a>
+      <a href="{{ page.cta.phone_link }}" class="inline-block px-8 py-4 font-label uppercase" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="phone" class="icon-inline"></i>{{ page.cta.phone_display }}</a>
+      <a href="{{ page.cta.email_link }}" class="inline-block px-8 py-4 font-label uppercase border-2" style="border-color: oklch(0.85 0.1 80); color: oklch(0.85 0.1 80); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="mail" class="icon-inline"></i>{{ page.cta.email_label }}</a>
     </div>
   </div>
 </section>

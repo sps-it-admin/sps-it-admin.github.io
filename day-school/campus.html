@@ -3,26 +3,64 @@ layout: day-school
 nav: about
 title: "Our Campus"
 description: "Eleven rural acres at 61 Koplick Road, Park Ridge — chapel, classrooms, sports facilities and library, built by faithful hands since 1999."
+
+# ── Hero ──
+hero:
+  image: "/project/assets/campus-assembly.jpg"
+  eyebrow: "About St Philomena"
+  heading: "Our Campus"
+  subtitle: "61 Koplick Road, Park Ridge"
+
+# ── Intro ──
+intro:
+  eyebrow: "A Living Campus"
+  heading: "Eleven Acres, Built by Faithful Hands"
+  body:
+    - text: "St Philomena School sits on <strong>eleven rural acres</strong> at <strong>61 Koplick Road, Park Ridge</strong>, just south-east of Brisbane. The land was purchased in February 1993 through the great generosity of <strong>Dr Felice and Mrs Marie Zaccari</strong>, after years of effort by Catholic families seeking a school worthy of their children's faith."
+    - text: "From those first buildings moved onto the site in the mid-1990s, the campus has grown — through Parents &amp; Friends fundraising, government grants, and the labour of countless volunteers — into a complete Prep–Year 12 school with chapel, classrooms, sports facilities and a library at its heart."
+
+# ── Campus features ──
+features:
+  eyebrow: "Campus Features"
+  heading: "What You'll Find Here"
+  items:
+    - {numeral: "I", title: "Chapel", body: "Refurbished and dedicated, the heart of school life — daily Mass, sacraments and prayer."}
+    - {numeral: "II", title: "Primary & Secondary Buildings", body: "Purpose-built and refurbished classrooms across two distinct precincts, accommodating Prep through Year 12."}
+    - {numeral: "III", title: "Multi-purpose Court", body: "Funded through Powerlink and the Gambling Community Benefit Fund — home of the Sea Wolves."}
+    - {numeral: "IV", title: "Library", body: "A growing collection of classical literature, reference works and curriculum resources."}
+    - {numeral: "V", title: "Eleven Rural Acres", body: "Donated through the generosity of Dr Felice and Mrs Marie Zaccari — a quiet, semi-rural setting."}
+    - {numeral: "VI", title: "Lit Carpark & Driveway", body: "Funded by the Gambling Community Benefit Fund, ensuring safe drop-off and pickup."}
+
+# ── Location ──
+location:
+  eyebrow: "Visit Us"
+  heading: "How to Find Us"
+  address: "<strong>St Philomena School</strong><br>61 Koplick Road<br>Park Ridge, Queensland 4125"
+  contact: '<strong>Phone:</strong> <a href="tel:0738020088" class="underline">(07) 3802 0088</a><br><strong>Email:</strong> <a href="mailto:admin@stphilomena.qld.edu.au" class="underline">admin@stphilomena.qld.edu.au</a>'
+  note: "Please note: St Philomena School does not host Open Days. School tours are arranged only after a successful Expression of Interest and interview."
+  map_embed_url: "https://www.google.com/maps?q=61+Koplick+Road,+Park+Ridge+QLD+4125&output=embed"
+  map_title: "St Philomena School location"
 ---
 
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
-  <div class="absolute inset-0 opacity-25" style="background-image: url('/project/assets/campus-assembly.jpg'); background-size: cover; background-position: center"></div>
+  <div class="absolute inset-0 opacity-25" style="background-image: url('{{ page.hero.image }}'); background-size: cover; background-position: center"></div>
   <div class="relative container mx-auto text-center max-w-4xl">
-    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">About St Philomena</p>
-    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Our Campus</h1>
-    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">61 Koplick Road, Park Ridge</p>
+    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.hero.eyebrow }}</p>
+    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">{{ page.hero.heading }}</h1>
+    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">{{ page.hero.subtitle }}</p>
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">A Living Campus</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">Eleven Acres, Built by Faithful Hands</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.intro.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.intro.heading }}</h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--foreground)">
-      <p>St Philomena School sits on <strong>eleven rural acres</strong> at <strong>61 Koplick Road, Park Ridge</strong>, just south-east of Brisbane. The land was purchased in February 1993 through the great generosity of <strong>Dr Felice and Mrs Marie Zaccari</strong>, after years of effort by Catholic families seeking a school worthy of their children's faith.</p>
-      <p>From those first buildings moved onto the site in the mid-1990s, the campus has grown — through Parents &amp; Friends fundraising, government grants, and the labour of countless volunteers — into a complete Prep–Year 12 school with chapel, classrooms, sports facilities and a library at its heart.</p>
+      {% for para in page.intro.body %}
+      <p>{{ para.text }}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -30,39 +68,16 @@ description: "Eleven rural acres at 61 Koplick Road, Park Ridge — chapel, clas
 <!-- FEATURES -->
 <section class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-5xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Campus Features</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">What You'll Find Here</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.features.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">{{ page.features.heading }}</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in page.features.items %}
       <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">I</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Chapel</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">Refurbished and dedicated, the heart of school life — daily Mass, sacraments and prayer.</p>
+        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">{{ item.numeral }}</div>
+        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">{{ item.title }}</h3>
+        <p class="text-base leading-relaxed" style="color: var(--foreground)">{{ item.body }}</p>
       </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">II</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Primary &amp; Secondary Buildings</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">Purpose-built and refurbished classrooms across two distinct precincts, accommodating Prep through Year 12.</p>
-      </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">III</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Multi-purpose Court</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">Funded through Powerlink and the Gambling Community Benefit Fund — home of the Sea Wolves.</p>
-      </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">IV</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Library</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">A growing collection of classical literature, reference works and curriculum resources.</p>
-      </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">V</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Eleven Rural Acres</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">Donated through the generosity of Dr Felice and Mrs Marie Zaccari — a quiet, semi-rural setting.</p>
-      </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="text-4xl font-display font-bold mb-3" style="color: var(--accent)">VI</div>
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Lit Carpark &amp; Driveway</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">Funded by the Gambling Community Benefit Fund, ensuring safe drop-off and pickup.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -70,16 +85,16 @@ description: "Eleven rural acres at 61 Koplick Road, Park Ridge — chapel, clas
 <!-- LOCATION -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Visit Us</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">How to Find Us</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.location.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.location.heading }}</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="space-y-4">
-        <p class="text-lg leading-relaxed" style="color: var(--foreground)"><strong>St Philomena School</strong><br>61 Koplick Road<br>Park Ridge, Queensland 4125</p>
-        <p class="text-base" style="color: var(--foreground)"><strong>Phone:</strong> <a href="tel:0738020088" class="underline">(07) 3802 0088</a><br><strong>Email:</strong> <a href="mailto:admin@stphilomena.qld.edu.au" class="underline">admin@stphilomena.qld.edu.au</a></p>
-        <div class="mt-6 p-4 rounded border-l-4 italic text-sm" style="background-color: var(--secondary); border-color: var(--accent); color: var(--primary)">Please note: St Philomena School does not host Open Days. School tours are arranged only after a successful Expression of Interest and interview.</div>
+        <p class="text-lg leading-relaxed" style="color: var(--foreground)">{{ page.location.address }}</p>
+        <p class="text-base" style="color: var(--foreground)">{{ page.location.contact }}</p>
+        <div class="mt-6 p-4 rounded border-l-4 italic text-sm" style="background-color: var(--secondary); border-color: var(--accent); color: var(--primary)">{{ page.location.note }}</div>
       </div>
       <div class="rounded-lg overflow-hidden border" style="border-color: var(--accent); aspect-ratio: 4/3">
-        <iframe title="St Philomena School location" src="https://www.google.com/maps?q=61+Koplick+Road,+Park+Ridge+QLD+4125&output=embed" width="100%" height="100%" style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="{{ page.location.map_title }}" src="{{ page.location.map_embed_url }}" width="100%" height="100%" style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>

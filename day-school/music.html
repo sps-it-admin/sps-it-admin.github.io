@@ -3,53 +3,106 @@ layout: day-school
 nav: school-life
 title: "Music"
 description: "Music at St Philomena School — the Quadrivium's living art, with a particular focus on the Sacred Music tradition, taught Prep to Year 12."
+
+# ── Hero ──
+hero:
+  image: "/project/assets/chapel-interior.jpg"
+  eyebrow: "School Life"
+  heading: "Music"
+  subtitle: "Numbers in Time — the Quadrivium's Living Art"
+
+# ── Intro ──
+intro:
+  eyebrow: "Why Music Matters"
+  heading: "A Highly Formative & Creatively Expressive Subject"
+  lead:
+    - text: "St Philomena School values Music as a highly formative and creatively expressive subject; for this reason it is taught from <strong>Prep – Year 12</strong>. We believe that music enhances the overall learning experience of every child."
+    - text: "Music is, according to the ancient Greek model of Classical Education, considered to be one of four higher subjects of learning — the <strong>Quadrivium</strong>:"
+  quadrivium:
+    - {name: "Arithmetic", desc: "numbers"}
+    - {name: "Geometry", desc: "numbers in space"}
+    - {name: "Music", desc: "numbers in time"}
+    - {name: "Astronomy", desc: "numbers in space & time"}
+  after:
+    - text: "Over the course of time music has gradually become separated from the field of Ethics. In the mind of the ancient Greeks and the Medievals this was not so. At St Philomena School we encourage students to critically analyse music as something that is either <em>ordered</em> (numbers in time) or not."
+
+# ── Aristotle quote ──
+aristotle:
+  eyebrow: "Aristotle on Music"
+  quote: "“Music directly imitates the passions or states of the soul. When one listens to music that imitates a certain passion, he becomes imbued with the same passion; and if over a long time he habitually listens to music that rouses ignoble passions, his whole character will be shaped to an ignoble form.”"
+  note: "This statement is, more importantly, <strong>inversely true</strong>. The more one listens to — and indeed sings or plays — music of a noble form, the more it will ennoble the soul."
+
+# ── Sacred music ──
+sacred:
+  eyebrow: "Sacred Music Tradition"
+  heading: "Particular Focus on the Sacred"
+  intro: "For this reason we have a particular focus on the Sacred Music tradition at St Philomena School, while also making use of good and wholesome classical and folk music."
+  cards:
+    - {title: "Gregorian Chant", body: "the Church's own song — monodic, modal, prayed."}
+    - {title: "Polyphony", body: "woven sacred lines (Palestrina, Victoria, Byrd)."}
+    - {title: "Hymnody", body: "the great hymns of the Latin Church and the English-speaking tradition."}
+
+# ── Three sources of inspiration ──
+sources:
+  eyebrow: "St Teresa of Avila"
+  heading: "Three Possible Sources of Inspiration"
+  intro: "St Teresa of Avila stated that everything on earth has one of three possible points of origin/sources of inspiration:"
+  items:
+    - {numeral: "I", name: "Heaven", desc: "celestial"}
+    - {numeral: "II", name: "Earth", desc: "terrestrial"}
+    - {numeral: "III", name: "Hell", desc: "infernal"}
+  outro: "This most certainly applies to music. A piece of music can be celestial, terrestrial or infernal in its origin/inspiration. Our aim is to equip each student with the necessary means of <strong>critically analysing</strong> any given piece of music."
+
+# ── Augustine close ──
+augustine:
+  eyebrow: "Saint Augustine"
+  quote: "“Music, that is the science or the sense of proper modulation, is likewise given by God's generosity to mortals having rational souls in order to lead them to higher things.”"
+  closing: "It is our hope at St Philomena School to lead our students to “higher things.”"
 ---
 
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
-  <div class="absolute inset-0 opacity-25" style="background-image: url('/project/assets/chapel-interior.jpg'); background-size: cover; background-position: center"></div>
+  <div class="absolute inset-0 opacity-25" style="background-image: url('{{ page.hero.image }}'); background-size: cover; background-position: center"></div>
   <div class="relative container mx-auto text-center max-w-4xl">
-    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">School Life</p>
-    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Music</h1>
-    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">Numbers in Time — the Quadrivium's Living Art</p>
+    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.hero.eyebrow }}</p>
+    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">{{ page.hero.heading }}</h1>
+    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">{{ page.hero.subtitle }}</p>
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Why Music Matters</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">A Highly Formative &amp; Creatively Expressive Subject</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.intro.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.intro.heading }}</h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--foreground)">
-      <p>St Philomena School values Music as a highly formative and creatively expressive subject; for this reason it is taught from <strong>Prep – Year 12</strong>. We believe that music enhances the overall learning experience of every child.</p>
-      <p>Music is, according to the ancient Greek model of Classical Education, considered to be one of four higher subjects of learning — the <strong>Quadrivium</strong>:</p>
+      {% for para in page.intro.lead %}
+      <p>{{ para.text }}</p>
+      {% endfor %}
     </div>
 
     <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8" style="list-style: none; padding: 0">
-      <li class="p-6 rounded-lg border text-center" style="background-color: var(--secondary); border-color: var(--accent); color: var(--foreground)">
-        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: var(--accent)">1</p>
-        <p class="text-2xl font-display font-bold mb-2">Arithmetic</p>
-        <p class="text-sm italic opacity-90">numbers</p>
-      </li>
-      <li class="p-6 rounded-lg border text-center" style="background-color: var(--secondary); border-color: var(--accent); color: var(--foreground)">
-        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: var(--accent)">2</p>
-        <p class="text-2xl font-display font-bold mb-2">Geometry</p>
-        <p class="text-sm italic opacity-90">numbers in space</p>
-      </li>
+      {% for q in page.intro.quadrivium %}
+      {% if forloop.index == 3 %}
       <li class="p-6 rounded-lg border text-center" style="background-color: var(--primary); border-color: var(--accent); color: oklch(0.98 0.015 90)">
-        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: oklch(0.85 0.1 80)">3</p>
-        <p class="text-2xl font-display font-bold mb-2">Music</p>
-        <p class="text-sm italic opacity-90">numbers in time</p>
+        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: oklch(0.85 0.1 80)">{{ forloop.index }}</p>
+        <p class="text-2xl font-display font-bold mb-2">{{ q.name }}</p>
+        <p class="text-sm italic opacity-90">{{ q.desc }}</p>
       </li>
+      {% else %}
       <li class="p-6 rounded-lg border text-center" style="background-color: var(--secondary); border-color: var(--accent); color: var(--foreground)">
-        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: var(--accent)">4</p>
-        <p class="text-2xl font-display font-bold mb-2">Astronomy</p>
-        <p class="text-sm italic opacity-90">numbers in space &amp; time</p>
+        <p class="font-label uppercase text-xs mb-2" style="letter-spacing: 0.2em; color: var(--accent)">{{ forloop.index }}</p>
+        <p class="text-2xl font-display font-bold mb-2">{{ q.name }}</p>
+        <p class="text-sm italic opacity-90">{{ q.desc }}</p>
       </li>
+      {% endif %}
+      {% endfor %}
     </ol>
 
     <div class="mt-10 space-y-6 text-lg leading-relaxed" style="color: var(--foreground)">
-      <p>Over the course of time music has gradually become separated from the field of Ethics. In the mind of the ancient Greeks and the Medievals this was not so. At St Philomena School we encourage students to critically analyse music as something that is either <em>ordered</em> (numbers in time) or not.</p>
+      {% for para in page.intro.after %}
+      <p>{{ para.text }}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -57,31 +110,25 @@ description: "Music at St Philomena School — the Quadrivium's living art, with
 <!-- ARISTOTLE QUOTE -->
 <section class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-6 text-center" style="letter-spacing: 0.25em; color: var(--accent)">Aristotle on Music</p>
-    <blockquote class="text-xl md:text-2xl leading-relaxed italic text-center border-l-4 pl-6 md:pl-10" style="border-color: var(--accent); color: var(--primary)">&ldquo;Music directly imitates the passions or states of the soul. When one listens to music that imitates a certain passion, he becomes imbued with the same passion; and if over a long time he habitually listens to music that rouses ignoble passions, his whole character will be shaped to an ignoble form.&rdquo;</blockquote>
-    <p class="mt-6 text-center text-base" style="color: var(--foreground)">This statement is, more importantly, <strong>inversely true</strong>. The more one listens to — and indeed sings or plays — music of a noble form, the more it will ennoble the soul.</p>
+    <p class="font-label uppercase mb-6 text-center" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.aristotle.eyebrow }}</p>
+    <blockquote class="text-xl md:text-2xl leading-relaxed italic text-center border-l-4 pl-6 md:pl-10" style="border-color: var(--accent); color: var(--primary)">{{ page.aristotle.quote }}</blockquote>
+    <p class="mt-6 text-center text-base" style="color: var(--foreground)">{{ page.aristotle.note }}</p>
   </div>
 </section>
 
 <!-- SACRED MUSIC -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-5xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Sacred Music Tradition</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">Particular Focus on the Sacred</h2>
-    <p class="text-lg leading-relaxed mb-10" style="color: var(--foreground)">For this reason we have a particular focus on the Sacred Music tradition at St Philomena School, while also making use of good and wholesome classical and folk music.</p>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.sacred.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.sacred.heading }}</h2>
+    <p class="text-lg leading-relaxed mb-10" style="color: var(--foreground)">{{ page.sacred.intro }}</p>
     <div class="grid md:grid-cols-3 gap-6">
+      {% for card in page.sacred.cards %}
       <div class="p-6 rounded-lg border" style="background-color: var(--secondary); border-color: var(--accent)">
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Gregorian Chant</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">the Church's own song — monodic, modal, prayed.</p>
+        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">{{ card.title }}</h3>
+        <p class="text-base leading-relaxed" style="color: var(--foreground)">{{ card.body }}</p>
       </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--secondary); border-color: var(--accent)">
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Polyphony</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">woven sacred lines (Palestrina, Victoria, Byrd).</p>
-      </div>
-      <div class="p-6 rounded-lg border" style="background-color: var(--secondary); border-color: var(--accent)">
-        <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Hymnody</h3>
-        <p class="text-base leading-relaxed" style="color: var(--foreground)">the great hymns of the Latin Church and the English-speaking tradition.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -89,35 +136,28 @@ description: "Music at St Philomena School — the Quadrivium's living art, with
 <!-- THREE SOURCES -->
 <section class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">St Teresa of Avila</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">Three Possible Sources of Inspiration</h2>
-    <p class="text-lg leading-relaxed mb-8" style="color: var(--foreground)">St Teresa of Avila stated that everything on earth has one of three possible points of origin/sources of inspiration:</p>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.sources.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.sources.heading }}</h2>
+    <p class="text-lg leading-relaxed mb-8" style="color: var(--foreground)">{{ page.sources.intro }}</p>
     <ol class="grid grid-cols-3 gap-3 mb-8" style="list-style: none; padding: 0">
-      <li class="p-6 rounded-lg border text-center" style="background-color: oklch(0.96 0.05 90); border-color: var(--accent)">
-        <p class="text-3xl font-display font-bold mb-2" style="color: var(--accent)">I</p>
-        <p class="text-xl font-display font-bold" style="color: var(--primary)">Heaven</p>
-        <p class="text-sm italic mt-2" style="color: var(--foreground)">celestial</p>
+      {% for item in page.sources.items %}
+      {% if forloop.index == 1 %}{% assign bg = "oklch(0.96 0.05 90)" %}{% elsif forloop.index == 2 %}{% assign bg = "var(--background)" %}{% else %}{% assign bg = "oklch(0.92 0.04 30)" %}{% endif %}
+      <li class="p-6 rounded-lg border text-center" style="background-color: {{ bg }}; border-color: var(--accent)">
+        <p class="text-3xl font-display font-bold mb-2" style="color: var(--accent)">{{ item.numeral }}</p>
+        <p class="text-xl font-display font-bold" style="color: var(--primary)">{{ item.name }}</p>
+        <p class="text-sm italic mt-2" style="color: var(--foreground)">{{ item.desc }}</p>
       </li>
-      <li class="p-6 rounded-lg border text-center" style="background-color: var(--background); border-color: var(--accent)">
-        <p class="text-3xl font-display font-bold mb-2" style="color: var(--accent)">II</p>
-        <p class="text-xl font-display font-bold" style="color: var(--primary)">Earth</p>
-        <p class="text-sm italic mt-2" style="color: var(--foreground)">terrestrial</p>
-      </li>
-      <li class="p-6 rounded-lg border text-center" style="background-color: oklch(0.92 0.04 30); border-color: var(--accent)">
-        <p class="text-3xl font-display font-bold mb-2" style="color: var(--accent)">III</p>
-        <p class="text-xl font-display font-bold" style="color: var(--primary)">Hell</p>
-        <p class="text-sm italic mt-2" style="color: var(--foreground)">infernal</p>
-      </li>
+      {% endfor %}
     </ol>
-    <p class="text-lg leading-relaxed" style="color: var(--foreground)">This most certainly applies to music. A piece of music can be celestial, terrestrial or infernal in its origin/inspiration. Our aim is to equip each student with the necessary means of <strong>critically analysing</strong> any given piece of music.</p>
+    <p class="text-lg leading-relaxed" style="color: var(--foreground)">{{ page.sources.outro }}</p>
   </div>
 </section>
 
 <!-- AUGUSTINE CLOSE -->
 <section class="py-20 px-4" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
   <div class="container mx-auto max-w-4xl text-center">
-    <p class="font-label uppercase mb-6" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">Saint Augustine</p>
-    <blockquote class="text-2xl md:text-3xl font-display italic leading-relaxed">&ldquo;Music, that is the science or the sense of proper modulation, is likewise given by God's generosity to mortals having rational souls in order to lead them to higher things.&rdquo;</blockquote>
-    <p class="mt-8 text-lg opacity-80" style="color: oklch(0.85 0.1 80)">It is our hope at St Philomena School to lead our students to &ldquo;higher things.&rdquo;</p>
+    <p class="font-label uppercase mb-6" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.augustine.eyebrow }}</p>
+    <blockquote class="text-2xl md:text-3xl font-display italic leading-relaxed">{{ page.augustine.quote }}</blockquote>
+    <p class="mt-8 text-lg opacity-80" style="color: oklch(0.85 0.1 80)">{{ page.augustine.closing }}</p>
   </div>
 </section>

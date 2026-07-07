@@ -3,27 +3,82 @@ layout: day-school
 nav: admissions
 title: "Admissions"
 description: "Begin your enrolment journey at St Philomena School — our five-step Expression of Interest process and key documents for prospective families."
+
+# ── Hero ──
+hero:
+  image: "/project/assets/students-uniform.jpg"
+  eyebrow: "Admissions"
+  heading: "Begin Your Journey"
+  subtitle: "Submit your Expression of Interest using the process below"
+
+# ── Intro ──
+intro:
+  eyebrow: "Welcome"
+  heading: "Thank you for considering St Philomena School"
+  body:
+    - text: "At St Philomena School we offer a unique form of learning with a focus on the <strong>Classical Education of the Liberal Arts</strong>. We take special care in imparting the rich and profound beauty of the <strong>traditional Catholic Faith</strong> to all our students."
+    - text: "St Philomena School offers enrolment into all grades, which is <strong>subject to availability</strong> of positions with <strong>limited</strong> class capacity."
+  callout: "St Philomena School does not host an Open Day, and School tours are only offered upon acceptance into the School."
+
+# ── Enrolment process ──
+process:
+  eyebrow: "The Enrolment Process"
+  heading: "Five Steps to Enrol"
+  steps:
+    - title: "Browse & Research"
+      body: "Browse and research our school community first to see if it fits in with your requirements."
+    - title: "Submit EOI"
+      body: "Click on the Expression of Interest Form button below to formally register your interest."
+    - title: "Capacity Review"
+      body: "We will process expressions of interest to ensure we have the capacity to accommodate your family/child, as we have limited class capacity."
+    - title: "Principal's Interview"
+      body: "If space is available, you will be requested to attend an interview with the School Principal. If we have no space to accommodate your family, you will be notified in writing."
+    - title: "Outcome"
+      body: "After the interview, you will be notified of the outcome of your application."
+  button_label: "Submit Expression of Interest"
+  button_url: "https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo"
+  note: 'Or email <a href="mailto:admin@stphilomena.qld.edu.au" class="underline">admin@stphilomena.qld.edu.au</a> directly'
+
+# ── Key documents ──
+documents:
+  eyebrow: "Documents"
+  heading: "Key Documents for Prospective Families"
+  items:
+    - {title: "Parents Handbook 2026", desc: "The complete guide to life at St Philomena School — academics, uniform, expectations.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/04/Parents-Handbook-2025.pdf"}
+    - {title: "2026 School Fees Schedule", desc: "Tuition, levies and incidental fees for the 2026 school year.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/2026_SchoolFees.pdf"}
+    - {title: "2026 Bus Route", desc: "Daily bus pickup/dropoff routes serving south-east Brisbane and Logan.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/2026_BusRoute.pdf"}
+    - {title: "2026 School Calendar", desc: "Term dates, public holidays, sports carnivals, productions and key school events.", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/Calendar-2026-Final-2.pdf"}
+
+# ── Contact call to action ──
+cta:
+  heading: "Questions?"
+  body: "For further information, please do not hesitate to contact us."
+  phone_display: "(07) 3802 0088"
+  phone_link: "tel:0738020088"
+  email_label: "Email Us"
+  email_link: "mailto:admin@stphilomena.qld.edu.au"
 ---
 
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
-  <div class="absolute inset-0 opacity-25" style="background-image: url('/project/assets/students-uniform.jpg'); background-size: cover; background-position: center"></div>
+  <div class="absolute inset-0 opacity-25" style="background-image: url('{{ page.hero.image }}'); background-size: cover; background-position: center"></div>
   <div class="relative container mx-auto text-center max-w-4xl">
-    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">Admissions</p>
-    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Begin Your Journey</h1>
-    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">Submit your Expression of Interest using the process below</p>
+    <p class="font-label uppercase mb-4 opacity-90" style="letter-spacing: 0.25em; color: oklch(0.85 0.1 80)">{{ page.hero.eyebrow }}</p>
+    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">{{ page.hero.heading }}</h1>
+    <p class="text-xl md:text-2xl font-display italic" style="color: oklch(0.85 0.1 80)">{{ page.hero.subtitle }}</p>
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-4xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Welcome</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">Thank you for considering St Philomena School</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.intro.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.intro.heading }}</h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--foreground)">
-      <p>At St Philomena School we offer a unique form of learning with a focus on the <strong>Classical Education of the Liberal Arts</strong>. We take special care in imparting the rich and profound beauty of the <strong>traditional Catholic Faith</strong> to all our students.</p>
-      <p>St Philomena School offers enrolment into all grades, which is <strong>subject to availability</strong> of positions with <strong>limited</strong> class capacity.</p>
-      <div class="p-6 rounded-lg border-l-4 italic" style="background-color: var(--secondary); border-color: var(--accent); color: var(--primary)">St Philomena School does not host an Open Day, and School tours are only offered upon acceptance into the School.</div>
+      {% for para in page.intro.body %}
+      <p>{{ para.text }}</p>
+      {% endfor %}
+      <div class="p-6 rounded-lg border-l-4 italic" style="background-color: var(--secondary); border-color: var(--accent); color: var(--primary)">{{ page.intro.callout }}</div>
     </div>
   </div>
 </section>
@@ -31,48 +86,22 @@ description: "Begin your enrolment journey at St Philomena School — our five-s
 <!-- 5-STEP PROCESS -->
 <section id="process" class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-5xl">
-    <p class="font-label uppercase mb-3 text-center" style="letter-spacing: 0.25em; color: var(--accent)">The Enrolment Process</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 text-center" style="color: var(--primary)">Five Steps to Enrol</h2>
+    <p class="font-label uppercase mb-3 text-center" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.process.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-12 text-center" style="color: var(--primary)">{{ page.process.heading }}</h2>
     <ol class="space-y-6" style="list-style: none; padding: 0">
+      {% for step in page.process.steps %}
       <li class="flex gap-6 p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">1</div>
+        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">{{ forloop.index }}</div>
         <div>
-          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Browse &amp; Research</h3>
-          <p class="text-base leading-relaxed" style="color: var(--foreground)">Browse and research our school community first to see if it fits in with your requirements.</p>
+          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">{{ step.title }}</h3>
+          <p class="text-base leading-relaxed" style="color: var(--foreground)">{{ step.body }}</p>
         </div>
       </li>
-      <li class="flex gap-6 p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">2</div>
-        <div>
-          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Submit EOI</h3>
-          <p class="text-base leading-relaxed" style="color: var(--foreground)">Click on the Expression of Interest Form button below to formally register your interest.</p>
-        </div>
-      </li>
-      <li class="flex gap-6 p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">3</div>
-        <div>
-          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Capacity Review</h3>
-          <p class="text-base leading-relaxed" style="color: var(--foreground)">We will process expressions of interest to ensure we have the capacity to accommodate your family/child, as we have limited class capacity.</p>
-        </div>
-      </li>
-      <li class="flex gap-6 p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">4</div>
-        <div>
-          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Principal's Interview</h3>
-          <p class="text-base leading-relaxed" style="color: var(--foreground)">If space is available, you will be requested to attend an interview with the School Principal. If we have no space to accommodate your family, you will be notified in writing.</p>
-        </div>
-      </li>
-      <li class="flex gap-6 p-6 rounded-lg border" style="background-color: var(--background); border-color: var(--accent)">
-        <div class="shrink-0 w-14 h-14 rounded-full flex items-center justify-center font-display text-2xl font-bold" style="background-color: var(--primary); color: oklch(0.85 0.1 80)">5</div>
-        <div>
-          <h3 class="text-xl font-display font-semibold mb-2" style="color: var(--primary)">Outcome</h3>
-          <p class="text-base leading-relaxed" style="color: var(--foreground)">After the interview, you will be notified of the outcome of your application.</p>
-        </div>
-      </li>
+      {% endfor %}
     </ol>
     <div class="mt-12 text-center">
-      <a href="https://app.enquirytracker.net/request-application/31b517fac9b04c9ba172021734953ca5/Iwx5r7zi5oruENSJsToo" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-5 font-label uppercase text-lg transition-colors" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px">Submit Expression of Interest</a>
-      <p class="text-sm mt-3 opacity-70" style="color: var(--foreground)">Or email <a href="mailto:admin@stphilomena.qld.edu.au" class="underline">admin@stphilomena.qld.edu.au</a> directly</p>
+      <a href="{{ page.process.button_url }}" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-5 font-label uppercase text-lg transition-colors" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px">{{ page.process.button_label }}</a>
+      <p class="text-sm mt-3 opacity-70" style="color: var(--foreground)">{{ page.process.note }}</p>
     </div>
   </div>
 </section>
@@ -80,49 +109,21 @@ description: "Begin your enrolment journey at St Philomena School — our five-s
 <!-- KEY DOCUMENTS -->
 <section id="documents" class="py-20 px-4" style="background-color: var(--background)">
   <div class="container mx-auto max-w-5xl">
-    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">Documents</p>
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">Key Documents for Prospective Families</h2>
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.documents.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">{{ page.documents.heading }}</h2>
     <div class="grid md:grid-cols-2 gap-6">
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/04/Parents-Handbook-2025.pdf" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--secondary); border-color: var(--accent)">
+      {% for item in page.documents.items %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--secondary); border-color: var(--accent)">
         <div class="flex items-start gap-4">
           <div class="ds-doc-icon shrink-0 w-12 h-12 rounded flex items-center justify-center" style="background-color: var(--primary); color: oklch(0.85 0.1 80)"><i data-lucide="file-text"></i></div>
           <div class="flex-1">
-            <h3 class="text-lg font-display font-semibold mb-1 group-hover:underline" style="color: var(--primary)">Parents Handbook 2026</h3>
-            <p class="text-sm opacity-80" style="color: var(--foreground)">The complete guide to life at St Philomena School — academics, uniform, expectations.</p>
+            <h3 class="text-lg font-display font-semibold mb-1 group-hover:underline" style="color: var(--primary)">{{ item.title }}</h3>
+            <p class="text-sm opacity-80" style="color: var(--foreground)">{{ item.desc }}</p>
             <p class="text-xs mt-2 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download PDF →</p>
           </div>
         </div>
       </a>
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/2026_SchoolFees.pdf" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--secondary); border-color: var(--accent)">
-        <div class="flex items-start gap-4">
-          <div class="ds-doc-icon shrink-0 w-12 h-12 rounded flex items-center justify-center" style="background-color: var(--primary); color: oklch(0.85 0.1 80)"><i data-lucide="file-text"></i></div>
-          <div class="flex-1">
-            <h3 class="text-lg font-display font-semibold mb-1 group-hover:underline" style="color: var(--primary)">2026 School Fees Schedule</h3>
-            <p class="text-sm opacity-80" style="color: var(--foreground)">Tuition, levies and incidental fees for the 2026 school year.</p>
-            <p class="text-xs mt-2 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download PDF →</p>
-          </div>
-        </div>
-      </a>
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/2026_BusRoute.pdf" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--secondary); border-color: var(--accent)">
-        <div class="flex items-start gap-4">
-          <div class="ds-doc-icon shrink-0 w-12 h-12 rounded flex items-center justify-center" style="background-color: var(--primary); color: oklch(0.85 0.1 80)"><i data-lucide="file-text"></i></div>
-          <div class="flex-1">
-            <h3 class="text-lg font-display font-semibold mb-1 group-hover:underline" style="color: var(--primary)">2026 Bus Route</h3>
-            <p class="text-sm opacity-80" style="color: var(--foreground)">Daily bus pickup/dropoff routes serving south-east Brisbane and Logan.</p>
-            <p class="text-xs mt-2 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download PDF →</p>
-          </div>
-        </div>
-      </a>
-      <a href="https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2026/01/Calendar-2026-Final-2.pdf" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--secondary); border-color: var(--accent)">
-        <div class="flex items-start gap-4">
-          <div class="ds-doc-icon shrink-0 w-12 h-12 rounded flex items-center justify-center" style="background-color: var(--primary); color: oklch(0.85 0.1 80)"><i data-lucide="file-text"></i></div>
-          <div class="flex-1">
-            <h3 class="text-lg font-display font-semibold mb-1 group-hover:underline" style="color: var(--primary)">2026 School Calendar</h3>
-            <p class="text-sm opacity-80" style="color: var(--foreground)">Term dates, public holidays, sports carnivals, productions and key school events.</p>
-            <p class="text-xs mt-2 font-label uppercase" style="letter-spacing: 0.15em; color: var(--accent)">Download PDF →</p>
-          </div>
-        </div>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -130,11 +131,11 @@ description: "Begin your enrolment journey at St Philomena School — our five-s
 <!-- CONTACT CTA -->
 <section class="py-20 px-4" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
   <div class="container mx-auto text-center max-w-3xl">
-    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Questions?</h2>
-    <p class="text-lg mb-8 opacity-90">For further information, please do not hesitate to contact us.</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">{{ page.cta.heading }}</h2>
+    <p class="text-lg mb-8 opacity-90">{{ page.cta.body }}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:0738020088" class="inline-block px-8 py-4 font-label uppercase transition-colors" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="phone" class="icon-inline"></i>(07) 3802 0088</a>
-      <a href="mailto:admin@stphilomena.qld.edu.au" class="inline-block px-8 py-4 font-label uppercase transition-colors border-2" style="border-color: oklch(0.85 0.1 80); color: oklch(0.85 0.1 80); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="mail" class="icon-inline"></i>Email Us</a>
+      <a href="{{ page.cta.phone_link }}" class="inline-block px-8 py-4 font-label uppercase transition-colors" style="background-color: oklch(0.85 0.1 80); color: var(--primary); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="phone" class="icon-inline"></i>{{ page.cta.phone_display }}</a>
+      <a href="{{ page.cta.email_link }}" class="inline-block px-8 py-4 font-label uppercase transition-colors border-2" style="border-color: oklch(0.85 0.1 80); color: oklch(0.85 0.1 80); letter-spacing: 0.2em; border-radius: 2px"><i data-lucide="mail" class="icon-inline"></i>{{ page.cta.email_label }}</a>
     </div>
   </div>
 </section>

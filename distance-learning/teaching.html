@@ -2,27 +2,39 @@
 layout: distance-learning
 nav: teaching
 title: "Teaching & Learning"
-page_hero_label: "Teaching & Learning"
-page_hero_heading: "The Classical Curriculum"
+
+# ── Page hero ──
+hero:
+  label: "Teaching & Learning"
+  heading: "The Classical Curriculum"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Placeholder section ──
+stub:
+  quote: '"Sine Deo Nihil"'
+  body: >-
+    Full details of our Grammar Phase (Year 7) and Logic Phase (Year 8) curriculum — including Latin, Logic, Rhetoric, Literature, and History — are being prepared. Explore <a href="/distance-learning/" style="color:var(--crimson);">Home</a>, <a href="/distance-learning/about.html" style="color:var(--crimson);">About</a>, and <a href="/distance-learning/enrol.html" style="color:var(--crimson);">Enrolments</a> to see the full component vocabulary.
+  button_label: "Back to Home"
+  button_link: "/distance-learning/"
 ---
 
 <main>
   <section class="page-hero">
-    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">{{ page.page_hero_label }}</p>
-      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
     </div>
   </section>
 
   <section class="stub-section section-cream">
     <div class="stub-inner">
-      <p class="stub-quote">"Sine Deo Nihil"</p>
+      <p class="stub-quote">{{ page.stub.quote }}</p>
       <p class="stub-body">
-        Full details of our Grammar Phase (Year 7) and Logic Phase (Year 8) curriculum — including Latin, Logic, Rhetoric, Literature, and History — are being prepared. Explore <a href="/distance-learning/" style="color:var(--crimson);">Home</a>, <a href="/distance-learning/about.html" style="color:var(--crimson);">About</a>, and <a href="/distance-learning/enrol.html" style="color:var(--crimson);">Enrolments</a> to see the full component vocabulary.
+        {{ page.stub.body }}
       </p>
-      <a href="/distance-learning/" class="btn btn-navy">Back to Home</a>
+      <a href="{{ page.stub.button_link }}" class="btn btn-navy">{{ page.stub.button_label }}</a>
     </div>
   </section>
 </main>

@@ -3,19 +3,35 @@ layout: distance-learning
 nav: community
 title: "News"
 description: "The latest news, events, and updates from the St Philomena School Distance Learning community."
-page_hero_label: "Community"
-page_hero_heading: "School News"
+
+# ── Page hero ──
+hero:
+  label: "Community"
+  heading: "School News"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Listing header (shown when there are posts) ──
+listing:
+  eyebrow: "Latest Updates"
+  heading: "From Our Community"
+
+# ── Empty state (shown when there are no posts) ──
+empty:
+  quote: '"Sine Deo Nihil"'
+  body: "There are no news posts yet. Please check back soon for the latest updates from our school community."
+  button_label: "Back to Home"
+  button_link: "/distance-learning/"
 ---
 
 <main>
 
   <!-- ── Page hero ── -->
   <section class="page-hero">
-    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">{{ page.page_hero_label }}</p>
-      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
     </div>
   </section>
 
@@ -25,8 +41,8 @@ page_hero_heading: "School News"
       {% assign posts = site.dl_news | sort: 'date' | reverse %}
       {% if posts.size > 0 %}
       <div class="steps-header reveal">
-        <span class="section-eyebrow">Latest Updates</span>
-        <h2 class="section-h2">From Our Community</h2>
+        <span class="section-eyebrow">{{ page.listing.eyebrow }}</span>
+        <h2 class="section-h2">{{ page.listing.heading }}</h2>
       </div>
       <div class="school-life-grid">
         {% for post in posts %}
@@ -47,9 +63,9 @@ page_hero_heading: "School News"
       </div>
       {% else %}
       <div class="news-empty reveal">
-        <p class="stub-quote">"Sine Deo Nihil"</p>
-        <p class="stub-body">There are no news posts yet. Please check back soon for the latest updates from our school community.</p>
-        <a href="/distance-learning/" class="btn btn-navy">Back to Home</a>
+        <p class="stub-quote">{{ page.empty.quote }}</p>
+        <p class="stub-body">{{ page.empty.body }}</p>
+        <a href="{{ page.empty.button_link }}" class="btn btn-navy">{{ page.empty.button_label }}</a>
       </div>
       {% endif %}
     </div>

@@ -1432,3 +1432,547 @@ collections:
           - {label: "Body", name: "body", widget: "text"}
           - {label: "Button Label", name: "button_label", widget: "string"}
           - {label: "Button Link", name: "button_link", widget: "string"}
+
+  - name: "distance_learning_pages"
+    label: "Distance Learning — Pages"
+    files:
+      - name: "dl_home"
+        label: "Home"
+        file: "distance-learning/index.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "home"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Image Alt Text", name: "image_alt", widget: "string"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+          - label: "Motto Banner"
+            name: "motto"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Latin", name: "latin", widget: "string"}
+              - {label: "English", name: "sub", widget: "string"}
+          - label: "Four Pillars"
+            name: "pillars"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Icon (Lucide name)", name: "icon", widget: "string", hint: "e.g. cross, book-open, graduation-cap, map-pin"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Philosophy"
+            name: "philosophy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Image URL", name: "src", widget: "string"}
+                  - {label: "Alt Text", name: "alt", widget: "string"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Pull Quote", name: "quote", widget: "text"}
+              - {label: "Citation", name: "cite", widget: "string"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+          - label: "Curriculum"
+            name: "curriculum"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, gold italic)", name: "heading_em", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+              - label: "Subjects"
+                name: "subjects"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Badge", name: "badge", widget: "string"}
+                  - {label: "Badge Colour", name: "variant", widget: "select", options: ["navy", "crimson"]}
+          - label: "Distance Learning + Stats"
+            name: "dl"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Image URL", name: "image", widget: "string"}
+              - {label: "Image Alt Text", name: "image_alt", widget: "string"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Value", name: "value", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Background Image URL", name: "image", widget: "string"}
+              - {label: "Image Alt Text", name: "image_alt", widget: "string"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+
+      - name: "dl_about"
+        label: "About"
+        file: "distance-learning/about.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Philosophy Section"
+            name: "philosophy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Value", name: "value", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+          - label: "School Vision Section"
+            name: "vision"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Divider Text (italic)", name: "divider", widget: "string"}
+              - label: "Vision Cards"
+                name: "cards"
+                widget: "list"
+                hint: "Cards are numbered automatically."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "History Section"
+            name: "history"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Principals List Heading", name: "principals_label", widget: "string"}
+              - label: "Principals"
+                name: "principals"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Years", name: "years", widget: "string"}
+          - label: "Principal's Welcome Section"
+            name: "welcome"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - {label: "Pull Quote", name: "quote", widget: "text"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "dl_teaching"
+        label: "Teaching & Learning"
+        file: "distance-learning/teaching.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "teaching"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Placeholder Section"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "May contain HTML links."}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "dl_community"
+        label: "Community"
+        file: "distance-learning/community.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "community"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Placeholder Section"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "May contain HTML links."}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
+
+      - name: "dl_employment"
+        label: "Employment"
+        file: "distance-learning/employment.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "The Transcendentals"
+            name: "transcendentals"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Numeral", name: "numeral", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Expression of Interest CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "HTML links allowed."}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+
+      - name: "dl_enrol"
+        label: "Enrolments"
+        file: "distance-learning/enrol.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "enrol"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Welcome Text"
+            name: "welcome"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+          - label: "Eligibility Box"
+            name: "eligibility"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Item", name: "text", widget: "string"}
+              - {label: "Footer Label", name: "footer_label", widget: "string"}
+              - {label: "Badge", name: "badge", widget: "string"}
+          - label: "Process Steps"
+            name: "process"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                hint: "Numbered automatically in order."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Application Checklist"
+            name: "checklist"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Item", name: "text", widget: "string"}
+          - label: "Fees Section"
+            name: "fees"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Note Label", name: "note_label", widget: "string"}
+              - {label: "Note Body", name: "note_body", widget: "text"}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            hint: "The email and phone links use the school's contact details from Site Settings."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+
+      - name: "dl_enrolment_process"
+        label: "Enrolment Process"
+        file: "distance-learning/enrolment-process.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "enrol"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - {label: "Subtitle (italic)", name: "subtitle", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Process Steps"
+            name: "process"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                hint: "Numbered automatically in order."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text", hint: "HTML links allowed."}
+          - label: "Expression of Interest CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            hint: "The contact line beneath the heading is generated from Site Settings."
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+
+      - name: "dl_faq"
+        label: "FAQ"
+        file: "distance-learning/faq.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "faq"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Empty-state Fallback"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            hint: "Shown only when no FAQ items have been added under 'FAQ Items'."
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+          - label: "Bottom Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+
+      - name: "dl_news"
+        label: "News (page)"
+        file: "distance-learning/news.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "community"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Listing Header"
+            name: "listing"
+            widget: "object"
+            collapsed: true
+            hint: "Shown above the posts. Individual posts are managed under 'Distance Learning — News'."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+          - label: "Empty State"
+            name: "empty"
+            widget: "object"
+            collapsed: true
+            hint: "Shown when there are no news posts yet."
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}

@@ -3,19 +3,54 @@ layout: distance-learning
 nav: about
 title: "Employment"
 description: "St Philomena School is constantly seeking good teachers who want to lead students to a knowledge and love of Our Lord Jesus Christ and academic excellence."
-page_hero_label: "Employment"
-page_hero_heading: "Teachers Wanted"
+
+# ── Page hero ──
+hero:
+  label: "Employment"
+  heading: "Teachers Wanted"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Intro ──
+intro:
+  eyebrow: "Join Our Community"
+  heading: "Lead Students to a Knowledge"
+  heading_em: "Love of Our Lord"
+  body:
+    - text: "St Philomena School is constantly seeking to make contact with good teachers who want to lead students to a knowledge and love of Our Lord Jesus Christ and academic excellence. Our school follows a classical curriculum which is based on the philosophy of guiding our students to a knowledge of the true, a love of what is truly good, and contemplation of what is truly beautiful &mdash; by teacher-centred learning which focuses on the Catholic faith and the greatest thinkers, writers, artists, and events in history."
+    - text: "Teachers who are familiar with such a curriculum, or who are ready to commit to implementing such a curriculum, are necessary to help our School fulfil its vision of education."
+
+# ── The three transcendentals ──
+transcendentals:
+  eyebrow: "Our Classical Philosophy"
+  heading: "The True, the Good"
+  heading_em: "the Beautiful"
+  intro: "Our classical curriculum is built on teacher-centred learning, focused on the Catholic faith and the greatest thinkers, writers, artists, and events in history."
+  items:
+    - {numeral: "I", title: "The True", body: "Guiding our students to a knowledge of the true."}
+    - {numeral: "II", title: "The Good", body: "Cultivating in them a love of what is truly good."}
+    - {numeral: "III", title: "The Beautiful", body: "Leading them to the contemplation of what is truly beautiful."}
+
+# ── Expression of interest CTA ──
+cta:
+  image: "/project/assets/chapel-interior.jpg"
+  eyebrow: "Express Your Interest"
+  heading: "Submit an Expression of Interest"
+  body: 'If you are such a teacher, we invite you to submit an expression of interest, including a cover letter and resum&eacute;, to <a href="mailto:admin@stphilomena.qld.edu.au" style="color:var(--gold);">admin@stphilomena.qld.edu.au</a>. This will allow us to contact you when future teaching positions at the school become available and to discuss your interest in filling this position.'
+  primary_label: "Email Your Expression of Interest"
+  primary_link: "mailto:admin@stphilomena.qld.edu.au?subject=Teaching%20Expression%20of%20Interest"
+  secondary_label: "About the School"
+  secondary_link: "/distance-learning/about.html"
 ---
 
 <main>
 
   <!-- ── Page hero ── -->
   <section class="page-hero">
-    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">{{ page.page_hero_label }}</p>
-      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
     </div>
   </section>
 
@@ -23,12 +58,13 @@ page_hero_heading: "Teachers Wanted"
   <section class="section section-cream">
     <div class="container">
       <div class="reveal" style="max-width:46rem;margin:0 auto;text-align:center;">
-        <span class="section-eyebrow">Join Our Community</span>
-        <h2 class="section-h2" style="margin-top:0.75rem;">Lead Students to a Knowledge<br>&amp; <em>Love of Our Lord</em></h2>
+        <span class="section-eyebrow">{{ page.intro.eyebrow }}</span>
+        <h2 class="section-h2" style="margin-top:0.75rem;">{{ page.intro.heading }}<br>&amp; <em>{{ page.intro.heading_em }}</em></h2>
       </div>
       <div class="body-stack reveal" style="max-width:46rem;margin:1.75rem auto 0;">
-        <p class="body-text">St Philomena School is constantly seeking to make contact with good teachers who want to lead students to a knowledge and love of Our Lord Jesus Christ and academic excellence. Our school follows a classical curriculum which is based on the philosophy of guiding our students to a knowledge of the true, a love of what is truly good, and contemplation of what is truly beautiful &mdash; by teacher-centred learning which focuses on the Catholic faith and the greatest thinkers, writers, artists, and events in history.</p>
-        <p class="body-text">Teachers who are familiar with such a curriculum, or who are ready to commit to implementing such a curriculum, are necessary to help our School fulfil its vision of education.</p>
+        {% for para in page.intro.body %}
+        <p class="body-text">{{ para.text }}</p>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -37,26 +73,18 @@ page_hero_heading: "Teachers Wanted"
   <section class="section section-cream-dark">
     <div class="container">
       <div class="transcendentals-intro reveal">
-        <span class="section-eyebrow">Our Classical Philosophy</span>
-        <h2 class="section-h2">The True, the Good<br>&amp; <em>the Beautiful</em></h2>
-        <p class="body-text" style="margin-top:1rem;">Our classical curriculum is built on teacher-centred learning, focused on the Catholic faith and the greatest thinkers, writers, artists, and events in history.</p>
+        <span class="section-eyebrow">{{ page.transcendentals.eyebrow }}</span>
+        <h2 class="section-h2">{{ page.transcendentals.heading }}<br>&amp; <em>{{ page.transcendentals.heading_em }}</em></h2>
+        <p class="body-text" style="margin-top:1rem;">{{ page.transcendentals.intro }}</p>
       </div>
       <div class="transcendentals-grid">
+        {% for item in page.transcendentals.items %}
         <div class="transcendental-item reveal">
-          <span class="transcendental-numeral">I</span>
-          <h3 class="transcendental-title">The True</h3>
-          <p class="transcendental-body">Guiding our students to a knowledge of the true.</p>
+          <span class="transcendental-numeral">{{ item.numeral }}</span>
+          <h3 class="transcendental-title">{{ item.title }}</h3>
+          <p class="transcendental-body">{{ item.body }}</p>
         </div>
-        <div class="transcendental-item reveal">
-          <span class="transcendental-numeral">II</span>
-          <h3 class="transcendental-title">The Good</h3>
-          <p class="transcendental-body">Cultivating in them a love of what is truly good.</p>
-        </div>
-        <div class="transcendental-item reveal">
-          <span class="transcendental-numeral">III</span>
-          <h3 class="transcendental-title">The Beautiful</h3>
-          <p class="transcendental-body">Leading them to the contemplation of what is truly beautiful.</p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -64,21 +92,21 @@ page_hero_heading: "Teachers Wanted"
   <!-- ── Expression of interest CTA ── -->
   <section class="cta-section">
     <div class="cta-bg">
-      <img src="/project/assets/chapel-interior.jpg" alt="">
+      <img src="{{ page.cta.image }}" alt="">
     </div>
     <div class="cta-overlay"></div>
     <div class="cta-content reveal">
-      <span class="section-eyebrow gold">Express Your Interest</span>
-      <h2 class="cta-h2">Submit an Expression of Interest</h2>
+      <span class="section-eyebrow gold">{{ page.cta.eyebrow }}</span>
+      <h2 class="cta-h2">{{ page.cta.heading }}</h2>
       <p class="body-text on-navy" style="font-size:1.15rem;line-height:1.6;margin-bottom:2rem;">
-        If you are such a teacher, we invite you to submit an expression of interest, including a cover letter and resum&eacute;, to <a href="mailto:admin@stphilomena.qld.edu.au" style="color:var(--gold);">admin@stphilomena.qld.edu.au</a>. This will allow us to contact you when future teaching positions at the school become available and to discuss your interest in filling this position.
+        {{ page.cta.body }}
       </p>
       <div class="cta-btns">
-        <a href="mailto:admin@stphilomena.qld.edu.au?subject=Teaching%20Expression%20of%20Interest" class="btn btn-primary">
-          Email Your Expression of Interest
+        <a href="{{ page.cta.primary_link }}" class="btn btn-primary">
+          {{ page.cta.primary_label }}
           <i data-lucide="arrow-right" class="icon-14"></i>
         </a>
-        <a href="/distance-learning/about.html" class="btn btn-secondary">About the School</a>
+        <a href="{{ page.cta.secondary_link }}" class="btn btn-secondary">{{ page.cta.secondary_label }}</a>
       </div>
     </div>
   </section>

@@ -2,27 +2,39 @@
 layout: distance-learning
 nav: community
 title: "Community"
-page_hero_label: "Community"
-page_hero_heading: "Our School Community"
+
+# ── Page hero ──
+hero:
+  label: "Community"
+  heading: "Our School Community"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Placeholder section ──
+stub:
+  quote: '"Sine Deo Nihil"'
+  body: >-
+    Information about our school community, events, and parent resources is being prepared. In the meantime, explore <a href="/distance-learning/about.html" style="color:var(--crimson);">About</a> and <a href="/distance-learning/enrol.html" style="color:var(--crimson);">Enrolments</a> to learn more.
+  button_label: "Back to Home"
+  button_link: "/distance-learning/"
 ---
 
 <main>
   <section class="page-hero">
-    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">{{ page.page_hero_label }}</p>
-      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
     </div>
   </section>
 
   <section class="stub-section section-cream">
     <div class="stub-inner">
-      <p class="stub-quote">"Sine Deo Nihil"</p>
+      <p class="stub-quote">{{ page.stub.quote }}</p>
       <p class="stub-body">
-        Information about our school community, events, and parent resources is being prepared. In the meantime, explore <a href="/distance-learning/about.html" style="color:var(--crimson);">About</a> and <a href="/distance-learning/enrol.html" style="color:var(--crimson);">Enrolments</a> to learn more.
+        {{ page.stub.body }}
       </p>
-      <a href="/distance-learning/" class="btn btn-navy">Back to Home</a>
+      <a href="{{ page.stub.button_link }}" class="btn btn-navy">{{ page.stub.button_label }}</a>
     </div>
   </section>
 </main>

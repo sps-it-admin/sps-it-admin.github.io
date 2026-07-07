@@ -98,149 +98,89 @@ collections:
               - {label: "Department", name: "department", widget: "select", options: [{label: "Principal", value: "principal"}, {label: "Administration", value: "administration"}, {label: "Primary Teaching Staff", value: "primary"}, {label: "Secondary Teaching Staff", value: "secondary"}, {label: "Specialist Teaching Staff", value: "specialist"}, {label: "Support Staff", value: "support"}]}
               - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 1}
 
-  - name: "day_school_annual_report"
-    label: "Day School — Annual Report"
+  - name: "day_school_documents"
+    label: "Day School — Documents"
     files:
       - name: "annual_report"
-        label: "Annual Report Document"
+        label: "Annual Report"
         file: "_data/day_school_annual_report.yml"
         fields:
-          - {label: "Annual Report Document", name: "document", widget: "file", required: false, hint: "Upload the Annual Report (e.g. a PDF). The Annual Report menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_prospectus"
-    label: "Day School — Prospectus & Handbook"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Annual Report (e.g. a PDF). The Annual Report menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "prospectus"
-        label: "Prospectus & Handbook Document"
+        label: "Prospectus & Handbook"
         file: "_data/day_school_prospectus.yml"
         fields:
-          - {label: "Prospectus & Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Prospectus & Handbook (e.g. a PDF). The Prospectus & Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_fee_schedule"
-    label: "Day School — Fee Schedule"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Prospectus & Handbook (e.g. a PDF). The Prospectus & Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "fee_schedule"
-        label: "Fee Schedule Document"
+        label: "Fee Schedule"
         file: "_data/day_school_fee_schedule.yml"
         fields:
-          - {label: "Fee Schedule Document", name: "document", widget: "file", required: false, hint: "Upload the Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_bus_transport"
-    label: "Day School — Bus Transport"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "bus_transport"
-        label: "Bus Transport Document"
+        label: "Bus Transport"
         file: "_data/day_school_bus_transport.yml"
         fields:
-          - {label: "Bus Transport Document", name: "document", widget: "file", required: false, hint: "Upload the Bus Transport document (e.g. a PDF). The Bus Transport menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_school_calendar"
-    label: "Day School — School Calendar"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Bus Transport document (e.g. a PDF). The Bus Transport menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "school_calendar"
-        label: "School Calendar Document"
+        label: "School Calendar"
         file: "_data/day_school_school_calendar.yml"
         fields:
-          - {label: "School Calendar Document", name: "document", widget: "file", required: false, hint: "Upload the School Calendar (e.g. a PDF). The School Calendar menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_classical_books"
-    label: "Day School — Classical Books"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the School Calendar (e.g. a PDF). The School Calendar menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "classical_books"
-        label: "Classical Books Document"
+        label: "Classical Books"
         file: "_data/day_school_classical_books.yml"
         fields:
-          - {label: "Classical Books Document", name: "document", widget: "file", required: false, hint: "Upload the Classical Books document (e.g. a PDF). The Classical Books menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_accident_claim_form"
-    label: "Day School — Accident Claim Form"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Classical Books document (e.g. a PDF). The Classical Books menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "accident_claim_form"
-        label: "Accident Claim Form Document"
+        label: "Accident Claim Form"
         file: "_data/day_school_accident_claim_form.yml"
         fields:
-          - {label: "Accident Claim Form Document", name: "document", widget: "file", required: false, hint: "Upload the Accident Claim Form (e.g. a PDF). The Accident Claim Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_ahi_claim_form"
-    label: "Day School — AHI Claim Form Sport/Volunteers"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Accident Claim Form (e.g. a PDF). The Accident Claim Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "ahi_claim_form"
-        label: "AHI Claim Form Sport/Volunteers Document"
+        label: "AHI Claim Form (Sport/Volunteers)"
         file: "_data/day_school_ahi_claim_form.yml"
         fields:
-          - {label: "AHI Claim Form Sport/Volunteers Document", name: "document", widget: "file", required: false, hint: "Upload the AHI Claim Form Sport/Volunteers (e.g. a PDF). The AHI Claim Form Sport/Volunteers menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_insured_authorization_form"
-    label: "Day School — Insured Authorization Form"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the AHI Claim Form Sport/Volunteers (e.g. a PDF). The AHI Claim Form Sport/Volunteers menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "insured_authorization_form"
-        label: "Insured Authorization Form Document"
+        label: "Insured Authorization Form"
         file: "_data/day_school_insured_authorization_form.yml"
         fields:
-          - {label: "Insured Authorization Form Document", name: "document", widget: "file", required: false, hint: "Upload the Insured Authorization Form (e.g. a PDF). The Insured Authorization Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_declaration_authority_form"
-    label: "Day School — Declaration Information Authority Form"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Insured Authorization Form (e.g. a PDF). The Insured Authorization Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "declaration_authority_form"
-        label: "Declaration Information Authority Form Document"
+        label: "Declaration Information Authority Form"
         file: "_data/day_school_declaration_authority_form.yml"
         fields:
-          - {label: "Declaration Information Authority Form Document", name: "document", widget: "file", required: false, hint: "Upload the Declaration Information Authority Form (e.g. a PDF). The Declaration Information Authority Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_student_safety_wellbeing_policy"
-    label: "Day School — Student Safety and Wellbeing Policy"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Declaration Information Authority Form (e.g. a PDF). The Declaration Information Authority Form menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "student_safety_wellbeing_policy"
-        label: "Student Safety and Wellbeing Policy Document"
+        label: "Student Safety and Wellbeing Policy"
         file: "_data/day_school_student_safety_wellbeing_policy.yml"
         fields:
-          - {label: "Student Safety and Wellbeing Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Student Safety and Wellbeing Policy (e.g. a PDF). The Student Safety and Wellbeing Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_whistle_blower_policy"
-    label: "Day School — Whistle Blower Policy"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Safety and Wellbeing Policy (e.g. a PDF). The Student Safety and Wellbeing Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "whistle_blower_policy"
-        label: "Whistle Blower Policy Document"
+        label: "Whistle Blower Policy"
         file: "_data/day_school_whistle_blower_policy.yml"
         fields:
-          - {label: "Whistle Blower Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Whistle Blower Policy (e.g. a PDF). The Whistle Blower Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_complaints_handling_policy"
-    label: "Day School — Complaints Handling Policy"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Whistle Blower Policy (e.g. a PDF). The Whistle Blower Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "complaints_handling_policy"
-        label: "Complaints Handling Policy Document"
+        label: "Complaints Handling Policy"
         file: "_data/day_school_complaints_handling_policy.yml"
         fields:
-          - {label: "Complaints Handling Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Complaints Handling Policy (e.g. a PDF). The Complaints Handling Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_privacy_policy"
-    label: "Day School — Privacy Policy"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Complaints Handling Policy (e.g. a PDF). The Complaints Handling Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "privacy_policy"
-        label: "Privacy Policy Document"
+        label: "Privacy Policy"
         file: "_data/day_school_privacy_policy.yml"
         fields:
-          - {label: "Privacy Policy Document", name: "document", widget: "file", required: false, hint: "Upload the Privacy Policy (e.g. a PDF). The Privacy Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_workplace_health_safety"
-    label: "Day School — Workplace Health and Safety"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Privacy Policy (e.g. a PDF). The Privacy Policy menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "workplace_health_safety"
-        label: "Workplace Health and Safety Document"
+        label: "Workplace Health and Safety"
         file: "_data/day_school_workplace_health_safety.yml"
         fields:
-          - {label: "Workplace Health and Safety Document", name: "document", widget: "file", required: false, hint: "Upload the Workplace Health and Safety document (e.g. a PDF). The Workplace Health and Safety menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "day_school_distance_education_announcement"
-    label: "Day School — Distance Education Announcement"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Workplace Health and Safety document (e.g. a PDF). The Workplace Health and Safety menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "distance_education_announcement"
-        label: "Distance Education Announcement Document"
+        label: "Distance Education Announcement"
         file: "_data/day_school_distance_education_announcement.yml"
         fields:
-          - {label: "Distance Education Announcement Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Education Announcement (e.g. a PDF). The Announcement menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Education Announcement (e.g. a PDF). The Announcement menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
 
   - name: "day_school_campus"
     label: "Day School — Our Campus"
@@ -269,59 +209,39 @@ collections:
           - {label: "ANZ Direct Debit Authorisation Request Form — document", name: "direct_debit_request_document", widget: "file", required: false, hint: "Upload the ANZ Direct Debit Authorisation Request Form (e.g. a PDF). The matching button links to this file and opens it in a new tab. Leave empty to hide the button."}
           - {label: "ANZ Direct Debit Agreement — document", name: "direct_debit_agreement_document", widget: "file", required: false, hint: "Upload the ANZ Direct Debit Service Agreement (e.g. a PDF). The matching button links to this file and opens it in a new tab. Leave empty to hide the button."}
 
-  - name: "distance_learning_fee_schedule"
-    label: "Distance Learning — Fee Schedule"
+  - name: "distance_learning_documents"
+    label: "Distance Learning — Documents"
     files:
       - name: "fee_schedule"
-        label: "Fee Schedule Document"
+        label: "Fee Schedule"
         file: "_data/distance_learning_fee_schedule.yml"
         fields:
-          - {label: "Fee Schedule Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_philosophy_of_education"
-    label: "Distance Learning — Philosophy of Education"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "philosophy_of_education"
-        label: "Philosophy of Education Document"
+        label: "Philosophy of Education"
         file: "_data/distance_learning_philosophy_of_education.yml"
         fields:
-          - {label: "Philosophy of Education Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_parent_handbook"
-    label: "Distance Learning — Parent Handbook"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "parent_handbook"
-        label: "Parent Handbook Document"
+        label: "Parent Handbook"
         file: "_data/distance_learning_parent_handbook.yml"
         fields:
-          - {label: "Parent Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_student_handbook"
-    label: "Distance Learning — Student Handbook"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "student_handbook"
-        label: "Student Handbook Document"
+        label: "Student Handbook"
         file: "_data/distance_learning_student_handbook.yml"
         fields:
-          - {label: "Student Handbook Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_it_requirements"
-    label: "Distance Learning — IT Requirements"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "it_requirements"
-        label: "IT Requirements Document"
+        label: "IT Requirements"
         file: "_data/distance_learning_it_requirements.yml"
         fields:
-          - {label: "IT Requirements Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_faq"
-    label: "Distance Learning — Frequently Asked Questions"
-    files:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
       - name: "faq"
-        label: "Frequently Asked Questions Document"
+        label: "Frequently Asked Questions"
         file: "_data/distance_learning_faq.yml"
         fields:
-          - {label: "Frequently Asked Questions Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
 
   - name: "dl_news"
     label: "Distance Learning — News"

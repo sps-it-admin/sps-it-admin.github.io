@@ -297,10 +297,93 @@ collections:
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
           - {label: "Nav", name: "nav", widget: "hidden", default: "about"}
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+          - {label: "Page Title", name: "title", widget: "string", hint: "Shown in the browser tab and search results."}
+          - {label: "Meta Description", name: "description", widget: "text", hint: "One or two sentences describing the page for search engines."}
+
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            hint: "The banner at the top of the page."
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image", hint: "Large photo behind the hero heading."}
+
+          - label: "Philosophy Section"
+            name: "philosophy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string", hint: "Small label above the heading."}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false, hint: "Optional second line, shown in italics. Leave empty for a single-line heading."}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                hint: "The three highlighted figures beside the text."
+                fields:
+                  - {label: "Value", name: "value", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+
+          - label: "School Vision Section"
+            name: "vision"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Divider Text (italic)", name: "divider", widget: "string"}
+              - label: "Vision Cards"
+                name: "cards"
+                widget: "list"
+                hint: "Cards are numbered automatically in the order shown here."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+
+          - label: "History Section"
+            name: "history"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false, hint: "Optional second line, shown in italics."}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Principals List Heading", name: "principals_label", widget: "string"}
+              - label: "Principals"
+                name: "principals"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Years", name: "years", widget: "string"}
+
+          - label: "Principal's Welcome Section"
+            name: "welcome"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false, hint: "Optional second line, shown in italics."}
+              - {label: "Pull Quote", name: "quote", widget: "text"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string", hint: "Where the button goes, e.g. /enrol.html"}
 
       - name: "teaching"
         label: "Teaching & Learning"

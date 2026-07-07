@@ -1,0 +1,16 @@
+# ── Day School design tokens (edited in the CMS under "Day School — Design") ──
+# Colours are oklch(L C H). Fonts must remain serif (brand rule: no sans-serif).
+# Seeded from the :root block in day-school.css so the switch is visually a no-op.
+colors:
+  primary:    "oklch(0.31 0.085 247)"   # --navy / --primary  (headers, primary ground)
+  accent:     "oklch(0.55 0.16 245)"    # --accent            (links, CTAs)
+  gold:       "oklch(0.72 0.12 80)"     # --gold              (rules, dividers, ornament)
+  cream:      "oklch(0.98 0.015 90)"    # --cream / --background (page ground)
+  foreground: "oklch(0.22 0.06 247)"    # --foreground        (body text)
+fonts:
+  display: "Playfair Display"            # headings
+  body:    "Lora"                        # body copy
+  label:   "Cinzel"                      # eyebrows / nav / buttons (UPPERCASE)
+type:
+  base_size:    "17px"                   # body font-size
+  body_leading: "1.75"                   # body line-height

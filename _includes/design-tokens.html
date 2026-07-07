@@ -1,0 +1,25 @@
+{%- comment -%}
+  Emits a :root override block from a design data object.
+  Usage: {% include design-tokens.html design=site.data.design_day_school %}
+  Placed in <head> AFTER the stylesheet <link> so these values win.
+  Overrides only :root custom properties — no structural CSS is touched.
+{%- endcomment -%}
+{%- assign d = include.design -%}
+<style id="design-tokens">
+:root{
+  --navy: {{ d.colors.primary }};
+  --primary: {{ d.colors.primary }};
+  --accent: {{ d.colors.accent }};
+  --crimson: {{ d.colors.accent }};
+  --gold: {{ d.colors.gold }};
+  --cream: {{ d.colors.cream }};
+  --background: {{ d.colors.cream }};
+  --foreground: {{ d.colors.foreground }};
+  --text-body: {{ d.colors.foreground }};
+  --font-display: "{{ d.fonts.display }}", Georgia, serif;
+  --font-body: "{{ d.fonts.body }}", Georgia, serif;
+  --font-label: "{{ d.fonts.label }}", "Times New Roman", serif;
+  --text-base: {{ d.type.base_size }};
+  --leading-body: {{ d.type.body_leading }};
+}
+</style>

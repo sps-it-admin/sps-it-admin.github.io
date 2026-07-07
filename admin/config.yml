@@ -20,6 +20,68 @@ collections:
           - {label: "Address Line 2", name: "address_line2", widget: "string"}
           - {label: "Copyright Year", name: "copyright_year", widget: "string"}
 
+  - name: "day_school_design"
+    label: "Day School — Design"
+    files:
+      - name: "design"
+        label: "Colours, Fonts & Type"
+        file: "_data/design_day_school.yml"
+        fields:
+          - label: "Colours"
+            name: "colors"
+            widget: "object"
+            fields:
+              - {label: "Primary (headers/ground)", name: "primary", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value, e.g. oklch(0.31 0.085 247)"], hint: "Deep institutional blue/navy."}
+              - {label: "Accent (links/buttons)", name: "accent", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Gold (rules/ornament)", name: "gold", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Cream (page background)", name: "cream", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Body text", name: "foreground", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+          - label: "Fonts"
+            name: "fonts"
+            widget: "object"
+            hint: "Serif only — the brand never uses a sans-serif font."
+            fields:
+              - {label: "Headings", name: "display", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Playfair Display"}
+              - {label: "Body", name: "body", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Lora"}
+              - {label: "Labels / Nav", name: "label", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Cinzel"}
+          - label: "Type"
+            name: "type"
+            widget: "object"
+            fields:
+              - {label: "Body text size", name: "base_size", widget: "string", default: "17px", pattern: ['px$', "End with px, e.g. 17px"]}
+              - {label: "Body line height", name: "body_leading", widget: "string", default: "1.75"}
+
+  - name: "distance_learning_design"
+    label: "Distance Learning — Design"
+    files:
+      - name: "design"
+        label: "Colours, Fonts & Type"
+        file: "_data/design_distance_learning.yml"
+        fields:
+          - label: "Colours"
+            name: "colors"
+            widget: "object"
+            fields:
+              - {label: "Primary (headers/ground)", name: "primary", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value, e.g. oklch(0.27 0.065 250)"], hint: "Deep institutional navy."}
+              - {label: "Accent (links/buttons)", name: "accent", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Gold (rules/ornament)", name: "gold", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Cream (page background)", name: "cream", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Body text", name: "foreground", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+          - label: "Fonts"
+            name: "fonts"
+            widget: "object"
+            hint: "Serif only — the brand never uses a sans-serif font."
+            fields:
+              - {label: "Headings", name: "display", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Playfair Display"}
+              - {label: "Body", name: "body", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Lora"}
+              - {label: "Labels / Nav", name: "label", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Cinzel"}
+          - label: "Type"
+            name: "type"
+            widget: "object"
+            fields:
+              - {label: "Body text size", name: "base_size", widget: "string", default: "17px", pattern: ['px$', "End with px, e.g. 17px"]}
+              - {label: "Body line height", name: "body_leading", widget: "string", default: "1.75"}
+
   - name: "day_school_staff"
     label: "Day School — Our Staff"
     files:

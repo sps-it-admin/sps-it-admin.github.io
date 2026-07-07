@@ -1,0 +1,16 @@
+# ── Distance Learning design tokens (edited under "Distance Learning — Design") ──
+# Colours are oklch(L C H). Fonts must remain serif (brand rule: no sans-serif).
+# Seeded from project/tokens/colors.css + typography.css so the switch is a no-op.
+colors:
+  primary:    "oklch(0.27 0.065 250)"   # --navy
+  accent:     "oklch(0.38 0.13 22)"     # --crimson (header, CTAs)
+  gold:       "oklch(0.72 0.12 80)"     # --gold
+  cream:      "oklch(0.98 0.015 90)"    # --cream (page ground)
+  foreground: "oklch(0.18 0.04 250)"    # --foreground (body text)
+fonts:
+  display: "Playfair Display"
+  body:    "Lora"
+  label:   "Cinzel"
+type:
+  base_size:    "17px"
+  body_leading: "1.75"

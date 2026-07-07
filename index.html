@@ -2,6 +2,30 @@
 layout: landing
 title: "St Philomena School"
 description: "Catholic classical education at Park Ridge, QLD — Day School and Distance Learning."
+
+# ── Brand block ──
+brand:
+  crest_image: "/project/assets/logo-full.png"
+  school_name: "St Philomena School"
+  tagline: "Park Ridge, Queensland"
+  motto: '"Sine Deo Nihil"'
+  motto_en: "Without God there is Nothing"
+
+# ── School chooser ──
+prompt: "Please select your school"
+choices:
+  - eyebrow: "On Campus · Prep – Year 12"
+    title: "Day School"
+    desc: "Onsite Catholic classical education at our Park Ridge campus. A full school experience grounded in Faith, virtue, and the Liberal Arts."
+    cta: "Visit Day School"
+    link: "/day-school/"
+  - eyebrow: "Australia-Wide · Years 7 & 8"
+    title: "Distance Learning"
+    desc: "Authentic Catholic classical education delivered to families across Australia — the same rigorous curriculum, wherever you are."
+    cta: "Visit Distance Learning"
+    link: "/distance-learning/"
+
+footer_note: "© 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, Park Ridge QLD 4125"
 ---
 
 <style>
@@ -145,30 +169,26 @@ description: "Catholic classical education at Park Ridge, QLD — Day School and
 
 <div class="landing-wrap">
   <div class="landing-brand">
-    <img src="/project/assets/logo-full.png" alt="St Philomena School crest" class="landing-crest">
-    <p class="landing-school-name">St Philomena School</p>
-    <h1 class="landing-tagline">Park Ridge, Queensland</h1>
-    <p class="landing-motto">"Sine Deo Nihil"</p>
-    <p class="landing-motto-en">Without God there is Nothing</p>
+    <img src="{{ page.brand.crest_image }}" alt="St Philomena School crest" class="landing-crest">
+    <p class="landing-school-name">{{ page.brand.school_name }}</p>
+    <h1 class="landing-tagline">{{ page.brand.tagline }}</h1>
+    <p class="landing-motto">{{ page.brand.motto }}</p>
+    <p class="landing-motto-en">{{ page.brand.motto_en }}</p>
   </div>
 
   <div class="landing-divider"></div>
-  <p class="landing-prompt">Please select your school</p>
+  <p class="landing-prompt">{{ page.prompt }}</p>
 
   <div class="landing-choices">
-    <a href="/day-school/" class="choice-card">
-      <span class="choice-card-eyebrow">On Campus · Prep – Year 12</span>
-      <h2 class="choice-card-title">Day School</h2>
-      <p class="choice-card-desc">Onsite Catholic classical education at our Park Ridge campus. A full school experience grounded in Faith, virtue, and the Liberal Arts.</p>
-      <span class="choice-card-cta">Visit Day School</span>
+    {% for choice in page.choices %}
+    <a href="{{ choice.link }}" class="choice-card">
+      <span class="choice-card-eyebrow">{{ choice.eyebrow }}</span>
+      <h2 class="choice-card-title">{{ choice.title }}</h2>
+      <p class="choice-card-desc">{{ choice.desc }}</p>
+      <span class="choice-card-cta">{{ choice.cta }}</span>
     </a>
-    <a href="/distance-learning/" class="choice-card">
-      <span class="choice-card-eyebrow">Australia-Wide · Years 7 & 8</span>
-      <h2 class="choice-card-title">Distance Learning</h2>
-      <p class="choice-card-desc">Authentic Catholic classical education delivered to families across Australia — the same rigorous curriculum, wherever you are.</p>
-      <span class="choice-card-cta">Visit Distance Learning</span>
-    </a>
+    {% endfor %}
   </div>
 
-  <p class="landing-footer-note">&copy; 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, Park Ridge QLD 4125</p>
+  <p class="landing-footer-note">{{ page.footer_note }}</p>
 </div>

@@ -279,17 +279,35 @@ collections:
     label: "Pages"
     files:
       - name: "home"
-        label: "Home"
+        label: "Home (Landing)"
         file: "index.html"
         fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-          - {label: "Nav", name: "nav", widget: "hidden", default: "home"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string"}
-          - {label: "Hero Heading Line 1", name: "hero_h1", widget: "string"}
-          - {label: "Hero Heading Line 2 (italic)", name: "hero_h1_em", widget: "string"}
-          - {label: "Hero Description", name: "hero_desc", widget: "text"}
+          - label: "Brand Block"
+            name: "brand"
+            widget: "object"
+            collapsed: false
+            hint: "The crest and school name at the centre of the landing page."
+            fields:
+              - {label: "Crest Image", name: "crest_image", widget: "image"}
+              - {label: "School Name", name: "school_name", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Motto (Latin)", name: "motto", widget: "string"}
+              - {label: "Motto (English)", name: "motto_en", widget: "string"}
+          - {label: "Prompt", name: "prompt", widget: "string", hint: "The line above the two school cards, e.g. 'Please select your school'."}
+          - label: "School Cards"
+            name: "choices"
+            widget: "list"
+            hint: "The two cards linking to Day School and Distance Learning."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Call to Action", name: "cta", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+          - {label: "Footer Note", name: "footer_note", widget: "string", hint: "The small line of text at the very bottom."}
 
       - name: "about"
         label: "About"
@@ -392,8 +410,24 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
           - {label: "Nav", name: "nav", widget: "hidden", default: "teaching"}
           - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Placeholder Section"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            hint: "Temporary content shown until the full page is written."
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "May contain HTML links."}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
 
       - name: "enrol"
         label: "Enrolments"
@@ -403,8 +437,92 @@ collections:
           - {label: "Nav", name: "nav", widget: "hidden", default: "enrol"}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Welcome Text"
+            name: "welcome"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+          - label: "Eligibility Box"
+            name: "eligibility"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Item", name: "text", widget: "string"}
+              - {label: "Footer Label", name: "footer_label", widget: "string"}
+              - {label: "Badge", name: "badge", widget: "string"}
+          - label: "Process Steps"
+            name: "process"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                hint: "Steps are numbered automatically in order."
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+          - label: "Application Checklist"
+            name: "checklist"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Item", name: "text", widget: "string"}
+          - label: "Fees Section"
+            name: "fees"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string", required: false}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Note Label", name: "note_label", widget: "string"}
+              - {label: "Note Body", name: "note_body", widget: "text"}
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            hint: "The email and phone links use the school's contact details from Site Settings."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "button_label", widget: "string"}
 
       - name: "community"
         label: "Community"
@@ -413,8 +531,24 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
           - {label: "Nav", name: "nav", widget: "hidden", default: "community"}
           - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Placeholder Section"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            hint: "Temporary content shown until the full page is written."
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text", hint: "May contain HTML links."}
+              - {label: "Button Label", name: "button_label", widget: "string"}
+              - {label: "Button Link", name: "button_link", widget: "string"}
 
       - name: "faq"
         label: "FAQ"
@@ -423,5 +557,33 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
           - {label: "Nav", name: "nav", widget: "hidden", default: "faq"}
           - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Hero Label", name: "page_hero_label", widget: "string"}
-          - {label: "Page Hero Heading", name: "page_hero_heading", widget: "string"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Empty-state Fallback"
+            name: "stub"
+            widget: "object"
+            collapsed: true
+            hint: "Shown only when no FAQ items have been added under 'FAQ Items'."
+            fields:
+              - {label: "Quote", name: "quote", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
+          - label: "Bottom Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Primary Button Label", name: "primary_label", widget: "string"}
+              - {label: "Primary Button Link", name: "primary_link", widget: "string"}
+              - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
+              - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}

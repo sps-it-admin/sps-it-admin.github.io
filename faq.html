@@ -2,17 +2,38 @@
 layout: default
 nav: faq
 title: "FAQ"
-page_hero_label: "FAQ"
-page_hero_heading: "Frequently Asked Questions"
+
+# ── Page hero ──
+hero:
+  label: "FAQ"
+  heading: "Frequently Asked Questions"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Fallback shown only when no FAQ items have been added ──
+stub:
+  quote: '"Sine Deo Nihil"'
+  body: "Our full FAQ is being prepared. For any questions, please contact the Distance Learning office directly — we are happy to help."
+  primary_label: "Enrolment Enquiries"
+  primary_link: "/enrol.html"
+  secondary_label: "Back to Home"
+  secondary_link: "/index.html"
+
+# ── Bottom call to action ──
+cta:
+  body: "Have a question not listed here? Contact our Distance Learning office."
+  primary_label: "Enrolment Enquiries"
+  primary_link: "/enrol.html"
+  secondary_label: "Back to Home"
+  secondary_link: "/index.html"
 ---
 
 <main>
   <section class="page-hero">
-    <img src="/project/assets/st-philomena-statue.jpg" alt="" class="page-hero-bg">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">{{ page.page_hero_label }}</p>
-      <h1 class="page-hero-heading">{{ page.page_hero_heading }}</h1>
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
     </div>
   </section>
 
@@ -29,28 +50,28 @@ page_hero_heading: "Frequently Asked Questions"
         </div>
       {% else %}
         <div class="stub-inner">
-          <p class="stub-quote">"Sine Deo Nihil"</p>
+          <p class="stub-quote">{{ page.stub.quote }}</p>
           <p class="stub-body">
-            Our full FAQ is being prepared. For any questions, please contact the Distance Learning office directly — we are happy to help.
+            {{ page.stub.body }}
           </p>
           <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-            <a href="/enrol.html" class="btn btn-navy">
-              Enrolment Enquiries
+            <a href="{{ page.stub.primary_link }}" class="btn btn-navy">
+              {{ page.stub.primary_label }}
               <i data-lucide="arrow-right" class="icon-14"></i>
             </a>
-            <a href="/index.html" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">Back to Home</a>
+            <a href="{{ page.stub.secondary_link }}" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">{{ page.stub.secondary_label }}</a>
           </div>
         </div>
       {% endif %}
 
       <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--cream-dark,#e8e0d4);">
-        <p class="body-text" style="margin-bottom:1.5rem;">Have a question not listed here? Contact our Distance Learning office.</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">{{ page.cta.body }}</p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a href="/enrol.html" class="btn btn-navy">
-            Enrolment Enquiries
+          <a href="{{ page.cta.primary_link }}" class="btn btn-navy">
+            {{ page.cta.primary_label }}
             <i data-lucide="arrow-right" class="icon-14"></i>
           </a>
-          <a href="/index.html" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">Back to Home</a>
+          <a href="{{ page.cta.secondary_link }}" class="btn btn-secondary" style="color:var(--navy)!important;border-color:var(--navy);">{{ page.cta.secondary_label }}</a>
         </div>
       </div>
     </div>

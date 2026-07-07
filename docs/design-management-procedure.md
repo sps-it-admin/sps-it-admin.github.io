@@ -40,9 +40,10 @@ _layouts/distance-learning.html  → reads _data/design_distance_learning.yml  �
 |------|------|
 | `_data/design_day_school.yml` | Day School's editable tokens (seeded from `day-school.css`) |
 | `_data/design_distance_learning.yml` | Distance Learning's tokens (seeded from `project/tokens/`) |
-| `_includes/design-tokens.html` | Shared include — renders a `:root` override from whichever data object it's passed |
-| `_layouts/day-school.html` | Injects `design_day_school` after its stylesheet link |
-| `_layouts/distance-learning.html` | Injects `design_distance_learning` after its stylesheet links |
+| `_includes/design-tokens-day-school.html` | Day School's `:root` override — emits **only** the variables `day-school.css` uses (e.g. `--accent`, never `--crimson`) |
+| `_includes/design-tokens-distance-learning.html` | Distance Learning's `:root` override — emits **only** the variables the DL stylesheets use (e.g. `--crimson`; `--primary`/`--accent` follow via `var()` aliases) |
+| `_layouts/day-school.html` | Injects the Day School token block after its stylesheet link |
+| `_layouts/distance-learning.html` | Injects the Distance Learning token block after its stylesheet links |
 | `admin/config.yml` | Two collections: **"Day School — Design"** and **"Distance Learning — Design"** |
 
 > **The root site** (`_layouts/default.html`) shares `project/styles.css` with
@@ -113,7 +114,9 @@ layout — recheck the layout wiring in Section 1.
 ## 4. Extending it
 
 - **Add a token** (e.g. `--gold-bright`): add it to **both** design data files, map
-  it in `_includes/design-tokens.html`, and add a field to **both** Design
+  it in **each** site's include (`_includes/design-tokens-day-school.html` and
+  `_includes/design-tokens-distance-learning.html`) — emitting only the variable
+  names that site's stylesheet actually uses — and add a field to **both** Design
   collections in `admin/config.yml`. Keep the two programmes symmetrical.
 - **Theme the root site too:** create `_data/design_root.yml`, add a
   "Root Site — Design" collection, and include it in `_layouts/default.html`.

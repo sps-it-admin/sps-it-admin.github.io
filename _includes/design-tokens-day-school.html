@@ -1,21 +1,20 @@
 {%- comment -%}
-  Emits a :root override block from a design data object.
-  Usage: {% include design-tokens.html design=site.data.design_day_school %}
-  Placed in <head> AFTER the stylesheet <link> so these values win.
-  Overrides only :root custom properties — no structural CSS is touched.
+  Day School design tokens → :root override.
+  Emits ONLY the variables day-school.css consumes (it never uses --crimson).
+  Injected in _layouts/day-school.html AFTER /day-school.css so these win.
+  In day-school.css these are independent literals, so --navy and --primary
+  are both set from the one "primary" token.
 {%- endcomment -%}
-{%- assign d = include.design -%}
+{%- assign d = site.data.design_day_school -%}
 <style id="design-tokens">
 :root{
   --navy: {{ d.colors.primary }};
   --primary: {{ d.colors.primary }};
   --accent: {{ d.colors.accent }};
-  --crimson: {{ d.colors.accent }};
   --gold: {{ d.colors.gold }};
   --cream: {{ d.colors.cream }};
   --background: {{ d.colors.cream }};
   --foreground: {{ d.colors.foreground }};
-  --text-body: {{ d.colors.foreground }};
   --font-display: "{{ d.fonts.display }}", Georgia, serif;
   --font-body: "{{ d.fonts.body }}", Georgia, serif;
   --font-label: "{{ d.fonts.label }}", "Times New Roman", serif;

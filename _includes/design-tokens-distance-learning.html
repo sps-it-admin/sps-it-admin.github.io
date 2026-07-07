@@ -1,0 +1,23 @@
+{%- comment -%}
+  Distance Learning design tokens → :root override.
+  Emits ONLY the variables the DL stylesheets consume. --primary and --accent
+  are not set here: colors.css defines them as var(--navy) / var(--crimson),
+  so they follow automatically from the values below.
+  Injected in _layouts/distance-learning.html AFTER the stylesheets so these win.
+{%- endcomment -%}
+{%- assign d = site.data.design_distance_learning -%}
+<style id="design-tokens">
+:root{
+  --navy: {{ d.colors.primary }};
+  --crimson: {{ d.colors.accent }};
+  --gold: {{ d.colors.gold }};
+  --cream: {{ d.colors.cream }};
+  --foreground: {{ d.colors.foreground }};
+  --text-body: {{ d.colors.foreground }};
+  --font-display: "{{ d.fonts.display }}", Georgia, serif;
+  --font-body: "{{ d.fonts.body }}", Georgia, serif;
+  --font-label: "{{ d.fonts.label }}", "Times New Roman", serif;
+  --text-base: {{ d.type.base_size }};
+  --leading-body: {{ d.type.body_leading }};
+}
+</style>

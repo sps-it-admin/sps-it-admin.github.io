@@ -82,22 +82,6 @@ collections:
               - {label: "Body text size", name: "base_size", widget: "string", default: "17px", pattern: ['px$', "End with px, e.g. 17px"]}
               - {label: "Body line height", name: "body_leading", widget: "string", default: "1.75"}
 
-  - name: "day_school_staff"
-    label: "Day School — Our Staff"
-    files:
-      - name: "staff"
-        label: "Staff Members"
-        file: "_data/day_school_staff.yml"
-        fields:
-          - name: "members"
-            label: "Staff Members"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Role / Subject", name: "role", widget: "string"}
-              - {label: "Department", name: "department", widget: "select", options: [{label: "Principal", value: "principal"}, {label: "Administration", value: "administration"}, {label: "Primary Teaching Staff", value: "primary"}, {label: "Secondary Teaching Staff", value: "secondary"}, {label: "Specialist Teaching Staff", value: "specialist"}, {label: "Support Staff", value: "support"}]}
-              - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 1}
-
   - name: "day_school_documents"
     label: "Day School — Documents"
     files:
@@ -1391,7 +1375,7 @@ collections:
                   - {label: "Title", name: "title", widget: "string"}
 
       - name: "ds_staff"
-        label: "Our Staff (page)"
+        label: "Our Staff"
         file: "day-school/staff.html"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
@@ -1402,12 +1386,21 @@ collections:
             name: "hero"
             widget: "object"
             collapsed: false
-            hint: "The staff list itself is managed under 'Day School — Our Staff'."
             fields:
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Subtitle Prefix", name: "subtitle_prefix", widget: "string", hint: "Text before the automatic staff count."}
               - {label: "Subtitle Suffix", name: "subtitle_suffix", widget: "string", hint: "Text after the automatic staff count."}
+          - label: "Staff Members"
+            name: "members"
+            widget: "list"
+            collapsed: true
+            hint: "The faculty & staff list shown on the page. Grouped by department in a fixed order (Principal, Administration, Primary, Secondary, Specialist, Support) and sorted by display order within each."
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role / Subject", name: "role", widget: "string"}
+              - {label: "Department", name: "department", widget: "select", options: [{label: "Principal", value: "principal"}, {label: "Administration", value: "administration"}, {label: "Primary Teaching Staff", value: "primary"}, {label: "Secondary Teaching Staff", value: "secondary"}, {label: "Specialist Teaching Staff", value: "specialist"}, {label: "Support Staff", value: "support"}]}
+              - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 1}
           - label: "Call to Action"
             name: "cta"
             widget: "object"

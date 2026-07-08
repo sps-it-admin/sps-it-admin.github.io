@@ -260,20 +260,6 @@ collections:
       - {label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown on the News listing page. If left empty, the start of the post is used."}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "faq_data"
-    label: "FAQ Items"
-    files:
-      - name: "faqs"
-        label: "Frequently Asked Questions"
-        file: "_data/faqs.yml"
-        fields:
-          - name: "items"
-            label: "FAQ Items"
-            widget: "list"
-            fields:
-              - {label: "Question", name: "question", widget: "string"}
-              - {label: "Answer", name: "answer", widget: "markdown"}
-
   - name: "pages"
     label: "Landing Page"
     files:
@@ -1648,11 +1634,19 @@ collections:
               - {label: "Hero Label", name: "label", widget: "string"}
               - {label: "Hero Heading", name: "heading", widget: "string"}
               - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "FAQ Items"
+            name: "faqs"
+            widget: "list"
+            collapsed: true
+            hint: "Questions and answers shown on the page. When at least one item is added, this list replaces the empty-state fallback below."
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "markdown"}
           - label: "Empty-state Fallback"
             name: "stub"
             widget: "object"
             collapsed: true
-            hint: "Shown only when no FAQ items have been added under 'FAQ Items'."
+            hint: "Shown only when no FAQ Items have been added above."
             fields:
               - {label: "Quote", name: "quote", widget: "string"}
               - {label: "Body", name: "body", widget: "text"}

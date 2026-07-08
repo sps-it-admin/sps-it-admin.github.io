@@ -46,11 +46,11 @@ _layouts/distance-learning.html  → reads _data/design_distance_learning.yml  �
 | `_layouts/distance-learning.html` | Injects the Distance Learning token block after its stylesheet links |
 | `admin/config.yml` | Two collections: **"Day School — Design"** and **"Distance Learning — Design"** |
 
-> **The root site** (`_layouts/default.html`) shares `project/styles.css` with
+> **The root landing page** (`_layouts/landing.html`) shares `project/styles.css` with
 > Distance Learning and is intentionally left on the stylesheet defaults — it is not
 > CMS-themable and is unaffected by design edits. To make it independently themable
 > later, repeat the pattern with a `_data/design_root.yml` file injected into
-> `default.html`.
+> `landing.html`.
 
 ---
 
@@ -118,8 +118,8 @@ layout — recheck the layout wiring in Section 1.
   `_includes/design-tokens-distance-learning.html`) — emitting only the variable
   names that site's stylesheet actually uses — and add a field to **both** Design
   collections in `admin/config.yml`. Keep the two programmes symmetrical.
-- **Theme the root site too:** create `_data/design_root.yml`, add a
-  "Root Site — Design" collection, and include it in `_layouts/default.html`.
+- **Theme the root landing page too:** create `_data/design_root.yml`, add a
+  "Root Site — Design" collection, and include it in `_layouts/landing.html`.
 - **Add a new font:** add it to the `select` options **and** to the Google Fonts
   `<link>` in the layouts in the same change, or it won't load.
 - **Preview:** design changes appear on the live site after the GitHub Pages

@@ -7,34 +7,6 @@ media_folder: "project/assets"
 public_folder: "/project/assets"
 
 collections:
-  - name: "site_settings"
-    label: "Site Settings"
-    files:
-      - name: "contact"
-        label: "Contact Information"
-        file: "_data/settings.yml"
-        fields:
-          - label: "Day School"
-            name: "day_school"
-            widget: "object"
-            hint: "Contact details shown across the Day School section."
-            fields:
-              - {label: "Phone", name: "phone", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Address Line 1", name: "address_line1", widget: "string"}
-              - {label: "Address Line 2", name: "address_line2", widget: "string"}
-              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
-          - label: "Distance Learning"
-            name: "distance_learning"
-            widget: "object"
-            hint: "Contact details shown across the Distance Learning section. The two programmes use different email addresses."
-            fields:
-              - {label: "Phone", name: "phone", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Address Line 1", name: "address_line1", widget: "string"}
-              - {label: "Address Line 2", name: "address_line2", widget: "string"}
-              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
-
   - name: "day_school_design"
     label: "Day School — Design"
     files:
@@ -47,37 +19,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Primary (headers/ground)", name: "primary", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value, e.g. oklch(0.31 0.085 247)"], hint: "Deep institutional blue/navy."}
-              - {label: "Accent (links/buttons)", name: "accent", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
-              - {label: "Gold (rules/ornament)", name: "gold", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
-              - {label: "Cream (page background)", name: "cream", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
-              - {label: "Body text", name: "foreground", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
-          - label: "Fonts"
-            name: "fonts"
-            widget: "object"
-            hint: "Serif only — the brand never uses a sans-serif font."
-            fields:
-              - {label: "Headings", name: "display", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Playfair Display"}
-              - {label: "Body", name: "body", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Lora"}
-              - {label: "Labels / Nav", name: "label", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Cinzel"}
-          - label: "Type"
-            name: "type"
-            widget: "object"
-            fields:
-              - {label: "Body text size", name: "base_size", widget: "string", default: "17px", pattern: ['px$', "End with px, e.g. 17px"]}
-              - {label: "Body line height", name: "body_leading", widget: "string", default: "1.75"}
-
-  - name: "distance_learning_design"
-    label: "Distance Learning — Design"
-    files:
-      - name: "design"
-        label: "Colours, Fonts & Type"
-        file: "_data/design_distance_learning.yml"
-        fields:
-          - label: "Colours"
-            name: "colors"
-            widget: "object"
-            fields:
-              - {label: "Primary (headers/ground)", name: "primary", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value, e.g. oklch(0.27 0.065 250)"], hint: "Deep institutional navy."}
               - {label: "Accent (links/buttons)", name: "accent", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
               - {label: "Gold (rules/ornament)", name: "gold", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
               - {label: "Cream (page background)", name: "cream", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
@@ -180,74 +121,6 @@ collections:
         file: "_data/day_school_distance_education_announcement.yml"
         fields:
           - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Education Announcement (e.g. a PDF). The Announcement menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-
-  - name: "distance_learning_documents"
-    label: "Distance Learning — Documents"
-    files:
-      - name: "fee_schedule"
-        label: "Fee Schedule"
-        file: "_data/distance_learning_fee_schedule.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-      - name: "philosophy_of_education"
-        label: "Philosophy of Education"
-        file: "_data/distance_learning_philosophy_of_education.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-      - name: "parent_handbook"
-        label: "Parent Handbook"
-        file: "_data/distance_learning_parent_handbook.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-      - name: "student_handbook"
-        label: "Student Handbook"
-        file: "_data/distance_learning_student_handbook.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-      - name: "it_requirements"
-        label: "IT Requirements"
-        file: "_data/distance_learning_it_requirements.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
-      - name: "faq"
-        label: "Frequently Asked Questions"
-        file: "_data/distance_learning_faq.yml"
-        fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
-
-  - name: "pages"
-    label: "Landing Page"
-    files:
-      - name: "home"
-        label: "Home (Landing)"
-        file: "index.html"
-        fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Meta Description", name: "description", widget: "text"}
-          - label: "Brand Block"
-            name: "brand"
-            widget: "object"
-            collapsed: false
-            hint: "The crest and school name at the centre of the landing page."
-            fields:
-              - {label: "Crest Image", name: "crest_image", widget: "image"}
-              - {label: "School Name", name: "school_name", widget: "string"}
-              - {label: "Tagline", name: "tagline", widget: "string"}
-              - {label: "Motto (Latin)", name: "motto", widget: "string"}
-              - {label: "Motto (English)", name: "motto_en", widget: "string"}
-          - {label: "Prompt", name: "prompt", widget: "string", hint: "The line above the two school cards, e.g. 'Please select your school'."}
-          - label: "School Cards"
-            name: "choices"
-            widget: "list"
-            hint: "The two cards linking to Day School and Distance Learning."
-            fields:
-              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
-              - {label: "Call to Action", name: "cta", widget: "string"}
-              - {label: "Link", name: "link", widget: "string"}
-          - {label: "Footer Note", name: "footer_note", widget: "string", hint: "The small line of text at the very bottom."}
 
   - name: "day_school_pages"
     label: "Day School — Pages"
@@ -1119,6 +992,71 @@ collections:
           - {label: "Button Label", name: "button_label", widget: "string"}
           - {label: "Button Link", name: "button_link", widget: "string"}
 
+  - name: "distance_learning_design"
+    label: "Distance Learning — Design"
+    files:
+      - name: "design"
+        label: "Colours, Fonts & Type"
+        file: "_data/design_distance_learning.yml"
+        fields:
+          - label: "Colours"
+            name: "colors"
+            widget: "object"
+            fields:
+              - {label: "Primary (headers/ground)", name: "primary", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value, e.g. oklch(0.27 0.065 250)"], hint: "Deep institutional navy."}
+              - {label: "Accent (links/buttons)", name: "accent", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Gold (rules/ornament)", name: "gold", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Cream (page background)", name: "cream", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+              - {label: "Body text", name: "foreground", widget: "string", pattern: ['^oklch\(', "Use an oklch(L C H) value"]}
+          - label: "Fonts"
+            name: "fonts"
+            widget: "object"
+            hint: "Serif only — the brand never uses a sans-serif font."
+            fields:
+              - {label: "Headings", name: "display", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Playfair Display"}
+              - {label: "Body", name: "body", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Lora"}
+              - {label: "Labels / Nav", name: "label", widget: "select", options: ["Playfair Display", "Lora", "Cinzel"], default: "Cinzel"}
+          - label: "Type"
+            name: "type"
+            widget: "object"
+            fields:
+              - {label: "Body text size", name: "base_size", widget: "string", default: "17px", pattern: ['px$', "End with px, e.g. 17px"]}
+              - {label: "Body line height", name: "body_leading", widget: "string", default: "1.75"}
+
+  - name: "distance_learning_documents"
+    label: "Distance Learning — Documents"
+    files:
+      - name: "fee_schedule"
+        label: "Fee Schedule"
+        file: "_data/distance_learning_fee_schedule.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Distance Learning Fee Schedule (e.g. a PDF). The Fee Schedule menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+      - name: "philosophy_of_education"
+        label: "Philosophy of Education"
+        file: "_data/distance_learning_philosophy_of_education.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Philosophy of Education document (e.g. a PDF). The Philosophy of Education menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+      - name: "parent_handbook"
+        label: "Parent Handbook"
+        file: "_data/distance_learning_parent_handbook.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Parent Handbook (e.g. a PDF). The Parent Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+      - name: "student_handbook"
+        label: "Student Handbook"
+        file: "_data/distance_learning_student_handbook.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Handbook (e.g. a PDF). The Student Handbook menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+      - name: "it_requirements"
+        label: "IT Requirements"
+        file: "_data/distance_learning_it_requirements.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the IT Requirements document (e.g. a PDF). The IT Requirements menu item will link to this file and open it in a new tab. Leave empty to keep the menu item inactive."}
+      - name: "faq"
+        label: "Frequently Asked Questions"
+        file: "_data/distance_learning_faq.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
+
   - name: "distance_learning_pages"
     label: "Distance Learning — Pages"
     files:
@@ -1682,3 +1620,65 @@ collections:
               - {label: "Body", name: "body", widget: "text"}
               - {label: "Button Label", name: "button_label", widget: "string"}
               - {label: "Button Link", name: "button_link", widget: "string"}
+
+  - name: "pages"
+    label: "Landing Page"
+    files:
+      - name: "home"
+        label: "Home (Landing)"
+        file: "index.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Brand Block"
+            name: "brand"
+            widget: "object"
+            collapsed: false
+            hint: "The crest and school name at the centre of the landing page."
+            fields:
+              - {label: "Crest Image", name: "crest_image", widget: "image"}
+              - {label: "School Name", name: "school_name", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Motto (Latin)", name: "motto", widget: "string"}
+              - {label: "Motto (English)", name: "motto_en", widget: "string"}
+          - {label: "Prompt", name: "prompt", widget: "string", hint: "The line above the two school cards, e.g. 'Please select your school'."}
+          - label: "School Cards"
+            name: "choices"
+            widget: "list"
+            hint: "The two cards linking to Day School and Distance Learning."
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Call to Action", name: "cta", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+          - {label: "Footer Note", name: "footer_note", widget: "string", hint: "The small line of text at the very bottom."}
+
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "contact"
+        label: "Contact Information"
+        file: "_data/settings.yml"
+        fields:
+          - label: "Day School"
+            name: "day_school"
+            widget: "object"
+            hint: "Contact details shown across the Day School section."
+            fields:
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Address Line 1", name: "address_line1", widget: "string"}
+              - {label: "Address Line 2", name: "address_line2", widget: "string"}
+              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
+          - label: "Distance Learning"
+            name: "distance_learning"
+            widget: "object"
+            hint: "Contact details shown across the Distance Learning section. The two programmes use different email addresses."
+            fields:
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Address Line 1", name: "address_line1", widget: "string"}
+              - {label: "Address Line 2", name: "address_line2", widget: "string"}
+              - {label: "Copyright Year", name: "copyright_year", widget: "string"}

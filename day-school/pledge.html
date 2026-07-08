@@ -70,7 +70,7 @@ cta:
     <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">{{ page.give.heading }}</h2>
     <div class="grid md:grid-cols-3 gap-6">
       {% for item in page.give.items %}
-      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
+      <a href="{{ item.document | default: item.url }}" target="_blank" rel="noopener noreferrer" class="group block p-6 rounded-lg border transition-all hover:shadow-lg hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
         <div class="ds-doc-icon mb-3" style="color: var(--accent)"><i data-lucide="file-text"></i></div>
         <h3 class="text-lg font-display font-semibold mb-2 group-hover:underline" style="color: var(--primary)">{{ item.title }}</h3>
         <p class="text-sm opacity-80" style="color: var(--foreground)">{{ item.desc }}</p>

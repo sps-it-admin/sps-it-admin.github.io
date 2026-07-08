@@ -1,8 +1,0 @@
-# ── Day School — Pledge Your Support ──
-# Editable in the CMS under "Day School — Pledge Your Support".
-# photo is an image; the *_document fields are uploaded files (e.g. PDFs).
-# Leave a field empty to hide that photo or button.
-photo: /project/assets/masterplan-2.jpg
-brochure_document: /project/assets/Test.pdf
-direct_debit_request_document: /project/assets/Test.pdf
-direct_debit_agreement_document: /project/assets/Test.pdf

@@ -31,6 +31,18 @@ features:
     - {numeral: "V", title: "Eleven Rural Acres", body: "Donated through the generosity of Dr Felice and Mrs Marie Zaccari — a quiet, semi-rural setting."}
     - {numeral: "VI", title: "Lit Carpark & Driveway", body: "Funded by the Gambling Community Benefit Fund, ensuring safe drop-off and pickup."}
 
+# ── Campus gallery ── (managed in the CMS under "Day School — Pages > Our Campus")
+gallery:
+  eyebrow: "In Pictures"
+  heading: "A Look Around Our Campus"
+  featured_image: /project/assets/SPS-Campus-1.jpg
+  campus_photo_1: /project/assets/SPS-Campus-2.jpg
+  campus_photo_2: /project/assets/SPS-Campus-4.jpg
+  campus_photo_3: /project/assets/SPS-Campus-3.jpg
+  campus_photo_4: /project/assets/SPS-Campus-5.jpg
+  masterplan_1: /project/assets/masterplan-2.jpg
+  masterplan_2: /project/assets/masterplan-1.jpg
+
 # ── Location ──
 location:
   eyebrow: "Visit Us"
@@ -82,8 +94,40 @@ location:
   </div>
 </section>
 
-<!-- LOCATION -->
+<!-- GALLERY -->
+{% assign g = page.gallery %}
+{% if g.featured_image or g.campus_photo_1 or g.campus_photo_2 or g.campus_photo_3 or g.campus_photo_4 or g.masterplan_1 or g.masterplan_2 %}
 <section class="py-20 px-4" style="background-color: var(--background)">
+  <div class="container mx-auto max-w-5xl">
+    <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ g.eyebrow }}</p>
+    <h2 class="text-3xl md:text-4xl font-display font-bold mb-10" style="color: var(--primary)">{{ g.heading }}</h2>
+
+    {% if g.featured_image %}
+    <div class="rounded-lg overflow-hidden border mb-6" style="border-color: var(--accent)">
+      <img src="{{ g.featured_image }}" alt="St Philomena School campus" style="display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover">
+    </div>
+    {% endif %}
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {% if g.campus_photo_1 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.campus_photo_1 }}" alt="St Philomena School campus" style="display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover"></div>{% endif %}
+      {% if g.campus_photo_2 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.campus_photo_2 }}" alt="St Philomena School campus" style="display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover"></div>{% endif %}
+      {% if g.campus_photo_3 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.campus_photo_3 }}" alt="St Philomena School campus" style="display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover"></div>{% endif %}
+      {% if g.campus_photo_4 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.campus_photo_4 }}" alt="St Philomena School campus" style="display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover"></div>{% endif %}
+    </div>
+
+    {% if g.masterplan_1 or g.masterplan_2 %}
+    <h3 class="text-2xl font-display font-semibold mt-12 mb-6" style="color: var(--primary)">Master Plan</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      {% if g.masterplan_1 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.masterplan_1 }}" alt="St Philomena School master plan" style="display: block; width: 100%; object-fit: cover"></div>{% endif %}
+      {% if g.masterplan_2 %}<div class="rounded-lg overflow-hidden border" style="border-color: var(--accent)"><img src="{{ g.masterplan_2 }}" alt="St Philomena School master plan" style="display: block; width: 100%; object-fit: cover"></div>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<!-- LOCATION -->
+<section class="py-20 px-4" style="background-color: var(--secondary)">
   <div class="container mx-auto max-w-4xl">
     <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ page.location.eyebrow }}</p>
     <h2 class="text-3xl md:text-4xl font-display font-bold mb-8" style="color: var(--primary)">{{ page.location.heading }}</h2>

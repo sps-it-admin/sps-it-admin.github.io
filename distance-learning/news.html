@@ -15,6 +15,17 @@ listing:
   eyebrow: "Latest Updates"
   heading: "From Our Community"
 
+# ── News posts (managed in the CMS under "Distance Learning — Pages > News") ──
+posts:
+  - title: "Welcome to Our News"
+    date: 2026-06-19
+    body: |
+      We are pleased to introduce the News page for St Philomena School Distance Learning. This will be our home for sharing updates, upcoming events, feast days, and stories from across our community.
+
+      Please check back regularly for the latest news. We look forward to keeping families informed and connected throughout the school year.
+
+      *Sine Deo Nihil.*
+
 # ── Empty state (shown when there are no posts) ──
 empty:
   quote: '"Sine Deo Nihil"'
@@ -38,27 +49,24 @@ empty:
   <!-- ── News listing ── -->
   <section class="section section-cream">
     <div class="container">
-      {% assign posts = site.dl_news | sort: 'date' | reverse %}
+      {% assign posts = page.posts | sort: 'date' | reverse %}
       {% if posts.size > 0 %}
       <div class="steps-header reveal">
         <span class="section-eyebrow">{{ page.listing.eyebrow }}</span>
         <h2 class="section-h2">{{ page.listing.heading }}</h2>
       </div>
-      <div class="school-life-grid">
+      <div style="display:flex;flex-direction:column;gap:3.5rem;max-width:760px;margin:0 auto;">
         {% for post in posts %}
-        <a href="{{ post.url }}" class="school-life-card news-card reveal">
+        <article class="reveal" style="{% unless forloop.last %}padding-bottom:2.5rem;border-bottom:1px solid var(--cream-dark,#e8e0d4);{% endunless %}">
+          {% if post.date %}<p class="news-article-meta">{{ post.date | date: "%-d %B %Y" }}</p>{% endif %}
+          <h2 class="news-article-title">{{ post.title }}</h2>
           {% if post.image %}
-          <div class="school-life-img">
+          <div class="news-article-img">
             <img src="{{ post.image }}" alt="{{ post.title | escape }}">
           </div>
           {% endif %}
-          <div class="school-life-body">
-            {% if post.date %}<p class="news-date">{{ post.date | date: "%-d %B %Y" }}</p>{% endif %}
-            <h3 class="school-life-title">{{ post.title }}</h3>
-            <p class="school-life-desc">{{ post.summary | default: post.excerpt | strip_html | normalize_whitespace | truncate: 160 }}</p>
-            <span class="news-readmore">Read More &rarr;</span>
-          </div>
-        </a>
+          <div class="news-prose">{{ post.body | markdownify }}</div>
+        </article>
         {% endfor %}
       </div>
       {% else %}

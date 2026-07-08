@@ -2,16 +2,3 @@ title: "St Philomena School — Distance Learning"
 description: "Authentic Catholic classical education for Years 7 & 8"
 url: "https://sps-it-admin.github.io"
 baseurl: ""
-
-collections:
-  dl_news:
-    output: true
-    permalink: /distance-learning/news/:name/
-
-defaults:
-  - scope:
-      path: ""
-      type: dl_news
-    values:
-      layout: news-post
-      nav: community

@@ -242,24 +242,6 @@ collections:
         fields:
           - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Frequently Asked Questions document (e.g. a PDF). The Frequently Asked Questions menu item will link to this file and open it in a new tab. Leave empty to fall back to the built-in FAQ page."}
 
-  - name: "dl_news"
-    label: "Distance Learning — News"
-    label_singular: "News Post"
-    description: "Each entry is published as its own post on the Distance Learning News page. Use 'New News Post' to add one."
-    folder: "_dl_news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}}"
-    sortable_fields: ["date", "title"]
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "news-post"}
-      - {label: "Navigation", name: "nav", widget: "hidden", default: "community"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional. Shown on the News listing and at the top of the post."}
-      - {label: "Summary", name: "summary", widget: "text", required: false, hint: "Short teaser shown on the News listing page. If left empty, the start of the post is used."}
-      - {label: "Body", name: "body", widget: "markdown"}
-
   - name: "pages"
     label: "Landing Page"
     files:
@@ -1666,7 +1648,7 @@ collections:
               - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
 
       - name: "dl_news_page"
-        label: "News (page)"
+        label: "News"
         file: "distance-learning/news.html"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
@@ -1685,10 +1667,22 @@ collections:
             name: "listing"
             widget: "object"
             collapsed: true
-            hint: "Shown above the posts. Individual posts are managed under 'Distance Learning — News'."
+            hint: "Shown above the posts."
             fields:
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string"}
+          - label: "News Posts"
+            name: "posts"
+            label_singular: "News Post"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.title}}"
+            hint: "Each item is shown on the News page, newest first by publish date. Leave the list empty to show the empty state below."
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+              - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Optional. Shown at the top of the post."}
+              - {label: "Body", name: "body", widget: "markdown"}
           - label: "Empty State"
             name: "empty"
             widget: "object"

@@ -1942,7 +1942,7 @@ collections:
               - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
               - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
 
-      - name: "dl_news"
+      - name: "dl_news_page"
         label: "News (page)"
         file: "distance-learning/news.html"
         fields:

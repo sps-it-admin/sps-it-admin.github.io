@@ -14,11 +14,26 @@ collections:
         label: "Contact Information"
         file: "_data/settings.yml"
         fields:
-          - {label: "Phone", name: "phone", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Address Line 1", name: "address_line1", widget: "string"}
-          - {label: "Address Line 2", name: "address_line2", widget: "string"}
-          - {label: "Copyright Year", name: "copyright_year", widget: "string"}
+          - label: "Day School"
+            name: "day_school"
+            widget: "object"
+            hint: "Contact details shown across the Day School section."
+            fields:
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Address Line 1", name: "address_line1", widget: "string"}
+              - {label: "Address Line 2", name: "address_line2", widget: "string"}
+              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
+          - label: "Distance Learning"
+            name: "distance_learning"
+            widget: "object"
+            hint: "Contact details shown across the Distance Learning section. The two programmes use different email addresses."
+            fields:
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Address Line 1", name: "address_line1", widget: "string"}
+              - {label: "Address Line 2", name: "address_line2", widget: "string"}
+              - {label: "Copyright Year", name: "copyright_year", widget: "string"}
 
   - name: "day_school_design"
     label: "Day School — Design"
@@ -260,7 +275,7 @@ collections:
               - {label: "Answer", name: "answer", widget: "markdown"}
 
   - name: "pages"
-    label: "Pages"
+    label: "Landing Page"
     files:
       - name: "home"
         label: "Home (Landing)"

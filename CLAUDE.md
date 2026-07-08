@@ -10,7 +10,7 @@ This is a **Jekyll static site** for St Philomena School, hosted on GitHub Pages
 
 - `_config.yml` — site title, description, URL
 - `_layouts/` — three layouts: `day-school.html` (day school section), `distance-learning.html` (DL section), `landing.html` (the root landing page — minimal, no nav)
-- `_data/settings.yml` — contact info (phone, email, address) injected via Liquid into layouts. The `day_school` and `distance_learning` keys hold programme-specific values (used by `day-school.html` and `distance-learning.html` respectively) — the two programmes have different contact emails and must not be merged. The top-level keys are legacy shared defaults, no longer referenced by any layout
+- `_data/settings.yml` — contact info (phone, email, address) injected via Liquid into layouts. The `day_school` and `distance_learning` keys hold programme-specific values (used by `day-school.html` and `distance-learning.html` respectively) — the two programmes have different contact emails and must not be merged
 - `_data/faqs.yml` — FAQ content rendered on the FAQ pages
 - `admin/config.yml` — Netlify CMS config for non-technical content editing
 
@@ -82,7 +82,7 @@ The UI kit at `project/ui_kits/website/` contains full-screen JSX recreations of
 
 ## Content Editing
 
-Contact details, copyright year → `_data/settings.yml` (set per-programme under the `day_school` and `distance_learning` keys; top-level keys are legacy defaults no longer referenced by a layout)  
+Contact details, copyright year → `_data/settings.yml` (set per-programme under the `day_school` and `distance_learning` keys)  
 FAQ items → `_data/faqs.yml`  
 Page body copy → frontmatter and inline HTML in each `.html` page file  
 CMS-managed fields → `admin/config.yml` (Netlify CMS)

@@ -117,6 +117,15 @@
           </div>
         </div>
         <div class="nav-item">
+          <a href="/distance-learning/policies-and-procedures.html" class="nav-item-btn{% if page.nav == 'policies-procedures' %} active{% endif %}">
+            Policies &amp; Procedures
+            <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="nav-dropdown-item">Mandatory Policies</a>
+          </div>
+        </div>
+        <div class="nav-item">
           {% if faq_doc and faq_doc != "" %}
           <a href="{{ faq_doc }}" class="nav-item-btn" target="_blank" rel="noopener">Frequently Asked Questions</a>
           {% else %}
@@ -169,6 +178,8 @@
       {% else %}
       <a href="#" class="mobile-nav-item">IT Requirements</a>
       {% endif %}
+      <a href="/distance-learning/policies-and-procedures.html" class="mobile-nav-item">Policies &amp; Procedures</a>
+      <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="mobile-nav-item">Mandatory Policies</a>
       {% if faq_doc and faq_doc != "" %}
       <a href="{{ faq_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Frequently Asked Questions</a>
       {% else %}
@@ -198,6 +209,7 @@
           <li><a href="/distance-learning/teaching.html" class="footer-link">Teaching &amp; Learning</a></li>
           <li><a href="/distance-learning/enrol.html" class="footer-link">Enrolments</a></li>
           <li><a href="/distance-learning/community.html" class="footer-link">Community</a></li>
+          <li><a href="/distance-learning/policies-and-procedures.html" class="footer-link">Policies &amp; Procedures</a></li>
           {% if faq_doc and faq_doc != "" %}
           <li><a href="{{ faq_doc }}" class="footer-link" target="_blank" rel="noopener">FAQ</a></li>
           {% else %}

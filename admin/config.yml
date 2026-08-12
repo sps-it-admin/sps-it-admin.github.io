@@ -1662,6 +1662,68 @@ collections:
               - {label: "Secondary Button Label", name: "secondary_label", widget: "string"}
               - {label: "Secondary Button Link", name: "secondary_link", widget: "string"}
 
+      - name: "dl_policies_procedures"
+        label: "Policies & Procedures"
+        file: "distance-learning/policies-and-procedures.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "distance-learning"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "policies-procedures"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Hero Label", name: "label", widget: "string"}
+              - {label: "Hero Heading", name: "heading", widget: "string"}
+              - {label: "Hero Background Image", name: "image", widget: "image"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading (line 1)", name: "heading", widget: "string"}
+              - {label: "Heading (line 2, italic)", name: "heading_em", widget: "string"}
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "text", widget: "text", hint: "HTML allowed."}
+          - label: "Mandatory Policies"
+            name: "mandatory"
+            widget: "object"
+            collapsed: true
+            hint: "The Mandatory Policies menu item links to this section. Add a document to each entry, or link to one by URL."
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "mandatory-policies"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Contact CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            hint: "The phone number and email beneath the body text are generated from Site Settings."
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Button Label", name: "primary_label", widget: "string"}
+              - {label: "Button Link", name: "primary_link", widget: "string"}
+
       - name: "dl_faq"
         label: "FAQ"
         file: "distance-learning/faq.html"

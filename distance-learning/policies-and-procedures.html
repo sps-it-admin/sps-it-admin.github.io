@@ -1,0 +1,120 @@
+---
+layout: distance-learning
+nav: policies-procedures
+title: "Policies & Procedures"
+description: "Policies and procedures for St Philomena School Distance Learning, including the mandatory policies the school is required to publish."
+
+# ── Page hero ──
+hero:
+  label: "Policies & Procedures"
+  heading: "Policies & Procedures"
+  image: "/project/assets/st-philomena-statue.jpg"
+
+# ── Intro ──
+intro:
+  eyebrow: "Overview"
+  heading: "Our Published"
+  heading_em: "Policies"
+  body:
+    - text: "St Philomena School maintains a set of policies governing student safety and wellbeing, privacy, conduct, complaints and operational standards. These apply to the Distance Learning programme as they do across the school, and are reviewed regularly."
+    - text: "Families who cannot locate a document, or who would like a printed copy, are welcome to contact the school office."
+
+# ── Mandatory Policies ──
+mandatory:
+  anchor: "mandatory-policies"
+  eyebrow: "Mandatory Policies"
+  heading: "Mandatory Policies"
+  subtitle: "Policies the school is required to publish and maintain under Queensland non-state school accreditation and Commonwealth funding requirements."
+  empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
+  links:
+    - {label: "Student Safety & Wellbeing Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/StudentSafetyandWellbeingPolicy.pdf"}
+    - {label: "Whistle Blower Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WhistleblowerPolicy.pdf"}
+    - {label: "Complaints Handling Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ComplaintsHandlingPolicy.pdf"}
+    - {label: "Reporting Concerns of Harm & Abuse Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ReportingConcernsofHarmandAbusePolicy.pdf"}
+    - {label: "Privacy Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/PrivacyPolicy.pdf"}
+    - {label: "Work Health and Safety Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WorkHealthSafetyPolicy.pdf"}
+
+# ── Contact CTA ──
+cta:
+  image: "/project/assets/chapel-interior.jpg"
+  eyebrow: "Need Assistance?"
+  heading: "Questions About a Policy?"
+  body: "For clarification on any policy, to request a printed copy, or to raise a concern, please contact the school office."
+  primary_label: "About the School"
+  primary_link: "/distance-learning/about.html"
+---
+
+<main>
+
+  <!-- ── Page hero ── -->
+  <section class="page-hero">
+    <img src="{{ page.hero.image }}" alt="" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">{{ page.hero.label }}</p>
+      <h1 class="page-hero-heading">{{ page.hero.heading }}</h1>
+    </div>
+  </section>
+
+  <!-- ── Intro ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="reveal" style="max-width:46rem;margin:0 auto;text-align:center;">
+        <span class="section-eyebrow">{{ page.intro.eyebrow }}</span>
+        <h2 class="section-h2" style="margin-top:0.75rem;">{{ page.intro.heading }}<br><em>{{ page.intro.heading_em }}</em></h2>
+      </div>
+      <div class="body-stack reveal" style="max-width:46rem;margin:1.75rem auto 0;">
+        {% for para in page.intro.body %}
+        <p class="body-text">{{ para.text }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Mandatory Policies ── -->
+  <section id="{{ page.mandatory.anchor }}" class="section section-cream-dark">
+    <div class="container">
+      <div class="steps-header reveal">
+        <span class="section-eyebrow">{{ page.mandatory.eyebrow }}</span>
+        <h2 class="section-h2">{{ page.mandatory.heading }}</h2>
+        <p class="body-text" style="margin-top:1rem;">{{ page.mandatory.subtitle }}</p>
+      </div>
+      {% if page.mandatory.links and page.mandatory.links != empty %}
+      <div class="doc-grid">
+        {% for link in page.mandatory.links %}
+        {% assign href = link.document | default: link.url %}
+        <a href="{{ href }}" class="doc-card reveal" target="_blank" rel="noopener noreferrer">
+          <span class="doc-card-icon"><i data-lucide="file-text"></i></span>
+          <span class="doc-card-text">
+            <span class="doc-card-title">{{ link.label }}</span>
+            {% if link.desc and link.desc != "" %}<span class="doc-card-desc">{{ link.desc }}</span>{% endif %}
+            <span class="doc-card-meta">PDF <i data-lucide="arrow-right" class="icon-12"></i></span>
+          </span>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="doc-empty reveal">{{ page.mandatory.empty_note }}</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- ── Contact CTA ── -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <img src="{{ page.cta.image }}" alt="">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <span class="section-eyebrow gold">{{ page.cta.eyebrow }}</span>
+      <h2 class="cta-h2">{{ page.cta.heading }}</h2>
+      <p class="body-text on-navy" style="font-size:1.15rem;line-height:1.6;margin-bottom:2rem;">
+        {{ page.cta.body }} Please contact us on {{ site.data.settings.distance_learning.phone }} or email <a href="mailto:{{ site.data.settings.distance_learning.email }}" style="color:var(--gold);">{{ site.data.settings.distance_learning.email }}</a>.
+      </p>
+      <div class="cta-btns">
+        <a href="{{ page.cta.primary_link }}" class="btn btn-secondary">{{ page.cta.primary_label }}</a>
+      </div>
+    </div>
+  </section>
+
+</main>

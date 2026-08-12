@@ -856,6 +856,140 @@ collections:
               - {label: "Email Button Label", name: "email_label", widget: "string"}
               - {label: "Email Link", name: "email_link", widget: "string"}
 
+      - name: "ds_policies_procedures"
+        label: "Policies & Procedures"
+        file: "day-school/policies-and-procedures.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "day-school"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: "policies-procedures"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+          - label: "Mandatory Policies"
+            name: "mandatory"
+            widget: "object"
+            collapsed: true
+            hint: "First section of the Policies & Procedures page. Add a document to each entry, or link to one by URL."
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "mandatory-policies"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Student Related Policies"
+            name: "student"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "student-related-policies"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Procedures"
+            name: "procedures"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "procedures"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Child Safety and Incidents Procedures"
+            name: "child_safety"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "child-safety-and-incidents-procedures"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Archive"
+            name: "archive"
+            widget: "object"
+            collapsed: true
+            hint: "Superseded policies and procedures, retained for reference."
+            fields:
+              - {label: "Anchor", name: "anchor", widget: "hidden", default: "archive"}
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
+              - {label: "Intro", name: "intro", widget: "text"}
+              - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
+              - label: "Documents"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text", required: false}
+                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - label: "Contact CTA"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "text"}
+              - {label: "Phone (display)", name: "phone_display", widget: "string"}
+              - {label: "Phone Link", name: "phone_link", widget: "string"}
+              - {label: "Email Button Label", name: "email_label", widget: "string"}
+              - {label: "Email Link", name: "email_link", widget: "string"}
+
       - name: "ds_sport"
         label: "Sport"
         file: "day-school/sport.html"

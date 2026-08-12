@@ -347,15 +347,16 @@ section[id] { scroll-margin-top: 96px; }
 .ds-logo-motto { font-size: 0.72rem; font-style: italic; margin-top: 0.25rem; letter-spacing: 0.1em; color: var(--gold-light); }
 
 /* Desktop nav */
-.ds-nav { display: none; align-items: center; gap: 0.25rem; }
+.ds-nav { display: none; align-items: center; gap: 0.125rem; }
 @media (min-width: 1280px) { .ds-nav { display: flex; } }
 .ds-nav-item { position: relative; }
 .ds-nav-link {
   display: inline-flex; align-items: center; gap: 0.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.4rem;
   font-family: var(--font-label);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
   text-transform: uppercase;
   color: var(--cream);
   transition: color 0.25s ease;
@@ -368,7 +369,7 @@ section[id] { scroll-margin-top: 96px; }
 /* Dropdown (pure CSS hover) */
 .ds-dropdown {
   position: absolute; top: 100%; left: 0;
-  min-width: 230px;
+  min-width: 230px; width: max-content; max-width: 24rem;
   background-color: var(--card);
   border: 1px solid var(--border);
   box-shadow: 0 16px 32px oklch(0.22 0.075 247 / 0.18);
@@ -388,14 +389,17 @@ section[id] { scroll-margin-top: 96px; }
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .ds-dropdown a:hover { background-color: var(--secondary); color: var(--primary); }
+/* Anchor wide dropdowns near the end of the bar to their right edge */
+.ds-dropdown-right { left: auto; right: 0; }
 
 /* Enrol Now button */
 .ds-enrol {
-  margin-left: 0.75rem;
-  padding: 0.55rem 1.25rem;
+  margin-left: 0.5rem;
+  padding: 0.55rem 1rem;
   font-family: var(--font-label);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
   text-transform: uppercase;
   font-weight: 600;
   background-color: var(--gold-light);

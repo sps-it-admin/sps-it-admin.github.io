@@ -392,6 +392,30 @@ section[id] { scroll-margin-top: 96px; }
 /* Anchor wide dropdowns near the end of the bar to their right edge */
 .ds-dropdown-right { left: auto; right: 0; }
 
+/* Nested flyout (e.g. Policies & Procedures > Mandatory Policies > a document) */
+.ds-dropdown-sub { position: relative; }
+.ds-dropdown a.ds-dropdown-sub-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.ds-dropdown-sub-toggle svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.55; }
+.ds-subdropdown {
+  position: absolute; top: -0.5rem; left: 100%;
+  min-width: 230px; width: max-content; max-width: 22rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 32px oklch(0.22 0.075 247 / 0.18);
+  padding: 0.5rem 0;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s;
+  z-index: 60;
+}
+.ds-dropdown-sub:hover > .ds-subdropdown,
+.ds-dropdown-sub:focus-within > .ds-subdropdown { opacity: 1; visibility: visible; }
+.ds-dropdown-sub:hover > .ds-dropdown-sub-toggle,
+.ds-dropdown-sub:focus-within > .ds-dropdown-sub-toggle { background-color: var(--secondary); color: var(--primary); }
+/* Right-anchored dropdowns open their flyouts to the left, clear of the viewport edge */
+.ds-dropdown-right .ds-subdropdown { left: auto; right: 100%; }
+
 /* Enrol Now button */
 .ds-enrol {
   margin-left: 0.5rem;
@@ -435,6 +459,7 @@ section[id] { scroll-margin-top: 96px; }
 }
 .mobile-nav-item:hover { color: var(--gold-light); }
 .mobile-nav-sub { padding-left: 1rem; font-size: 0.78rem; opacity: 0.85; text-transform: none; font-family: var(--font-body); letter-spacing: 0; }
+.mobile-nav-sub2 { padding-left: 2.25rem; font-size: 0.74rem; opacity: 0.72; }
 .mobile-nav-enrol { margin-top: 0.75rem; text-align: center; background-color: var(--gold-light); color: oklch(0.22 0.06 247); border-radius: 2px; }
 
 /* Footer */

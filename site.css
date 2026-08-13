@@ -191,7 +191,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: oklch(1 0 0 / 0.05);
 }
 
-/* Nested submenu flyout (e.g. Portal > Forms) */
+/* Anchor dropdowns near the end of the bar to their right edge */
+.nav-dropdown-right { left: auto; right: 0; }
+
+/* Nested submenu flyout (e.g. Mandatory Policies > a document) */
 .nav-dropdown-sub { position: relative; }
 .nav-dropdown-sub-toggle {
   display: flex;
@@ -214,11 +217,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: none;
   z-index: 110;
 }
+/* Flyouts on right-anchored dropdowns open leftwards, clear of the viewport edge */
+.nav-subdropdown-left { left: auto; right: 100%; }
 .nav-dropdown-sub:hover > .nav-subdropdown { display: block; }
 .nav-dropdown-sub:hover > .nav-dropdown-sub-toggle {
   color: var(--gold);
   background: oklch(1 0 0 / 0.05);
 }
+/* The parent nav chevron flips on hover; a submenu chevron points at its flyout */
+.nav-item:hover .nav-dropdown-sub-toggle .nav-chevron { transform: none; }
 
 /* Mobile toggle */
 .mob-toggle {

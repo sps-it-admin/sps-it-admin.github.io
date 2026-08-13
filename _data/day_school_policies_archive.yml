@@ -1,1 +1,10 @@
+# Archive — Day School
+#
+# document: optional single document for the whole section. When set, the
+#   "Archive" menu item links straight to it instead of the section of the
+#   Policies & Procedures page.
+# links: the superseded documents retained for reference. Each one is shown as
+#   a card on the Policies & Procedures page and as a sub-menu item under
+#   "Archive" in the navigation.
 document: ""
+links: []

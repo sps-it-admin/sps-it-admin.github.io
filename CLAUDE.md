@@ -12,6 +12,7 @@ This is a **Jekyll static site** for St Philomena School, hosted on GitHub Pages
 - `_layouts/` — three layouts: `day-school.html` (day school section), `distance-learning.html` (DL section), `landing.html` (the root landing page — minimal, no nav)
 - `_data/settings.yml` — contact info (phone, email, address) injected via Liquid into layouts. The `day_school` and `distance_learning` keys hold programme-specific values (used by `day-school.html` and `distance-learning.html` respectively) — the two programmes have different contact emails and must not be merged
 - Distance Learning FAQ items live in the frontmatter of `distance-learning/faq.html` (managed in the CMS under "Distance Learning — Pages > FAQ")
+- Policies & Procedures documents live in `_data/day_school_policies_*.yml` and `_data/distance_learning_policies_mandatory.yml` — one file per menu section, managed in the CMS under "Day School / Distance Learning — Policies & Procedures". Each document in a section's `links` list renders both as a card on that programme's Policies & Procedures page **and** as a sub-menu item beneath the section in the nav, so a document added in the CMS appears in both places. The optional top-level `document` in those files is a whole-section override: when set, the section's own menu item links straight to that file. The page frontmatter holds only each section's wording (eyebrow, heading, intro, empty message)
 - `admin/config.yml` — Netlify CMS config for non-technical content editing
 
 Pages use YAML frontmatter to select a layout:
@@ -84,6 +85,7 @@ The UI kit at `project/ui_kits/website/` contains full-screen JSX recreations of
 
 Contact details, copyright year → `_data/settings.yml` (set per-programme under the `day_school` and `distance_learning` keys)  
 FAQ items → frontmatter of `distance-learning/faq.html`  
+Policies & Procedures documents (page cards + nav sub-menu items) → `_data/*_policies_*.yml`  
 Page body copy → frontmatter and inline HTML in each `.html` page file  
 CMS-managed fields → `admin/config.yml` (Netlify CMS)
 

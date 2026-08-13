@@ -1,10 +1,12 @@
 {%- assign ds = site.data.settings.day_school -%}
 {%- assign annual_report = site.data.day_school_annual_report.document -%}
-{%- assign pol_mandatory_doc = site.data.day_school_policies_mandatory.document -%}
-{%- assign pol_student_doc = site.data.day_school_policies_student_related.document -%}
-{%- assign pol_procedures_doc = site.data.day_school_policies_procedures.document -%}
-{%- assign pol_child_safety_doc = site.data.day_school_policies_child_safety.document -%}
-{%- assign pol_archive_doc = site.data.day_school_policies_archive.document -%}
+{%- comment -%}
+  Policies & Procedures menu. One entry per section, in menu order, as
+  "anchor|menu label|data file in _data/". Each section's documents come from
+  that data file (CMS: "Day School — Policies & Procedures"), so every document
+  added there becomes a sub-menu item beneath its section.
+{%- endcomment -%}
+{%- assign pol_sections = "mandatory-policies|Mandatory Policies|day_school_policies_mandatory,student-related-policies|Student Related Policies|day_school_policies_student_related,procedures|Procedures|day_school_policies_procedures,child-safety-and-incidents-procedures|Child Safety and Incidents Procedures|day_school_policies_child_safety,archive|Archive|day_school_policies_archive" | split: "," -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,31 +100,36 @@
         <div class="ds-nav-item">
           <a href="/day-school/policies-and-procedures.html" class="ds-nav-link{% if page.nav == 'policies-procedures' %} active{% endif %}">Policies &amp; Procedures <i data-lucide="chevron-down"></i></a>
           <div class="ds-dropdown ds-dropdown-right">
-            {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
-            <a href="{{ pol_mandatory_doc }}" target="_blank" rel="noopener">Mandatory Policies</a>
-            {% else %}
-            <a href="/day-school/policies-and-procedures.html#mandatory-policies">Mandatory Policies</a>
-            {% endif %}
-            {% if pol_student_doc and pol_student_doc != "" %}
-            <a href="{{ pol_student_doc }}" target="_blank" rel="noopener">Student Related Policies</a>
-            {% else %}
-            <a href="/day-school/policies-and-procedures.html#student-related-policies">Student Related Policies</a>
-            {% endif %}
-            {% if pol_procedures_doc and pol_procedures_doc != "" %}
-            <a href="{{ pol_procedures_doc }}" target="_blank" rel="noopener">Procedures</a>
-            {% else %}
-            <a href="/day-school/policies-and-procedures.html#procedures">Procedures</a>
-            {% endif %}
-            {% if pol_child_safety_doc and pol_child_safety_doc != "" %}
-            <a href="{{ pol_child_safety_doc }}" target="_blank" rel="noopener">Child Safety and Incidents Procedures</a>
-            {% else %}
-            <a href="/day-school/policies-and-procedures.html#child-safety-and-incidents-procedures">Child Safety and Incidents Procedures</a>
-            {% endif %}
-            {% if pol_archive_doc and pol_archive_doc != "" %}
-            <a href="{{ pol_archive_doc }}" target="_blank" rel="noopener">Archive</a>
-            {% else %}
-            <a href="/day-school/policies-and-procedures.html#archive">Archive</a>
-            {% endif %}
+            {%- for section in pol_sections -%}
+            {%- assign parts = section | split: "|" -%}
+            {%- assign sec_key = parts[2] -%}
+            {%- assign sec_data = site.data[sec_key] -%}
+            {%- assign sec_doc = sec_data.document -%}
+            {%- if sec_doc and sec_doc != "" -%}
+              {%- assign sec_href = sec_doc -%}
+              {%- assign sec_attrs = ' target="_blank" rel="noopener"' -%}
+            {%- else -%}
+              {%- assign sec_href = "/day-school/policies-and-procedures.html#" | append: parts[0] -%}
+              {%- assign sec_attrs = '' -%}
+            {%- endif -%}
+            {%- if sec_data.links and sec_data.links != empty -%}
+            <div class="ds-dropdown-sub">
+              <a href="{{ sec_href }}"{{ sec_attrs }} class="ds-dropdown-sub-toggle">{{ parts[1] }}<i data-lucide="chevron-left"></i></a>
+              <div class="ds-subdropdown">
+                {%- for link in sec_data.links -%}
+                {%- assign href = link.document | default: link.url -%}
+                {%- assign first_char = href | slice: 0 -%}
+                {%- assign attrs = ' target="_blank" rel="noopener noreferrer"' -%}
+                {%- if first_char == "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+                {%- if first_char == "/" and href contains "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+                {%- if href and href != "" -%}<a href="{{ href }}"{{ attrs }}>{{ link.menu_label | default: link.label }}</a>{%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+            {%- else -%}
+            <a href="{{ sec_href }}"{{ sec_attrs }}>{{ parts[1] }}</a>
+            {%- endif -%}
+            {%- endfor -%}
           </div>
         </div>
         <div class="ds-nav-item">
@@ -153,31 +160,25 @@
       <a href="/day-school/admissions.html" class="mobile-nav-item">Admissions</a>
       <a href="/day-school/community.html" class="mobile-nav-item">Community</a>
       <a href="/day-school/policies-and-procedures.html" class="mobile-nav-item">Policies &amp; Procedures</a>
-      {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
-      <a href="{{ pol_mandatory_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Mandatory Policies</a>
-      {% else %}
-      <a href="/day-school/policies-and-procedures.html#mandatory-policies" class="mobile-nav-item mobile-nav-sub">Mandatory Policies</a>
-      {% endif %}
-      {% if pol_student_doc and pol_student_doc != "" %}
-      <a href="{{ pol_student_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Student Related Policies</a>
-      {% else %}
-      <a href="/day-school/policies-and-procedures.html#student-related-policies" class="mobile-nav-item mobile-nav-sub">Student Related Policies</a>
-      {% endif %}
-      {% if pol_procedures_doc and pol_procedures_doc != "" %}
-      <a href="{{ pol_procedures_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Procedures</a>
-      {% else %}
-      <a href="/day-school/policies-and-procedures.html#procedures" class="mobile-nav-item mobile-nav-sub">Procedures</a>
-      {% endif %}
-      {% if pol_child_safety_doc and pol_child_safety_doc != "" %}
-      <a href="{{ pol_child_safety_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Child Safety and Incidents Procedures</a>
-      {% else %}
-      <a href="/day-school/policies-and-procedures.html#child-safety-and-incidents-procedures" class="mobile-nav-item mobile-nav-sub">Child Safety and Incidents Procedures</a>
-      {% endif %}
-      {% if pol_archive_doc and pol_archive_doc != "" %}
-      <a href="{{ pol_archive_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Archive</a>
-      {% else %}
-      <a href="/day-school/policies-and-procedures.html#archive" class="mobile-nav-item mobile-nav-sub">Archive</a>
-      {% endif %}
+      {%- for section in pol_sections -%}
+      {%- assign parts = section | split: "|" -%}
+      {%- assign sec_key = parts[2] -%}
+      {%- assign sec_data = site.data[sec_key] -%}
+      {%- assign sec_doc = sec_data.document -%}
+      {%- if sec_doc and sec_doc != "" -%}
+      <a href="{{ sec_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">{{ parts[1] }}</a>
+      {%- else -%}
+      <a href="/day-school/policies-and-procedures.html#{{ parts[0] }}" class="mobile-nav-item mobile-nav-sub">{{ parts[1] }}</a>
+      {%- endif -%}
+      {%- for link in sec_data.links -%}
+      {%- assign href = link.document | default: link.url -%}
+      {%- assign first_char = href | slice: 0 -%}
+      {%- assign attrs = ' target="_blank" rel="noopener noreferrer"' -%}
+      {%- if first_char == "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+      {%- if first_char == "/" and href contains "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+      {%- if href and href != "" -%}<a href="{{ href }}" class="mobile-nav-item mobile-nav-sub mobile-nav-sub2"{{ attrs }}>{{ link.menu_label | default: link.label }}</a>{%- endif -%}
+      {%- endfor -%}
+      {%- endfor -%}
       <a href="/day-school/pledge.html" class="mobile-nav-item">Pledge</a>
       <a href="/day-school/admissions.html" class="mobile-nav-item mobile-nav-enrol">Enrol Now</a>
     </div>

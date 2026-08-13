@@ -4,7 +4,21 @@
 {%- assign student_handbook_doc = site.data.distance_learning_student_handbook.document -%}
 {%- assign it_requirements_doc = site.data.distance_learning_it_requirements.document -%}
 {%- assign faq_doc = site.data.distance_learning_faq.document -%}
+{%- comment -%}
+  Policies & Procedures menu. The Mandatory Policies documents come from
+  _data/distance_learning_policies_mandatory.yml (CMS: "Distance Learning —
+  Policies & Procedures"), so every document added there becomes a sub-menu
+  item beneath Mandatory Policies.
+{%- endcomment -%}
 {%- assign pol_mandatory_doc = site.data.distance_learning_policies_mandatory.document -%}
+{%- assign pol_mandatory_links = site.data.distance_learning_policies_mandatory.links -%}
+{%- if pol_mandatory_doc and pol_mandatory_doc != "" -%}
+  {%- assign pol_mandatory_href = pol_mandatory_doc -%}
+  {%- assign pol_mandatory_attrs = ' target="_blank" rel="noopener"' -%}
+{%- else -%}
+  {%- assign pol_mandatory_href = "/distance-learning/policies-and-procedures.html#mandatory-policies" -%}
+  {%- assign pol_mandatory_attrs = '' -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,12 +136,27 @@
             Policies &amp; Procedures
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
-          <div class="nav-dropdown">
-            {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
-            <a href="{{ pol_mandatory_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Mandatory Policies</a>
-            {% else %}
-            <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="nav-dropdown-item">Mandatory Policies</a>
-            {% endif %}
+          <div class="nav-dropdown nav-dropdown-right">
+            {%- if pol_mandatory_links and pol_mandatory_links != empty -%}
+            <div class="nav-dropdown-sub">
+              <a href="{{ pol_mandatory_href }}"{{ pol_mandatory_attrs }} class="nav-dropdown-item nav-dropdown-sub-toggle">
+                Mandatory Policies
+                <i data-lucide="chevron-left" class="nav-chevron icon-12"></i>
+              </a>
+              <div class="nav-subdropdown nav-subdropdown-left">
+                {%- for link in pol_mandatory_links -%}
+                {%- assign href = link.document | default: link.url -%}
+                {%- assign first_char = href | slice: 0 -%}
+                {%- assign attrs = ' target="_blank" rel="noopener noreferrer"' -%}
+                {%- if first_char == "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+                {%- if first_char == "/" and href contains "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+                {%- if href and href != "" -%}<a href="{{ href }}" class="nav-dropdown-item"{{ attrs }}>{{ link.menu_label | default: link.label }}</a>{%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+            {%- else -%}
+            <a href="{{ pol_mandatory_href }}"{{ pol_mandatory_attrs }} class="nav-dropdown-item">Mandatory Policies</a>
+            {%- endif -%}
           </div>
         </div>
         <div class="nav-item">
@@ -184,11 +213,15 @@
       <a href="#" class="mobile-nav-item">IT Requirements</a>
       {% endif %}
       <a href="/distance-learning/policies-and-procedures.html" class="mobile-nav-item">Policies &amp; Procedures</a>
-      {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
-      <a href="{{ pol_mandatory_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Mandatory Policies</a>
-      {% else %}
-      <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="mobile-nav-item">Mandatory Policies</a>
-      {% endif %}
+      <a href="{{ pol_mandatory_href }}"{{ pol_mandatory_attrs }} class="mobile-nav-item">Mandatory Policies</a>
+      {%- for link in pol_mandatory_links -%}
+      {%- assign href = link.document | default: link.url -%}
+      {%- assign first_char = href | slice: 0 -%}
+      {%- assign attrs = ' target="_blank" rel="noopener noreferrer"' -%}
+      {%- if first_char == "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+      {%- if first_char == "/" and href contains "#" -%}{%- assign attrs = '' -%}{%- endif -%}
+      {%- if href and href != "" -%}<a href="{{ href }}" class="mobile-nav-item mobile-nav-subitem"{{ attrs }}>{{ link.menu_label | default: link.label }}</a>{%- endif -%}
+      {%- endfor -%}
       {% if faq_doc and faq_doc != "" %}
       <a href="{{ faq_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Frequently Asked Questions</a>
       {% else %}

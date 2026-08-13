@@ -1,1 +1,10 @@
+# Procedures — Day School
+#
+# document: optional single document for the whole section. When set, the
+#   "Procedures" menu item links straight to it instead of the section of the
+#   Policies & Procedures page.
+# links: the documents published in this section. Each one is shown as a card
+#   on the Policies & Procedures page and as a sub-menu item under
+#   "Procedures" in the navigation.
 document: ""
+links: []

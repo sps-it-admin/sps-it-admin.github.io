@@ -885,99 +885,57 @@ collections:
             name: "mandatory"
             widget: "object"
             collapsed: true
-            hint: "First section of the Policies & Procedures page. Add a document to each entry, or link to one by URL."
+            hint: "Wording for the first section of the Policies & Procedures page. The documents themselves are managed under \"Day School — Policies & Procedures\" > \"Mandatory Policies\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "mandatory-policies"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
               - {label: "Intro", name: "intro", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Student Related Policies"
             name: "student"
             widget: "object"
             collapsed: true
+            hint: "Wording for this section of the page. The documents themselves are managed under \"Day School — Policies & Procedures\" > \"Student Related Policies\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "student-related-policies"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
               - {label: "Intro", name: "intro", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Procedures"
             name: "procedures"
             widget: "object"
             collapsed: true
+            hint: "Wording for this section of the page. The documents themselves are managed under \"Day School — Policies & Procedures\" > \"Procedures\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "procedures"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
               - {label: "Intro", name: "intro", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Child Safety and Incidents Procedures"
             name: "child_safety"
             widget: "object"
             collapsed: true
+            hint: "Wording for this section of the page. The documents themselves are managed under \"Day School — Policies & Procedures\" > \"Child Safety and Incidents Procedures\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "child-safety-and-incidents-procedures"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
               - {label: "Intro", name: "intro", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Archive"
             name: "archive"
             widget: "object"
             collapsed: true
-            hint: "Superseded policies and procedures, retained for reference."
+            hint: "Wording for the Archive section — superseded policies and procedures, retained for reference. The documents themselves are managed under \"Day School — Policies & Procedures\" > \"Archive\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "archive"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string", hint: "Also used as the label on the quick-nav buttons."}
               - {label: "Intro", name: "intro", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Contact CTA"
             name: "cta"
             widget: "object"
@@ -1133,27 +1091,92 @@ collections:
         label: "Mandatory Policies"
         file: "_data/day_school_policies_mandatory.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Mandatory Policies document (e.g. a PDF). The Mandatory Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Mandatory Policies section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "The documents published in the Mandatory Policies section. Each one is shown as a card in that section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Mandatory Policies in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Work Health and Safety Policy."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item, e.g. WHS Policy. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Mandatory Policies menu item itself then links to this file and opens it in a new tab, instead of pointing at the Mandatory Policies section of the page. The documents listed above are unaffected."}
       - name: "student_related_policies"
         label: "Student Related Policies"
         file: "_data/day_school_policies_student_related.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Related Policies document (e.g. a PDF). The Student Related Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Student Related Policies section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "The documents published in the Student Related Policies section. Each one is shown as a card in that section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Student Related Policies in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Uniform Policy."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Student Related Policies menu item itself then links to this file and opens it in a new tab, instead of pointing at the Student Related Policies section of the page. The documents listed above are unaffected."}
       - name: "procedures"
         label: "Procedures"
         file: "_data/day_school_policies_procedures.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Procedures document (e.g. a PDF). The Procedures menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Procedures section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "The documents published in the Procedures section. Each one is shown as a card in that section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Procedures in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Excursion Procedure."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Procedures menu item itself then links to this file and opens it in a new tab, instead of pointing at the Procedures section of the page. The documents listed above are unaffected."}
       - name: "child_safety_procedures"
         label: "Child Safety and Incidents Procedures"
         file: "_data/day_school_policies_child_safety.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Child Safety and Incidents Procedures document (e.g. a PDF). The Child Safety and Incidents Procedures menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Child Safety and Incidents Procedures section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "The documents published in the Child Safety and Incidents Procedures section. Each one is shown as a card in that section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Child Safety and Incidents Procedures in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Reporting Concerns of Harm & Abuse Policy."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Child Safety and Incidents Procedures menu item itself then links to this file and opens it in a new tab, instead of pointing at that section of the page. The documents listed above are unaffected."}
       - name: "archive"
         label: "Archive"
         file: "_data/day_school_policies_archive.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Archive document (e.g. a PDF). The Archive menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Archive section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "Superseded documents retained for reference. Each one is shown as a card in the Archive section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Archive in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Privacy Policy (2023)."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page — a good place to note the period the document applied to."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Archive menu item itself then links to this file and opens it in a new tab, instead of pointing at the Archive section of the page. The documents listed above are unaffected."}
 
   - name: "distance_learning_design"
     label: "Distance Learning — Design"
@@ -1724,22 +1747,13 @@ collections:
             name: "mandatory"
             widget: "object"
             collapsed: true
-            hint: "The Mandatory Policies menu item links to this section. Add a document to each entry, or link to one by URL."
+            hint: "Wording for the Mandatory Policies section of the page. The documents themselves are managed under \"Distance Learning — Policies & Procedures\" > \"Mandatory Policies\"."
             fields:
               - {label: "Anchor", name: "anchor", widget: "hidden", default: "mandatory-policies"}
               - {label: "Eyebrow", name: "eyebrow", widget: "string"}
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "text"}
               - {label: "Empty Message", name: "empty_note", widget: "text", hint: "Shown when this section has no documents yet."}
-              - label: "Documents"
-                name: "links"
-                widget: "list"
-                required: false
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Description", name: "desc", widget: "text", required: false}
-                  - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
-                  - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
           - label: "Contact CTA"
             name: "cta"
             widget: "object"
@@ -1853,7 +1867,20 @@ collections:
         label: "Mandatory Policies"
         file: "_data/distance_learning_policies_mandatory.yml"
         fields:
-          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Mandatory Policies document (e.g. a PDF). The Mandatory Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Mandatory Policies section of the Policies & Procedures page."}
+          - label: "Documents"
+            name: "links"
+            label_singular: "Document"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            hint: "The documents published in the Mandatory Policies section. Each one is shown as a card in that section of the Policies & Procedures page and added as a sub-menu item under Policies & Procedures > Mandatory Policies in the site menu."
+            fields:
+              - {label: "Label", name: "label", widget: "string", hint: "Title shown on the document card, e.g. Work Health and Safety Policy."}
+              - {label: "Menu Label", name: "menu_label", widget: "string", required: false, hint: "Optional shorter label for the sub-menu item, e.g. WHS Policy. Leave empty to use the Label above."}
+              - {label: "Description", name: "desc", widget: "text", required: false, hint: "Optional. Shown beneath the title on the page."}
+              - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload a PDF. Takes priority over the URL below."}
+              - {label: "URL", name: "url", widget: "string", required: false, hint: "Link used when no Document is uploaded."}
+          - {label: "Whole-section Document", name: "document", widget: "file", required: false, hint: "Optional. Upload one document covering the whole section — the Mandatory Policies menu item itself then links to this file and opens it in a new tab, instead of pointing at the Mandatory Policies section of the page. The documents listed above are unaffected."}
 
   - name: "pages"
     label: "Landing Page"

@@ -24,12 +24,6 @@ mandatory:
   heading: "Mandatory Policies"
   intro: "Policies the school is required to publish and maintain under Queensland non-state school accreditation and Commonwealth funding requirements."
   empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
-  links:
-    - {label: "Student Safety & Wellbeing Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/StudentSafetyandWellbeingPolicy.pdf"}
-    - {label: "Whistle Blower Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WhistleblowerPolicy.pdf"}
-    - {label: "Complaints Handling Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ComplaintsHandlingPolicy.pdf"}
-    - {label: "Privacy Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/PrivacyPolicy.pdf"}
-    - {label: "Work Health and Safety Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WorkHealthSafetyPolicy.pdf"}
 
 # ── Student Related Policies ──
 student:
@@ -38,8 +32,6 @@ student:
   heading: "Student Related Policies"
   intro: "Policies governing the conduct, presentation, attendance and pastoral care of students at the school."
   empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
-  links:
-    - {label: "Uniform Policy", url: "/day-school/community.html#uniform"}
 
 # ── Procedures ──
 procedures:
@@ -48,7 +40,6 @@ procedures:
   heading: "Procedures"
   intro: "The practical procedures that give effect to school policy — the steps staff, students and families are asked to follow."
   empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
-  links: []
 
 # ── Child Safety and Incidents Procedures ──
 child_safety:
@@ -57,8 +48,6 @@ child_safety:
   heading: "Child Safety and Incidents Procedures"
   intro: "St Philomena School has no tolerance for the abuse or harm of any child. These documents set out how concerns are reported, recorded and acted upon."
   empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
-  links:
-    - {label: "Reporting Concerns of Harm & Abuse Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ReportingConcernsofHarmandAbusePolicy.pdf"}
 
 # ── Archive ──
 archive:
@@ -67,7 +56,6 @@ archive:
   heading: "Archive"
   intro: "Superseded policies and procedures, retained for reference. For the document currently in force, please refer to the sections above."
   empty_note: "No archived documents have been published."
-  links: []
 
 # ── Contact CTA ──
 cta:
@@ -79,7 +67,14 @@ cta:
   email_link: "mailto:admin@stphilomena.qld.edu.au?subject=Policies%20%26%20Procedures%20Enquiry"
 ---
 
+{%- comment -%}
+  Section copy (heading, intro, empty message) lives in this page's front matter.
+  The documents in each section live in _data/day_school_policies_*.yml, edited in
+  the CMS under "Day School — Policies & Procedures", so that adding a document
+  there publishes both the card below and a sub-menu item in the navigation.
+{%- endcomment -%}
 {%- assign section_keys = "mandatory,student,procedures,child_safety,archive" | split: "," -%}
+{%- assign section_data = "day_school_policies_mandatory,day_school_policies_student_related,day_school_policies_procedures,day_school_policies_child_safety,day_school_policies_archive" | split: "," -%}
 
 <!-- HERO -->
 <section class="relative py-32 px-4 overflow-hidden" style="background-color: var(--primary); color: oklch(0.98 0.015 90)">
@@ -113,6 +108,8 @@ cta:
 <!-- POLICY SECTIONS -->
 {%- for key in section_keys -%}
 {%- assign sec = page[key] -%}
+{%- assign dkey = section_data[forloop.index0] -%}
+{%- assign sec_links = site.data[dkey].links -%}
 {%- assign mod = forloop.index0 | modulo: 2 -%}
 {%- assign secbg = "var(--background)" -%}
 {%- if mod == 0 -%}{%- assign secbg = "var(--secondary)" -%}{%- endif -%}
@@ -121,9 +118,9 @@ cta:
     <p class="font-label uppercase mb-3" style="letter-spacing: 0.25em; color: var(--accent)">{{ sec.eyebrow }}</p>
     <h2 class="text-3xl md:text-4xl font-display font-bold mb-6" style="color: var(--primary)">{{ sec.heading }}</h2>
     <p class="text-base mb-10 leading-relaxed" style="color: var(--foreground)">{{ sec.intro }}</p>
-    {%- if sec.links and sec.links != empty -%}
+    {%- if sec_links and sec_links != empty -%}
     <div class="grid md:grid-cols-2 gap-4">
-      {%- for link in sec.links -%}
+      {%- for link in sec_links -%}
       {%- assign href = link.document | default: link.url -%}
       <a href="{{ href }}"{% unless href contains "#" and href contains "/day-school/" %} target="_blank" rel="noopener noreferrer"{% endunless %} class="group flex items-center gap-4 p-5 rounded-lg border transition-all hover:shadow-md hover:-translate-y-0.5" style="background-color: var(--background); border-color: var(--accent)">
         <div class="ds-doc-icon shrink-0" style="color: var(--accent)"><i data-lucide="file-text"></i></div>

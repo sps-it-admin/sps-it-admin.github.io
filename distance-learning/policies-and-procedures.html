@@ -26,13 +26,6 @@ mandatory:
   heading: "Mandatory Policies"
   subtitle: "Policies the school is required to publish and maintain under Queensland non-state school accreditation and Commonwealth funding requirements."
   empty_note: "Documents for this section have not yet been published. Please contact the school office if you require a copy."
-  links:
-    - {label: "Student Safety & Wellbeing Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/StudentSafetyandWellbeingPolicy.pdf"}
-    - {label: "Whistle Blower Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WhistleblowerPolicy.pdf"}
-    - {label: "Complaints Handling Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ComplaintsHandlingPolicy.pdf"}
-    - {label: "Reporting Concerns of Harm & Abuse Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/ReportingConcernsofHarmandAbusePolicy.pdf"}
-    - {label: "Privacy Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/PrivacyPolicy.pdf"}
-    - {label: "Work Health and Safety Policy", url: "https://web.archive.org/web/2026/https://stphilomena.qld.edu.au/wp-content/uploads/2025/12/WorkHealthSafetyPolicy.pdf"}
 
 # ── Contact CTA ──
 cta:
@@ -43,6 +36,14 @@ cta:
   primary_label: "About the School"
   primary_link: "/distance-learning/about.html"
 ---
+
+{%- comment -%}
+  Section copy (heading, subtitle, empty message) lives in this page's front matter.
+  The documents themselves live in _data/distance_learning_policies_mandatory.yml,
+  edited in the CMS under "Distance Learning — Policies & Procedures", so that adding
+  a document there publishes both the card below and a sub-menu item in the navigation.
+{%- endcomment -%}
+{%- assign mandatory_links = site.data.distance_learning_policies_mandatory.links -%}
 
 <main>
 
@@ -79,9 +80,9 @@ cta:
         <h2 class="section-h2">{{ page.mandatory.heading }}</h2>
         <p class="body-text" style="margin-top:1rem;">{{ page.mandatory.subtitle }}</p>
       </div>
-      {% if page.mandatory.links and page.mandatory.links != empty %}
+      {% if mandatory_links and mandatory_links != empty %}
       <div class="doc-grid">
-        {% for link in page.mandatory.links %}
+        {% for link in mandatory_links %}
         {% assign href = link.document | default: link.url %}
         <a href="{{ href }}" class="doc-card reveal" target="_blank" rel="noopener noreferrer">
           <span class="doc-card-icon"><i data-lucide="file-text"></i></span>

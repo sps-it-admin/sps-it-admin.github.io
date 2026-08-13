@@ -1,5 +1,10 @@
 {%- assign ds = site.data.settings.day_school -%}
 {%- assign annual_report = site.data.day_school_annual_report.document -%}
+{%- assign pol_mandatory_doc = site.data.day_school_policies_mandatory.document -%}
+{%- assign pol_student_doc = site.data.day_school_policies_student_related.document -%}
+{%- assign pol_procedures_doc = site.data.day_school_policies_procedures.document -%}
+{%- assign pol_child_safety_doc = site.data.day_school_policies_child_safety.document -%}
+{%- assign pol_archive_doc = site.data.day_school_policies_archive.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,11 +98,31 @@
         <div class="ds-nav-item">
           <a href="/day-school/policies-and-procedures.html" class="ds-nav-link{% if page.nav == 'policies-procedures' %} active{% endif %}">Policies &amp; Procedures <i data-lucide="chevron-down"></i></a>
           <div class="ds-dropdown ds-dropdown-right">
+            {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
+            <a href="{{ pol_mandatory_doc }}" target="_blank" rel="noopener">Mandatory Policies</a>
+            {% else %}
             <a href="/day-school/policies-and-procedures.html#mandatory-policies">Mandatory Policies</a>
+            {% endif %}
+            {% if pol_student_doc and pol_student_doc != "" %}
+            <a href="{{ pol_student_doc }}" target="_blank" rel="noopener">Student Related Policies</a>
+            {% else %}
             <a href="/day-school/policies-and-procedures.html#student-related-policies">Student Related Policies</a>
+            {% endif %}
+            {% if pol_procedures_doc and pol_procedures_doc != "" %}
+            <a href="{{ pol_procedures_doc }}" target="_blank" rel="noopener">Procedures</a>
+            {% else %}
             <a href="/day-school/policies-and-procedures.html#procedures">Procedures</a>
+            {% endif %}
+            {% if pol_child_safety_doc and pol_child_safety_doc != "" %}
+            <a href="{{ pol_child_safety_doc }}" target="_blank" rel="noopener">Child Safety and Incidents Procedures</a>
+            {% else %}
             <a href="/day-school/policies-and-procedures.html#child-safety-and-incidents-procedures">Child Safety and Incidents Procedures</a>
+            {% endif %}
+            {% if pol_archive_doc and pol_archive_doc != "" %}
+            <a href="{{ pol_archive_doc }}" target="_blank" rel="noopener">Archive</a>
+            {% else %}
             <a href="/day-school/policies-and-procedures.html#archive">Archive</a>
+            {% endif %}
           </div>
         </div>
         <div class="ds-nav-item">
@@ -128,11 +153,31 @@
       <a href="/day-school/admissions.html" class="mobile-nav-item">Admissions</a>
       <a href="/day-school/community.html" class="mobile-nav-item">Community</a>
       <a href="/day-school/policies-and-procedures.html" class="mobile-nav-item">Policies &amp; Procedures</a>
+      {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
+      <a href="{{ pol_mandatory_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Mandatory Policies</a>
+      {% else %}
       <a href="/day-school/policies-and-procedures.html#mandatory-policies" class="mobile-nav-item mobile-nav-sub">Mandatory Policies</a>
+      {% endif %}
+      {% if pol_student_doc and pol_student_doc != "" %}
+      <a href="{{ pol_student_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Student Related Policies</a>
+      {% else %}
       <a href="/day-school/policies-and-procedures.html#student-related-policies" class="mobile-nav-item mobile-nav-sub">Student Related Policies</a>
+      {% endif %}
+      {% if pol_procedures_doc and pol_procedures_doc != "" %}
+      <a href="{{ pol_procedures_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Procedures</a>
+      {% else %}
       <a href="/day-school/policies-and-procedures.html#procedures" class="mobile-nav-item mobile-nav-sub">Procedures</a>
+      {% endif %}
+      {% if pol_child_safety_doc and pol_child_safety_doc != "" %}
+      <a href="{{ pol_child_safety_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Child Safety and Incidents Procedures</a>
+      {% else %}
       <a href="/day-school/policies-and-procedures.html#child-safety-and-incidents-procedures" class="mobile-nav-item mobile-nav-sub">Child Safety and Incidents Procedures</a>
+      {% endif %}
+      {% if pol_archive_doc and pol_archive_doc != "" %}
+      <a href="{{ pol_archive_doc }}" class="mobile-nav-item mobile-nav-sub" target="_blank" rel="noopener">Archive</a>
+      {% else %}
       <a href="/day-school/policies-and-procedures.html#archive" class="mobile-nav-item mobile-nav-sub">Archive</a>
+      {% endif %}
       <a href="/day-school/pledge.html" class="mobile-nav-item">Pledge</a>
       <a href="/day-school/admissions.html" class="mobile-nav-item mobile-nav-enrol">Enrol Now</a>
     </div>

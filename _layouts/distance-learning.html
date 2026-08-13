@@ -4,6 +4,7 @@
 {%- assign student_handbook_doc = site.data.distance_learning_student_handbook.document -%}
 {%- assign it_requirements_doc = site.data.distance_learning_it_requirements.document -%}
 {%- assign faq_doc = site.data.distance_learning_faq.document -%}
+{%- assign pol_mandatory_doc = site.data.distance_learning_policies_mandatory.document -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +123,11 @@
             <i data-lucide="chevron-down" class="nav-chevron icon-12"></i>
           </a>
           <div class="nav-dropdown">
+            {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
+            <a href="{{ pol_mandatory_doc }}" class="nav-dropdown-item" target="_blank" rel="noopener">Mandatory Policies</a>
+            {% else %}
             <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="nav-dropdown-item">Mandatory Policies</a>
+            {% endif %}
           </div>
         </div>
         <div class="nav-item">
@@ -179,7 +184,11 @@
       <a href="#" class="mobile-nav-item">IT Requirements</a>
       {% endif %}
       <a href="/distance-learning/policies-and-procedures.html" class="mobile-nav-item">Policies &amp; Procedures</a>
+      {% if pol_mandatory_doc and pol_mandatory_doc != "" %}
+      <a href="{{ pol_mandatory_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Mandatory Policies</a>
+      {% else %}
       <a href="/distance-learning/policies-and-procedures.html#mandatory-policies" class="mobile-nav-item">Mandatory Policies</a>
+      {% endif %}
       {% if faq_doc and faq_doc != "" %}
       <a href="{{ faq_doc }}" class="mobile-nav-item" target="_blank" rel="noopener">Frequently Asked Questions</a>
       {% else %}

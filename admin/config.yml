@@ -1126,6 +1126,35 @@ collections:
           - {label: "Button Label", name: "button_label", widget: "string"}
           - {label: "Button Link", name: "button_link", widget: "string"}
 
+  - name: "day_school_policies"
+    label: "Day School — Policies & Procedures"
+    files:
+      - name: "mandatory_policies"
+        label: "Mandatory Policies"
+        file: "_data/day_school_policies_mandatory.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Mandatory Policies document (e.g. a PDF). The Mandatory Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Mandatory Policies section of the Policies & Procedures page."}
+      - name: "student_related_policies"
+        label: "Student Related Policies"
+        file: "_data/day_school_policies_student_related.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Student Related Policies document (e.g. a PDF). The Student Related Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Student Related Policies section of the Policies & Procedures page."}
+      - name: "procedures"
+        label: "Procedures"
+        file: "_data/day_school_policies_procedures.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Procedures document (e.g. a PDF). The Procedures menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Procedures section of the Policies & Procedures page."}
+      - name: "child_safety_procedures"
+        label: "Child Safety and Incidents Procedures"
+        file: "_data/day_school_policies_child_safety.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Child Safety and Incidents Procedures document (e.g. a PDF). The Child Safety and Incidents Procedures menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Child Safety and Incidents Procedures section of the Policies & Procedures page."}
+      - name: "archive"
+        label: "Archive"
+        file: "_data/day_school_policies_archive.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Archive document (e.g. a PDF). The Archive menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Archive section of the Policies & Procedures page."}
+
   - name: "distance_learning_design"
     label: "Distance Learning — Design"
     files:
@@ -1816,6 +1845,15 @@ collections:
               - {label: "Body", name: "body", widget: "text"}
               - {label: "Button Label", name: "button_label", widget: "string"}
               - {label: "Button Link", name: "button_link", widget: "string"}
+
+  - name: "distance_learning_policies"
+    label: "Distance Learning — Policies & Procedures"
+    files:
+      - name: "mandatory_policies"
+        label: "Mandatory Policies"
+        file: "_data/distance_learning_policies_mandatory.yml"
+        fields:
+          - {label: "Document", name: "document", widget: "file", required: false, hint: "Upload the Mandatory Policies document (e.g. a PDF). The Mandatory Policies menu item will link to this file and open it in a new tab. Leave empty to keep the menu item pointing at the Mandatory Policies section of the Policies & Procedures page."}
 
   - name: "pages"
     label: "Landing Page"

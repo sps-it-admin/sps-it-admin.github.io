@@ -1,15 +1,7 @@
-# Student Related Policies — Day School
-#
-# document: optional single document for the whole section. When set, the
-#   "Student Related Policies" menu item links straight to it instead of the
-#   section of the Policies & Procedures page.
-# links: the documents published in this section. Each one is shown as a card
-#   on the Policies & Procedures page and as a sub-menu item under
-#   "Student Related Policies" in the navigation.
-document: ""
 links:
-  - label: "Uniform Policy"
-    menu_label: ""
-    desc: ""
-    document: ""
-    url: "/day-school/community.html#uniform"
+  - label: Student Computer Use Agreement
+    menu_label: Student IT Use
+    desc: ''
+    document: /project/assets/Student Computer Use Agreement 2027.pdf
+    url: ''
+document: ''

@@ -1631,6 +1631,7 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Landing Page Background Photo", name: "background_image", widget: "image", required: false, hint: "Optional photo shown as the full-page background behind a navy overlay. Leave empty for a plain navy background."}
           - label: "Brand Block"
             name: "brand"
             widget: "object"

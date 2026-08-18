@@ -38,8 +38,19 @@ footer_note: © 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, P
     padding: 4rem 1.5rem;
     text-align: center;
   }
-  .landing-brand {
-    margin-bottom: 3.5rem;
+  .landing-panel {
+    background: oklch(0.27 0.065 250 / 0.87);
+    border: 1px solid rgba(var(--gold-rgb, 180,140,60), 0.25);
+    border-radius: 2px;
+    padding: 3rem 2.5rem;
+    width: 100%;
+  }
+  .landing-panel-brand {
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+  .landing-panel-content {
+    max-width: 760px;
   }
   .landing-crest {
     width: 150px;
@@ -75,13 +86,6 @@ footer_note: © 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, P
     color: var(--cream);
     opacity: 0.4;
     text-transform: uppercase;
-  }
-  .landing-divider {
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    opacity: 0.4;
-    margin: 2.5rem auto;
   }
   .landing-prompt {
     font-family: var(--font-label);
@@ -167,27 +171,30 @@ footer_note: © 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, P
 </style>
 
 <div class="landing-wrap"{% if page.background_image and page.background_image != "" %} style="background-image: url('{{ page.background_image }}');"{% endif %}>
-  <div class="landing-brand">
-    <img src="{{ page.brand.crest_image }}" alt="St Philomena School crest" class="landing-crest">
-    <p class="landing-school-name">{{ page.brand.school_name }}</p>
-    <h1 class="landing-tagline">{{ page.brand.tagline }}</h1>
-    <p class="landing-motto">{{ page.brand.motto }}</p>
-    <p class="landing-motto-en">{{ page.brand.motto_en }}</p>
+  <div class="landing-panel landing-panel-brand">
+    <div class="landing-brand">
+      <img src="{{ page.brand.crest_image }}" alt="St Philomena School crest" class="landing-crest">
+      <p class="landing-school-name">{{ page.brand.school_name }}</p>
+      <h1 class="landing-tagline">{{ page.brand.tagline }}</h1>
+      <p class="landing-motto">{{ page.brand.motto }}</p>
+      <p class="landing-motto-en">{{ page.brand.motto_en }}</p>
+    </div>
   </div>
 
-  <div class="landing-divider"></div>
-  <p class="landing-prompt">{{ page.prompt }}</p>
+  <div class="landing-panel landing-panel-content">
+    <p class="landing-prompt">{{ page.prompt }}</p>
 
-  <div class="landing-choices">
-    {% for choice in page.choices %}
-    <a href="{{ choice.link }}" class="choice-card">
-      <span class="choice-card-eyebrow">{{ choice.eyebrow }}</span>
-      <h2 class="choice-card-title">{{ choice.title }}</h2>
-      <p class="choice-card-desc">{{ choice.desc }}</p>
-      <span class="choice-card-cta">{{ choice.cta }}</span>
-    </a>
-    {% endfor %}
+    <div class="landing-choices">
+      {% for choice in page.choices %}
+      <a href="{{ choice.link }}" class="choice-card">
+        <span class="choice-card-eyebrow">{{ choice.eyebrow }}</span>
+        <h2 class="choice-card-title">{{ choice.title }}</h2>
+        <p class="choice-card-desc">{{ choice.desc }}</p>
+        <span class="choice-card-cta">{{ choice.cta }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <p class="landing-footer-note">{{ page.footer_note }}</p>
   </div>
-
-  <p class="landing-footer-note">{{ page.footer_note }}</p>
 </div>

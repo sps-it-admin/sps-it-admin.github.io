@@ -3,6 +3,9 @@ layout: landing
 title: "St Philomena School"
 description: "Catholic classical education at Park Ridge, QLD — Day School and Distance Learning."
 
+# ── Background ──
+background_image: ""
+
 # ── Brand block ──
 brand:
   crest_image: "/project/assets/logo-full.png"
@@ -32,6 +35,9 @@ footer_note: "© 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, 
   .landing-wrap {
     min-height: 100vh;
     background: var(--navy);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,7 +173,7 @@ footer_note: "© 2026 St Philomena School · (07) 3802 0088 · 61 Koplick Road, 
   }
 </style>
 
-<div class="landing-wrap">
+<div class="landing-wrap"{% if page.background_image and page.background_image != "" %} style="background-image: linear-gradient(oklch(0.27 0.065 250 / 0.87), oklch(0.27 0.065 250 / 0.87)), url('{{ page.background_image }}');"{% endif %}>
   <div class="landing-brand">
     <img src="{{ page.brand.crest_image }}" alt="St Philomena School crest" class="landing-crest">
     <p class="landing-school-name">{{ page.brand.school_name }}</p>
